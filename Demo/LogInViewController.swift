@@ -14,7 +14,22 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-    
+    @IBAction func emailChange() {
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            nextButton.isHidden = false
+        }
+        else{
+            nextButton.isHidden = true
+        }
+    }
+    @IBAction func passwordChange() {
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            nextButton.isHidden = false
+        }
+        else{
+            nextButton.isHidden = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
