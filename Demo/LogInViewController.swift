@@ -10,10 +10,16 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        nextButton.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {

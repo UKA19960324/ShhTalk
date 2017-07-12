@@ -13,6 +13,10 @@
         <scene sceneID="mdR-q3-vmt">
             <objects>
                 <viewController id="IFx-1o-elV" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PoV-DS-OhV"/>
+                        <viewControllerLayoutGuide type="bottom" id="1mO-2S-dFl"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pXU-Dj-xM2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +102,10 @@
         <scene sceneID="Blg-21-DaX">
             <objects>
                 <viewController id="HFh-jw-hvU" customClass="LogInViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yky-1A-kKn"/>
+                        <viewControllerLayoutGuide type="bottom" id="soj-lF-H1C"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="goc-9r-VwY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +182,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470000001" green="0.8288332598" blue="0.84643682499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="FzG-6c-5qi" id="v60-ge-n4x"/>
+                        <outlet property="nextButton" destination="dYe-nh-QfE" id="ssN-Tk-BU5"/>
+                        <outlet property="passwordTextField" destination="FQF-Ts-nq5" id="bJF-1f-Kxo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zi-7n-RDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +196,10 @@
         <scene sceneID="J4j-Na-aed">
             <objects>
                 <viewController id="Dft-yc-Lvw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YL0-OH-gP9"/>
+                        <viewControllerLayoutGuide type="bottom" id="GqE-L9-Lv6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ahk-QU-Jcd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
