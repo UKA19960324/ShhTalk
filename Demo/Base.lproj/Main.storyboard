@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="-42.399999999999999" y="1557.5712143928038"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="Blg-21-DaX">
             <objects>
-                <viewController id="HFh-jw-hvU" sceneMemberID="viewController">
+                <viewController id="HFh-jw-hvU" customClass="LogInViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="goc-9r-VwY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +166,11 @@
                                 <rect key="frame" x="18" y="87" width="30" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYe-nh-QfE">
+                                <rect key="frame" x="305" y="87" width="54" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="next-page"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470000001" green="0.8288332598" blue="0.84643682499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -272,5 +277,6 @@
         <image name="email" width="24" height="16"/>
         <image name="lock" width="20" height="27"/>
         <image name="name" width="24" height="20"/>
+        <image name="next-page" width="24" height="24"/>
     </resources>
 </document>
