@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="-471.19999999999999" y="2228.6356821589206"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="J4j-Na-aed">
             <objects>
-                <viewController id="Dft-yc-Lvw" sceneMemberID="viewController">
+                <viewController id="Dft-yc-Lvw" customClass="SignUpViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YL0-OH-gP9"/>
                         <viewControllerLayoutGuide type="bottom" id="GqE-L9-Lv6"/>
@@ -217,6 +217,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameChange" destination="Dft-yc-Lvw" eventType="editingChanged" id="vNe-3t-IFk"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svu-ZV-QVC">
                                 <rect key="frame" x="54" y="75" width="305" height="45"/>
@@ -225,6 +228,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailChange" destination="Dft-yc-Lvw" eventType="editingChanged" id="TJE-q8-xwo"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X14-08-sUt">
                                 <rect key="frame" x="54" y="130" width="305" height="45"/>
@@ -233,6 +239,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordChange" destination="Dft-yc-Lvw" eventType="editingChanged" id="j8F-UW-BDP"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-FY-U9M">
                                 <rect key="frame" x="12" y="15" width="42" height="45"/>
@@ -287,13 +296,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yai-PZ-lfI">
+                                <rect key="frame" x="313" y="130" width="46" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="註冊">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470000001" green="0.8288332598" blue="0.84643682499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="svu-ZV-QVC" id="hSV-jU-5al"/>
+                        <outlet property="nameTextField" destination="xK6-v2-rcf" id="EGt-zg-JhF"/>
+                        <outlet property="passwordTextField" destination="X14-08-sUt" id="BJG-17-VyJ"/>
+                        <outlet property="signupButton" destination="yai-PZ-lfI" id="83u-DW-A27"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeN-Yb-NSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="2229"/>
+            <point key="canvasLocation" x="400.80000000000001" y="2228.6356821589206"/>
         </scene>
     </scenes>
     <resources>

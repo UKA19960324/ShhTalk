@@ -9,11 +9,41 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signupButton: UIButton!
+    
+    @IBAction func nameChange() {
+        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
+            signupButton.isHidden = false
+        }
+        else{
+            signupButton.isHidden = true
+        }
+    }
+    @IBAction func emailChange() {
+        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
+            signupButton.isHidden = false
+        }
+        else{
+            signupButton.isHidden = true
+        }
+    }
+    @IBAction func passwordChange() {
+        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
+            signupButton.isHidden = false
+        }
+        else{
+            signupButton.isHidden = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        signupButton.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
