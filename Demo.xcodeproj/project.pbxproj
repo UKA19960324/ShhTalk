@@ -13,6 +13,7 @@
 		55DB88FE1F1475280002CCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FD1F1475280002CCA3 /* Assets.xcassets */; };
 		55DB89011F1475280002CCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */; };
 		55DB891C1F1661F20002CCA3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB891B1F1661F20002CCA3 /* LogInViewController.swift */; };
+		55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB891D1F1729810002CCA3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		55DB89001F1475280002CCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55DB89021F1475280002CCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DB891B1F1661F20002CCA3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		55DB891D1F1729810002CCA3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
 				55DB88F81F1475280002CCA3 /* ViewController.swift */,
 				55DB891B1F1661F20002CCA3 /* LogInViewController.swift */,
+				55DB891D1F1729810002CCA3 /* SignUpViewController.swift */,
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
 				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
 				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
+				55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */,
 				55DB891C1F1661F20002CCA3 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
