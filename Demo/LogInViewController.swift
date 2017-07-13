@@ -30,6 +30,21 @@ class LogInViewController: UIViewController {
             nextButton.isHidden = true
         }
     }
+    
+    @IBAction func forgetPassword(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "重設密碼 🔑", message: "請輸入您忘記密碼的信箱", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: {(textField: UITextField) -> Void in
+            textField.placeholder = "Email"
+        })
+        let resetAction = UIAlertAction(title: "重新發送" , style: .default , handler:{ (action:UIAlertAction!) -> Void in
+            let email = (alertController.textFields?.first)! .text!
+            print (email)
+        })
+        alertController.addAction(resetAction)
+        let cancelAction = UIAlertAction(title: "取消" , style: .cancel , handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController,animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
