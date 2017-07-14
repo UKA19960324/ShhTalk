@@ -86,12 +86,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3d-ul-g3h">
+                                <rect key="frame" x="82" y="205" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-l8-azG">
+                                <rect key="frame" x="269" y="205" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="up"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470263746" green="0.82883325978928779" blue="0.84643682504923856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="lefttriangleButton" destination="c3d-ul-g3h" id="X5Z-Qs-arh"/>
+                        <outlet property="loginButton" destination="CKz-fW-IVR" id="npS-cm-Y6A"/>
                         <outlet property="loginContainerView" destination="Y14-T2-jTy" id="rMx-ws-P0k"/>
+                        <outlet property="righttriangleButton" destination="ecb-l8-azG" id="ZYV-cC-ZbZ"/>
                         <outlet property="signUpContainerView" destination="Vuu-Pg-DJF" id="CXT-m2-CZd"/>
+                        <outlet property="signupButton" destination="r0p-q4-Cwc" id="Glj-Zh-75u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gd-U1-0ON" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +203,7 @@
                                 <state key="normal" image="next-page"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.82296540470000001" green="0.8288332598" blue="0.84643682499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="FzG-6c-5qi" id="v60-ge-n4x"/>
@@ -327,5 +341,6 @@
         <image name="lock" width="20" height="27"/>
         <image name="name" width="24" height="20"/>
         <image name="next-page" width="24" height="24"/>
+        <image name="up" width="16" height="16"/>
     </resources>
 </document>
