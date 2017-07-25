@@ -112,6 +112,24 @@
             </objects>
             <point key="canvasLocation" x="-42.399999999999999" y="1557.5712143928038"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jLe-Wa-QIq">
+            <objects>
+                <viewController storyboardIdentifier="MyProfile" id="jGy-tm-a8b" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6iY-gD-rLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="XeH-YM-GNy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vNa-he-FPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8q-gx-Ye9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="1558"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="Blg-21-DaX">
             <objects>
@@ -320,6 +338,9 @@
                                 <state key="normal" title="註冊">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerAccount:" destination="Dft-yc-Lvw" eventType="touchUpInside" id="fmE-1Z-sgW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470000001" green="0.8288332598" blue="0.84643682499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
