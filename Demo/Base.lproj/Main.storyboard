@@ -219,6 +219,9 @@
                                 <rect key="frame" x="305" y="87" width="54" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="next-page"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="HFh-jw-hvU" eventType="touchUpInside" id="ia7-3q-nqZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.82745098039215681" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
