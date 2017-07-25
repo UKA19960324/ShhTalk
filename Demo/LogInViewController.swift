@@ -37,8 +37,30 @@ class LogInViewController: UIViewController {
             textField.placeholder = "Email"
         })
         let resetAction = UIAlertAction(title: "重新發送" , style: .default , handler:{ (action:UIAlertAction!) -> Void in
-            let email = (alertController.textFields?.first)! .text!
-            print (email)
+            // let email = (alertController.textFields?.first)! .text!
+            // print (email)
+            guard let email = (alertController.textFields?.first)!.text , email != ""
+            else{
+                let alertController = UIAlertController(title: "Input Error", message: "Please provide your email address for password reset.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK",style: .cancel,handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            
+            Auth.auth().sendPasswordReset(withEmail: email, completion: {(error) in
+                let title = (error == nil) ? "Password Rest Follow-up" : "Password Reset Error"
+                let message = (error == nil) ? "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password." : error?.localizedDescription
+                let alertController = UIAlertController(title: title,message: message,preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel,handler:{(action) in
+                    if error == nil{
+                        //解除鍵盤
+                        self.view.endEditing(true)
+                    }
+                })
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+            })
         })
         alertController.addAction(resetAction)
         let cancelAction = UIAlertAction(title: "取消" , style: .cancel , handler: nil)
