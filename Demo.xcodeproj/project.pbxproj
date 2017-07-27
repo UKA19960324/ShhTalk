@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
 		556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556084281F27791A00B0D8EC /* SWRevealViewController.m */; };
+		5560842B1F29BCD200B0D8EC /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */; };
+		5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */; };
+		5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */; };
+		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
 		55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F61F1475280002CCA3 /* AppDelegate.swift */; };
 		55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F81F1475280002CCA3 /* ViewController.swift */; };
 		55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FA1F1475280002CCA3 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 		556084261F27791900B0D8EC /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		556084271F27791A00B0D8EC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		556084281F27791A00B0D8EC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		55DB88F31F1475280002CCA3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DB88F61F1475280002CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DB88F81F1475280002CCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				55DB88F81F1475280002CCA3 /* ViewController.swift */,
 				55DB891B1F1661F20002CCA3 /* LogInViewController.swift */,
 				55DB891D1F1729810002CCA3 /* SignUpViewController.swift */,
+				5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */,
+				5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */,
+				5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */,
+				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
 				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
 				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
@@ -238,7 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5560842B1F29BCD200B0D8EC /* MyProfileViewController.swift in Sources */,
+				556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */,
 				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
+				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
+				5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */,
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
 				556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */,
 				55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */,
