@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="mdR-q3-vmt">
             <objects>
-                <viewController id="IFx-1o-elV" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="IFx-1o-elV" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoV-DS-OhV"/>
                         <viewControllerLayoutGuide type="bottom" id="1mO-2S-dFl"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1610" y="1558"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="kPI-Az-fqi">
             <objects>
-                <tableViewController id="v5v-vr-cGW" sceneMemberID="viewController">
+                <tableViewController id="v5v-vr-cGW" customClass="MenuTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hXh-ee-5QG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5om-PJ-dAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="118"/>
+            <point key="canvasLocation" x="3892" y="117"/>
         </scene>
         <!--About Us (趕工中)-->
         <scene sceneID="6mH-TH-oJS">
@@ -355,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tV-r5-mbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="2394"/>
+            <point key="canvasLocation" x="3892" y="2393"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Blg-21-DaX">
@@ -680,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4b-DA-s0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="1604"/>
+            <point key="canvasLocation" x="3892" y="1603"/>
         </scene>
         <!--Friends (趕工中)-->
         <scene sceneID="5Bq-sM-kQT">
@@ -704,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPC-P7-cfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="840"/>
+            <point key="canvasLocation" x="3892" y="840"/>
         </scene>
     </scenes>
     <resources>
@@ -722,6 +722,6 @@
         <image name="user" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="14o-0R-SYS"/>
+        <segue reference="7GG-vE-0c0"/>
     </inferredMetricsTieBreakers>
 </document>
