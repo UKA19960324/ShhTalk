@@ -22,6 +22,7 @@
 		55DB891C1F1661F20002CCA3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB891B1F1661F20002CCA3 /* LogInViewController.swift */; };
 		55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB891D1F1729810002CCA3 /* SignUpViewController.swift */; };
 		7E70447E7E1D5533907920C3 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7EFD29A223606BF9C62292 /* Pods_Demo.framework */; };
+		C2ED47211F403F190086A344 /* fbBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED47201F403F190086A344 /* fbBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		55DB89021F1475280002CCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DB891B1F1661F20002CCA3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		55DB891D1F1729810002CCA3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C2ED47201F403F190086A344 /* fbBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbBtn.swift; sourceTree = "<group>"; };
 		CD7EFD29A223606BF9C62292 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
 				5535AB321F3C3A9F004062C5 /* MenuTableViewController.swift */,
+				C2ED47201F403F190086A344 /* fbBtn.swift */,
 				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
 				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
 				55DB89021F1475280002CCA3 /* Info.plist */,
@@ -258,6 +261,7 @@
 				5535AB331F3C3A9F004062C5 /* MenuTableViewController.swift in Sources */,
 				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
+				C2ED47211F403F190086A344 /* fbBtn.swift in Sources */,
 				5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */,
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
 				556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */,
