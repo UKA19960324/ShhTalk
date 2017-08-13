@@ -116,6 +116,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableGradientBackground" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookSignIn:" destination="IFx-1o-elV" eventType="touchUpInside" id="WFh-Ua-hTq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82296540470263746" green="0.82883325978928779" blue="0.84643682504923856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

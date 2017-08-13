@@ -6,6 +6,8 @@
 //  Copyright © 2017年 U.K.A. All rights reserved.
 //
 import UIKit
+import FBSDKLoginKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -37,7 +39,54 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
+    
+    @IBAction func facebookSignIn(_ sender: fbBtn) {
+        // 採用FBSDKLoginManager類別進行登入動作
+        let fbLoginManager = FBSDKLoginManager()
 
+        // 取得登入授權
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                //print("cancel")
+                print("Failed to signin: \(error.localizedDescription)")
+                return
+            }
+            
+            // 是否確定授權
+            if result?.isCancelled != true {
+                print("Auth Successed")
+                
+                // 未知
+                guard let accessToken = FBSDKAccessToken.current() else {
+                    print("Failed to get access token")
+                    return
+                }
+                
+                // 未知
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+                
+                // 登入前先做登出的動作可以清除使用網頁介面進行登入的紀錄
+                try! Auth.auth().signOut()
+                
+                // 呼叫 Firebase API 來執行登入
+                Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    if let error = error {
+                        print("Login error: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    // 跳制登入後的app畫面
+                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile") {
+                        UIApplication.shared.keyWindow?.rootViewController = viewController
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    
+                })
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
