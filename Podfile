@@ -8,4 +8,8 @@ target 'Demo' do
   # Pods for Demo
    pod 'Firebase/Core'
    pod 'Firebase/Auth'
+  
+  # Pods for Facebook
+   pod 'FacebookCore'
+   pod 'FacebookLogin'
 end
