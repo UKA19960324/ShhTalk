@@ -37,6 +37,20 @@ class fbBtn: UIButton {
     
 // 內文對齊
     
+    // 上
+    @IBInspectable var titleTopPadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.top = titleTopPadding
+        }
+    }
+    
+    // 下
+    @IBInspectable var titleBottomPadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.bottom = titleBottomPadding
+        }
+    }
+
     // 左
     @IBInspectable var titleLeftpadding: CGFloat = 0.0 {
         didSet {
@@ -51,19 +65,66 @@ class fbBtn: UIButton {
         }
     }
     
-    // 上
-    @IBInspectable var titleTopPadding: CGFloat = 0.0 {
+    
+// 圖示對齊
+    
+    //上
+    @IBInspectable var imageTopPadding: CGFloat = 0.0 {
         didSet {
-            titleEdgeInsets.top = titleTopPadding
+            imageEdgeInsets.top = imageTopPadding
         }
     }
     
     // 下
-    @IBInspectable var titleBottomPadding: CGFloat = 0.0 {
+    @IBInspectable var imageBottomPadding: CGFloat = 0.0 {
         didSet {
-            titleEdgeInsets.bottom = titleBottomPadding
+            imageEdgeInsets.bottom = imageBottomPadding
         }
     }
+    
+    // 左
+    @IBInspectable var imageLeftPadding: CGFloat = 0.0 {
+        didSet {
+            imageEdgeInsets.left = imageLeftPadding
+        }
+    }
+    
+    // 右
+    @IBInspectable var imageRightPadding: CGFloat = 0.0 {
+        didSet {
+            imageEdgeInsets.right = imageRightPadding
+        }
+    }
+    
+// 圖示與內文之間
+    
+    @IBInspectable var enableImageRightAligned: Bool = false
+    @IBInspectable var enableGradientBackground: Bool = false
+    @IBInspectable var gradientColor1: UIColor = UIColor.black
+    @IBInspectable var gradientColor2: UIColor = UIColor.white
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if enableImageRightAligned,
+            let imageView = imageView {
+            imageEdgeInsets.left = self.bounds.width - imageView.bounds.width - imageRightPadding
+        }
+        
+        // 漸層
+        if enableGradientBackground {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = self.bounds
+            gradientLayer.colors = [gradientColor1.cgColor, gradientColor2.cgColor]
+            gradientLayer.startPoint = CGPoint(x:0.0, y:0.5)
+            gradientLayer.endPoint = CGPoint(x:1.0, y:0.5)
+            self.layer.insertSublayer(gradientLayer, at: 0)
+            
+            
+        }
+    }
+    
+
     
     /*
     // Only override draw() if you perform custom drawing.
