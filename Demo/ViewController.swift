@@ -40,14 +40,15 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // FB登入按鈕
     @IBAction func facebookSignIn(_ sender: fbBtn) {
+        FBSDKLoginManager().logOut()
         // 採用FBSDKLoginManager類別進行登入動作
         let fbLoginManager = FBSDKLoginManager()
 
         // 取得登入授權
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
-                //print("cancel")
                 print("Failed to signin: \(error.localizedDescription)")
                 return
             }
@@ -64,9 +65,6 @@ class ViewController: UIViewController {
                 
                 // 未知
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-                
-                // 登入前先做登出的動作可以清除使用網頁介面進行登入的紀錄
-                try! Auth.auth().signOut()
                 
                 // 呼叫 Firebase API 來執行登入
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
