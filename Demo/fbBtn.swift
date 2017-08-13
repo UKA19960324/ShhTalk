@@ -10,7 +10,8 @@ import UIKit
 
 @IBDesignable
 class fbBtn: UIButton {
-    
+
+// 按鈕外型
     // 圓角半徑
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
@@ -31,6 +32,36 @@ class fbBtn: UIButton {
     @IBInspectable var borderColor: UIColor = .black {
         didSet {
             layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+// 內文對齊
+    
+    // 左
+    @IBInspectable var titleLeftpadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.left = titleLeftpadding
+        }
+    }
+    
+    // 右
+    @IBInspectable var titleRightPadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.right = titleRightPadding
+        }
+    }
+    
+    // 上
+    @IBInspectable var titleTopPadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.top = titleTopPadding
+        }
+    }
+    
+    // 下
+    @IBInspectable var titleBottomPadding: CGFloat = 0.0 {
+        didSet {
+            titleEdgeInsets.bottom = titleBottomPadding
         }
     }
     
