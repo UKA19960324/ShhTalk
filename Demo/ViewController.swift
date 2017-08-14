@@ -8,8 +8,9 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate {
 
     @IBOutlet weak var loginContainerView: UIView!
     @IBOutlet weak var signUpContainerView: UIView!
@@ -35,9 +36,15 @@ class ViewController: UIViewController {
         //loginButton.setTitleColor(UIColor.white, for: .normal)
         //signupButton.setTitleColor(UIColor.black, for: .normal)
     }
+    
     //點選空白區域(鍵盤收合)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    //Google登入按鈕
+    @IBAction func googleLogin(sender: UIButton){
+        GIDSignIn.sharedInstance().signIn()
     }
     
     // FB登入按鈕
@@ -83,14 +90,63 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
+    //Google登入
+    func sign(_ signin: GIDSignIn, didSignInFor user: GIDGoogleUser!, withError error: Error!){
+        
+        if error != nil{
+            return
+        }
+        
+        guard let authentication = user.authentication else {
+            return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        Auth.auth().signIn(with: credential, completion: {(user,error) in
+            //登入失敗
+            if let error = error {
+                print("Login error")
+                
+                let alertController = UIAlertController(title: "Login Error",message: error.localizedDescription,preferredStyle : .alert)
+                
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(okayAction)
+                self.present(alertController,animated: true,completion: nil)
+                
+                return
+            }
+            //登入成功 轉畫面
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        })
+    }
+    //登出失敗
+    func sign(_ signIn: GIDSignIn, didDisconnectWith user: GIDGoogleUser, withError: Error){
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print(signOutError)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         righttriangleButton.isHidden = true
         //loginButton.setTitleColor(UIColor.black, for: .normal)
+        
+        //GIDSignInDelegate,GIDSignInUIDelegate 初始值
+        self.title = ""
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
+    
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.

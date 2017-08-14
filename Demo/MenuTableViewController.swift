@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+
 class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,22 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if ( indexPath.row == 5 ) {
             //print("Logout !  !")
+            
             do {
+                if let providerData = Auth.auth().currentUser?.providerData{
+                    //從哪裡登入
+                    let userInfo = providerData[0]
+                    
+                    switch userInfo.providerID{
+                        case "google.com":
+                            GIDSignIn.sharedInstance().signOut()
+                        
+                        default:
+                            break
+                    }
+                    
+                }
+            
                 try Auth.auth().signOut()
             
             } catch{
@@ -48,6 +65,7 @@ class MenuTableViewController: UITableViewController {
                 present(alertController, animated: true, completion: nil)
                 return
             }
+            
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Welcome"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)

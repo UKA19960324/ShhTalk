@@ -12,4 +12,7 @@ target 'Demo' do
   # Pods for Facebook
    pod 'FacebookCore'
    pod 'FacebookLogin'
+
+  # Pods for Google
+   pod ‘GoogleSignIn’
 end
