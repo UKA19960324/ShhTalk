@@ -15,15 +15,14 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    // Override point for customization after application launch
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.\
-        //UIApplication.shared.statusBarStyle = .lightContent // 將狀態列更新為亮色系
+        
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        //UIApplication.shared.statusBarStyle = .lightContent   // 將狀態列更新為亮色系
         return true
     }
 
@@ -51,20 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // 用以切換至網頁介面進行登入
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        
         var handled = false
-        
         if url.absoluteString.contains("fb") {
             handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
-            
         } else {
             handled = GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
         }
-        
         return handled
     }
-
-
 }
-

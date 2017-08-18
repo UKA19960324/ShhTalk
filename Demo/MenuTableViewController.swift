@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 import GoogleSignIn
 
 class MenuTableViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,58 +22,57 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-//    // MARK: - Table view data source
-//
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    
+    // 列被選取時的動作
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 當選取 Logout 時
         if ( indexPath.row == 5 ) {
-            //print("Logout !  !")
-            
-            do {
                 if let providerData = Auth.auth().currentUser?.providerData{
-                    //從哪裡登入
                     let userInfo = providerData[0]
-                    
-                    switch userInfo.providerID{
-                        case "google.com":
+                    print(userInfo.providerID)
+                    switch userInfo.providerID {
+                        case "password" :
+                            do{
+                                try Auth.auth().signOut()
+                            } catch{
+                                let alertController = UIAlertController(title: "Logout Error", message: error.localizedDescription, preferredStyle: .alert)
+                                let okayAction = UIAlertAction(title: "OK" , style: .cancel , handler: nil)
+                                alertController.addAction(okayAction)
+                                present(alertController, animated: true, completion: nil)
+                                return
+                            }
+                        case "facebook.com" :
+                            FBSDKLoginManager().logOut()
+                        case "google.com" :
                             GIDSignIn.sharedInstance().signOut()
-                        
-                        default:
-                            break
+                        default: break
                     }
-                    
                 }
-            
-                try Auth.auth().signOut()
-            
-            } catch{
-                let alertController = UIAlertController(title: "Logout Error", message: error.localizedDescription, preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "OK" , style: .cancel , handler: nil)
-                alertController.addAction(okayAction)
-                present(alertController, animated: true, completion: nil)
-                return
-            }
-            
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Welcome"){
-                UIApplication.shared.keyWindow?.rootViewController = viewController
-                self.dismiss(animated: true, completion: nil)
-            }
+                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Welcome"){
+                    UIApplication.shared.keyWindow?.rootViewController = viewController
+                    self.dismiss(animated: true, completion: nil)
+                }
         }
     }
+
+    // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    // MARK: - Table view data source
+    
+//    // #warning Incomplete implementation, return the number of sections
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 0
+//    }
+    
+//    // #warning Incomplete implementation, return the number of rows
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 0
+//    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IFx-1o-elV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IFx-1o-elV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -84,7 +84,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="up"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-uT-hu7" customClass="fbBtn" customModule="Demo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-uT-hu7" customClass="Button" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="8" y="462" width="359" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,7 +114,7 @@
                                     <action selector="facebookSignIn:" destination="IFx-1o-elV" eventType="touchUpInside" id="WFh-Ua-hTq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ex-nH-Zdg" customClass="fbBtn" customModule="Demo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ex-nH-Zdg" customClass="Button" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="8" y="555" width="359" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -640,7 +640,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0E1-Y7-1fV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBO-al-46y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mBO-al-46y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -658,7 +658,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0OL-dI-zV6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1l-4o-8Va">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V1l-4o-8Va">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -676,7 +676,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vHn-wr-ZOa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dXE-Sx-f7L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dXE-Sx-f7L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -687,14 +687,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6Q-zf-wFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3132" y="2394"/>
+            <point key="canvasLocation" x="3132" y="2393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="17o-IF-8co">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsp-f2-a8I" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hng-9U-mUd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hng-9U-mUd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -773,6 +773,6 @@
         <image name="user" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7GG-vE-0c0"/>
+        <segue reference="14o-0R-SYS"/>
     </inferredMetricsTieBreakers>
 </document>

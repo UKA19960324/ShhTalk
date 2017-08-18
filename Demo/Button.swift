@@ -1,6 +1,6 @@
 //
-//  fbBtn.swift
-//  
+//  Button.swift
+//
 //
 //  Created by 王曉琪 on 2017/8/13.
 //
@@ -9,9 +9,9 @@
 import UIKit
 
 @IBDesignable
-class fbBtn: UIButton {
-
-// 按鈕外型
+class Button: UIButton {
+    
+    // 按鈕外型
     // 圓角半徑
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
@@ -35,7 +35,7 @@ class fbBtn: UIButton {
         }
     }
     
-// 內文對齊
+    // 內文對齊
     
     // 上
     @IBInspectable var titleTopPadding: CGFloat = 0.0 {
@@ -50,7 +50,7 @@ class fbBtn: UIButton {
             titleEdgeInsets.bottom = titleBottomPadding
         }
     }
-
+    
     // 左
     @IBInspectable var titleLeftpadding: CGFloat = 0.0 {
         didSet {
@@ -64,9 +64,8 @@ class fbBtn: UIButton {
             titleEdgeInsets.right = titleRightPadding
         }
     }
-    
-    
-// 圖示對齊
+
+    // 圖示對齊
     
     //上
     @IBInspectable var imageTopPadding: CGFloat = 0.0 {
@@ -96,7 +95,7 @@ class fbBtn: UIButton {
         }
     }
     
-// 圖示與內文之間
+    // 圖示與內文之間
     
     @IBInspectable var enableImageRightAligned: Bool = false
     @IBInspectable var enableGradientBackground: Bool = false
@@ -120,18 +119,13 @@ class fbBtn: UIButton {
             gradientLayer.endPoint = CGPoint(x:1.0, y:0.5)
             self.layer.insertSublayer(gradientLayer, at: 0)
             
-            
         }
     }
-    
-
-    
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
 }

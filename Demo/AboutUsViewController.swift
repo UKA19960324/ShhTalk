@@ -9,27 +9,20 @@
 import UIKit
 
 class AboutUsViewController: UIViewController {
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        if revealViewController() != nil{
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 200
-            // 手勢辨識
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-        }
+        addSideBarMenu(leftMenuButton: menuButton)
     }
 
+    // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -10,10 +10,22 @@ import UIKit
 import Firebase
 class LogInViewController: UIViewController {
 
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    
+    // Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nextButton.isHidden = true
+    }
+    
+    // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // Email 欄位輸入時
     @IBAction func emailChange() {
         if emailTextField.text != "" && passwordTextField.text != ""{
             nextButton.isHidden = false
@@ -22,6 +34,8 @@ class LogInViewController: UIViewController {
             nextButton.isHidden = true
         }
     }
+    
+    // Password 欄位輸入時
     @IBAction func passwordChange() {
         if emailTextField.text != "" && passwordTextField.text != ""{
             nextButton.isHidden = false
@@ -31,6 +45,7 @@ class LogInViewController: UIViewController {
         }
     }
     
+    // 忘記密碼按鈕功能
     @IBAction func forgetPassword(_ sender: UIButton) {
         let alertController = UIAlertController(title: "重設密碼 🔑", message: "請輸入您忘記密碼的信箱", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: {(textField: UITextField) -> Void in
@@ -67,13 +82,8 @@ class LogInViewController: UIViewController {
         alertController.addAction(cancelAction)
         present(alertController,animated: true, completion: nil)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nextButton.isHidden = true
-        
-    }
-    
+
+    // 登入按鈕功能
     @IBAction func loginAction(_ sender: UIButton) {
         //輸入驗證
         guard let emailAddress = emailTextField.text , emailAddress != "" ,
@@ -117,20 +127,4 @@ class LogInViewController: UIViewController {
         })
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

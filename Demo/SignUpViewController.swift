@@ -15,6 +15,18 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
+    // Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        signupButton.isHidden = true
+    }
+    
+    // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // Name 欄位輸入時
     @IBAction func nameChange() {
         if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
             signupButton.isHidden = false
@@ -23,6 +35,8 @@ class SignUpViewController: UIViewController {
             signupButton.isHidden = true
         }
     }
+    
+    // Email 欄位輸入時
     @IBAction func emailChange() {
         if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
             signupButton.isHidden = false
@@ -40,6 +54,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // 註冊按鈕功能
     @IBAction func registerAccount(_ sender: UIButton) {
         //輸入驗證
         guard let name = nameTextField.text , name != "" ,
@@ -80,17 +95,6 @@ class SignUpViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         })
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        signupButton.isHidden = true
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -101,5 +105,4 @@ class SignUpViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
