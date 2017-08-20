@@ -372,7 +372,7 @@
                                 <rect key="frame" x="67" y="113" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-cq-DhY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-cq-DhY">
                                 <rect key="frame" x="67" y="113" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -783,6 +783,7 @@
         <image name="menu" width="22" height="22"/>
         <image name="name" width="24" height="20"/>
         <image name="next-page" width="24" height="24"/>
+        <image name="profile" width="300" height="300"/>
         <image name="up" width="16" height="16"/>
         <image name="user" width="32" height="32"/>
     </resources>

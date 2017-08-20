@@ -79,6 +79,7 @@ class SignUpViewController: UIViewController {
             //儲存使用者名稱
             if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest(){
                 changeRequest.displayName = name
+                changeRequest.photoURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/image-4bbfd.appspot.com/o/photos%2F-KrxEclCeuJjLDdatACK.jpg?alt=media&token=6487cd33-f488-4aae-8cd3-7f16358709ea")! as URL
                 changeRequest.commitChanges(completion: {(error: Error?) in
                     if let error = error{
                         print("Failed to change the display name: \(error.localizedDescription)")
