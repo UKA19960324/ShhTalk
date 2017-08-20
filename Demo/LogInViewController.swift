@@ -116,7 +116,11 @@ class LogInViewController: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
                     return
             }
-
+            let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
+            usersDatabaseRef.child("Name").setValue(user?.displayName)
+            usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
+            
+            //usersDatabaseRef.child("picture")
             //解除鍵盤
             self.view.endEditing(true)
             
@@ -126,5 +130,8 @@ class LogInViewController: UIViewController {
             }
         })
     }
-    
 }
+
+
+
+

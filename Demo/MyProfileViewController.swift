@@ -14,17 +14,22 @@ class MyProfileViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         addSideBarMenu(leftMenuButton: menuButton)
         if let currentuser = Auth.auth().currentUser{
+            let username = currentuser.displayName
             print("--------------------")
             print(currentuser.displayName)
             print(currentuser.email)
             print(currentuser.photoURL)
             print(currentuser.uid)
             print("--------------------")
+            nameLabel.text = username
             if let ProfileImageUrl = currentuser.photoURL{
                 do {
                     let image = try Data(contentsOf: ProfileImageUrl)
@@ -33,11 +38,6 @@ class MyProfileViewController: UIViewController {
                     print("Unale to load data")
                 }
             }
-//            if let IMVurl = NSData(contentsOf: currentuser.photoURL!){
-//                //let  img = UIImage(data: IMVurl as Data)
-//                //imageView.image = img?.scale(newWidth: 240)
-//                imageView.image = UIImage(data: IMVurl as Data)
-//            }
         }
     }
     // Dispose of any resources that can be recreated.
@@ -55,13 +55,53 @@ class MyProfileViewController: UIViewController {
     }
     */
 }
-
-
-
-
-
-
-
-
-
-
+/*
+             `
+            -d-
+           -ds-
+           /--`             ``.--.        .--
+          .---         `..----smh:      .----`
+          --:-.---....-------:o-      .-------
+        `:-----:/o---::--.``       .---------
+        :o:----:so----:          .-----:::::-
+      -:/+sos:--ooo:--.        .///////:-`
+     ++-:yso/--/+/----`        :///:.`
+      .----//:----------`        ://:
+    `.-:---------::::--:-      `-///
+   -:-------::::--:------:-   `:///-`
+   .------::-------:::::----:-+o.
+       ``....----------------//ys+`
+               ------------------+.
+               .----------------/:
+               `----:://::::::///`
+                   .-//.`   `.--:/:
+                     --         `::
+*/
+/*
+                   .
+                 .yh
+                .dmd
+                ss::                                  .`
+               -:---                ````.//::.     `.---
+               :---`            `..-----:mmd+`   `------`
+              .--::`.....````.----------yy/`   `---------
+              .::-------:---------------.`   `----------:
+             `-:------//yy----:/--.``      `.-----------:`
+             -s/-------oy+-----:.         .-------::::::-`
+            .:o//+//+---:+++/---:        ::::///////:-`
+           `++--sdhyy---:oooo----.       -///////:-`
+           `++---oo+o:---:/::-----`       :////:`
+            .-----:/+--------------`       :///:
+           ``.::------------:::::----      .////
+        ..-----------------::-------+:` `.:////:
+        ::----------:://:---:----------.-////-`
+        ----------/----------::///:-----:.-+s/`
+          ```..---::--------------------//:syy+`
+                    :---------------------:o:.`
+                    :---------------------:o:
+                    :--------------------:/:
+                    --------::::::::-:::///`
+                     .-::///:-...-:///////-
+                       `-//.        ```./:-
+                          -:             -/:
+*/

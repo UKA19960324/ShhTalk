@@ -352,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="1557.5712143928038"/>
         </scene>
-        <!--My Profile (趕工中)-->
+        <!--My Profile -->
         <scene sceneID="qaI-Rt-Kf7">
             <objects>
                 <viewController id="hzB-1k-EA2" customClass="MyProfileViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -381,20 +381,60 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwx-Ye-Hsf">
+                                <rect key="frame" x="175" y="442" width="104" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Friends">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19215686274509802" green="0.52156862745098043" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="MicrosoftJhengHeiRegular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRk-hd-FpU">
+                                <rect key="frame" x="115" y="446" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="X">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19215686274509802" green="0.52156862745098043" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="MicrosoftJhengHeiRegular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="APS-ki-Yt9">
+                                <rect key="frame" x="144" y="380" width="87" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19215686274509802" green="0.52156862745098043" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="MicrosoftJhengHeiRegular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile (趕工中)" id="bL5-Bu-UiW">
+                    <navigationItem key="navigationItem" title="My Profile " id="bL5-Bu-UiW">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="fa3-dM-q6h"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="k0i-cq-DhY" id="1XR-1y-872"/>
                         <outlet property="menuButton" destination="fa3-dM-q6h" id="wGY-U9-2f8"/>
+                        <outlet property="nameLabel" destination="APS-ki-Yt9" id="NvH-5N-FCG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5om-PJ-dAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3892" y="117"/>
+            <point key="canvasLocation" x="3892" y="116.49175412293854"/>
         </scene>
         <!--About Us (趕工中)-->
         <scene sceneID="6mH-TH-oJS">
