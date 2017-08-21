@@ -800,6 +800,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Friends (趕工中)" id="azL-8m-Hrs">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="1yg-Fp-BGw"/>
+                        <barButtonItem key="rightBarButtonItem" image="add-user" id="SdF-e9-ZXo">
+                            <connections>
+                                <action selector="AddFriendBtnAction:" destination="Gp0-iF-I2B" id="gQ2-ci-mOQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="1yg-Fp-BGw" id="STH-HT-J9N"/>
@@ -815,6 +820,7 @@
         <image name="Background" width="333" height="604"/>
         <image name="Friends" width="32" height="32"/>
         <image name="Message" width="32" height="32"/>
+        <image name="add-user" width="32" height="32"/>
         <image name="email" width="24" height="16"/>
         <image name="facebook.png" width="21" height="20"/>
         <image name="google" width="21" height="21"/>
