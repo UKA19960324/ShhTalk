@@ -10,6 +10,38 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="aCR-Ns-aKO">
+            <objects>
+                <viewController id="GQp-tj-IeF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ng1-FM-Mez"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKd-EN-S6a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ueb-mW-MWS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sign In 2" translatesAutoresizingMaskIntoConstraints="NO" id="bfk-Zm-gnV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.45000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="        Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQd-Z9-GeN">
+                                <rect key="frame" x="42" y="271" width="291" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.69503032340000004" green="0.940037601" blue="0.99841370559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sv6-Uz-pxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2176.8000000000002" y="-408.84557721139436"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="mdR-q3-vmt">
             <objects>
                 <viewController storyboardIdentifier="Welcome" id="IFx-1o-elV" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -695,7 +727,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0E1-Y7-1fV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBO-al-46y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mBO-al-46y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -713,7 +745,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0OL-dI-zV6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1l-4o-8Va">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V1l-4o-8Va">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -731,7 +763,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vHn-wr-ZOa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dXE-Sx-f7L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dXE-Sx-f7L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -749,7 +781,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsp-f2-a8I" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hng-9U-mUd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hng-9U-mUd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -821,6 +853,7 @@
         <image name="Background" width="333" height="604"/>
         <image name="Friends" width="32" height="32"/>
         <image name="Message" width="32" height="32"/>
+        <image name="Sign In 2" width="375" height="667"/>
         <image name="add-user" width="32" height="32"/>
         <image name="email" width="24" height="16"/>
         <image name="facebook.png" width="21" height="20"/>
