@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class Button: UIButton {
     
-    // 按鈕外型
+// 按鈕外型
     // 圓角半徑
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
@@ -28,14 +28,14 @@ class Button: UIButton {
     }
     
     // 邊框顏色
-    
     @IBInspectable var borderColor: UIColor = .black {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
     
-    // 內文對齊
+    
+// 內文對齊
     
     // 上
     @IBInspectable var titleTopPadding: CGFloat = 0.0 {
@@ -65,7 +65,8 @@ class Button: UIButton {
         }
     }
 
-    // 圖示對齊
+    
+// 圖示對齊
     
     //上
     @IBInspectable var imageTopPadding: CGFloat = 0.0 {

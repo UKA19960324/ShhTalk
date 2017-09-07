@@ -8,8 +8,16 @@
 
 import UIKit
 
+@IBDesignable
 class IBTextField: UITextField {
-
+    
+    // 圓角半徑
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
