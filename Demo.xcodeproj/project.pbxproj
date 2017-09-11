@@ -17,6 +17,7 @@
 		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
 		55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B751F4472600076CE60 /* SidebarMenu.swift */; };
 		55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B791F46BAD30076CE60 /* Button.swift */; };
+		55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C529D31F6548C200F5927F /* HomeViewController.swift */; };
 		55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F61F1475280002CCA3 /* AppDelegate.swift */; };
 		55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F81F1475280002CCA3 /* ViewController.swift */; };
 		55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FA1F1475280002CCA3 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		55A79B751F4472600076CE60 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		55A79B791F46BAD30076CE60 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		55C529D31F6548C200F5927F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55DB88F31F1475280002CCA3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DB88F61F1475280002CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DB88F81F1475280002CCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				55DB89021F1475280002CCA3 /* Info.plist */,
 				556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */,
 				554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */,
+				55C529D31F6548C200F5927F /* HomeViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				5535AB331F3C3A9F004062C5 /* MenuTableViewController.swift in Sources */,
 				55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */,
 				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
+				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
 				554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */,
 				55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */,
