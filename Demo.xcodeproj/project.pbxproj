@@ -17,6 +17,13 @@
 		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
 		55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B751F4472600076CE60 /* SidebarMenu.swift */; };
 		55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B791F46BAD30076CE60 /* Button.swift */; };
+		55B7A5861F683968006D3559 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55B7A57D1F683968006D3559 /* Info.plist */; };
+		55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A57F1F683968006D3559 /* RHButtonView.swift */; };
+		55B7A5881F683968006D3559 /* RHButtonViewConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A5801F683968006D3559 /* RHButtonViewConfigProtocol.swift */; };
+		55B7A5891F683968006D3559 /* RHSideButtonAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A5811F683968006D3559 /* RHSideButtonAnimator.swift */; };
+		55B7A58A1F683968006D3559 /* RHSideButtonAnimatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A5821F683968006D3559 /* RHSideButtonAnimatorProtocol.swift */; };
+		55B7A58B1F683968006D3559 /* RHSideButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A5831F683968006D3559 /* RHSideButtons.swift */; };
+		55B7A58C1F683968006D3559 /* RHTriggerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A5841F683968006D3559 /* RHTriggerButtonView.swift */; };
 		55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C529D31F6548C200F5927F /* HomeViewController.swift */; };
 		55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F61F1475280002CCA3 /* AppDelegate.swift */; };
 		55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F81F1475280002CCA3 /* ViewController.swift */; };
@@ -45,6 +52,14 @@
 		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		55A79B751F4472600076CE60 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		55A79B791F46BAD30076CE60 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		55B7A57D1F683968006D3559 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B7A57F1F683968006D3559 /* RHButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHButtonView.swift; sourceTree = "<group>"; };
+		55B7A5801F683968006D3559 /* RHButtonViewConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHButtonViewConfigProtocol.swift; sourceTree = "<group>"; };
+		55B7A5811F683968006D3559 /* RHSideButtonAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHSideButtonAnimator.swift; sourceTree = "<group>"; };
+		55B7A5821F683968006D3559 /* RHSideButtonAnimatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHSideButtonAnimatorProtocol.swift; sourceTree = "<group>"; };
+		55B7A5831F683968006D3559 /* RHSideButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHSideButtons.swift; sourceTree = "<group>"; };
+		55B7A5841F683968006D3559 /* RHTriggerButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHTriggerButtonView.swift; sourceTree = "<group>"; };
+		55B7A5851F683968006D3559 /* RHSideButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSideButtons.h; sourceTree = "<group>"; };
 		55C529D31F6548C200F5927F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55DB88F31F1475280002CCA3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DB88F61F1475280002CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +97,29 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		55B7A57C1F683968006D3559 /* RHSideButtons */ = {
+			isa = PBXGroup;
+			children = (
+				55B7A57D1F683968006D3559 /* Info.plist */,
+				55B7A57E1F683968006D3559 /* RHSideButtons */,
+				55B7A5851F683968006D3559 /* RHSideButtons.h */,
+			);
+			path = RHSideButtons;
+			sourceTree = "<group>";
+		};
+		55B7A57E1F683968006D3559 /* RHSideButtons */ = {
+			isa = PBXGroup;
+			children = (
+				55B7A57F1F683968006D3559 /* RHButtonView.swift */,
+				55B7A5801F683968006D3559 /* RHButtonViewConfigProtocol.swift */,
+				55B7A5811F683968006D3559 /* RHSideButtonAnimator.swift */,
+				55B7A5821F683968006D3559 /* RHSideButtonAnimatorProtocol.swift */,
+				55B7A5831F683968006D3559 /* RHSideButtons.swift */,
+				55B7A5841F683968006D3559 /* RHTriggerButtonView.swift */,
+			);
+			path = RHSideButtons;
+			sourceTree = "<group>";
+		};
 		55DB88EA1F1475280002CCA3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +141,7 @@
 		55DB88F51F1475280002CCA3 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
 				55DB88F81F1475280002CCA3 /* ViewController.swift */,
@@ -212,6 +251,7 @@
 				55DB89011F1475280002CCA3 /* LaunchScreen.storyboard in Resources */,
 				556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */,
 				55DB88FE1F1475280002CCA3 /* Assets.xcassets in Resources */,
+				55B7A5861F683968006D3559 /* Info.plist in Resources */,
 				55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,14 +314,20 @@
 				5560842B1F29BCD200B0D8EC /* MyProfileViewController.swift in Sources */,
 				556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */,
 				5535AB331F3C3A9F004062C5 /* MenuTableViewController.swift in Sources */,
+				55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */,
 				55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */,
 				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
+				55B7A58C1F683968006D3559 /* RHTriggerButtonView.swift in Sources */,
+				55B7A58B1F683968006D3559 /* RHSideButtons.swift in Sources */,
 				554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */,
+				55B7A5891F683968006D3559 /* RHSideButtonAnimator.swift in Sources */,
 				55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */,
 				5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */,
+				55B7A58A1F683968006D3559 /* RHSideButtonAnimatorProtocol.swift in Sources */,
+				55B7A5881F683968006D3559 /* RHButtonViewConfigProtocol.swift in Sources */,
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
 				C24654601F612ED800E8643B /* IBTextField.swift in Sources */,
 				556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */,
