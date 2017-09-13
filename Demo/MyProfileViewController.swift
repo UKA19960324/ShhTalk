@@ -9,27 +9,26 @@
 import UIKit
 import Firebase
 class MyProfileViewController: UIViewController {
-
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSideBarMenu(leftMenuButton: menuButton)
+        addSideButton()
         if let currentuser = Auth.auth().currentUser{
             let username = currentuser.displayName
-            print("--------------------")
-            print(currentuser.displayName)
-            print(currentuser.email)
-            print(currentuser.photoURL)
-            print(currentuser.uid)
-            print("--------------------")
+            let useremail = currentuser.email
+//            print("--------------------")
+//            print(currentuser.displayName)
+//            print(currentuser.email)
+//            print(currentuser.photoURL)
+//            print(currentuser.uid)
+//            print("--------------------")
             nameLabel.text = username
+            emailLabel.text = useremail
             if let ProfileImageUrl = currentuser.photoURL{
                 do {
                     let image = try Data(contentsOf: ProfileImageUrl)
@@ -40,6 +39,7 @@ class MyProfileViewController: UIViewController {
             }
         }
     }
+    
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

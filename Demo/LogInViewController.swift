@@ -12,37 +12,62 @@ class LogInViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var nextButton: UIButton!
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isHidden = true
     }
     
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    // Email 欄位輸入時
-    @IBAction func emailChange() {
-        if emailTextField.text != "" && passwordTextField.text != ""{
-            nextButton.isHidden = false
+    // 登入按鈕功能
+    @IBAction func loginAction(_ sender: UIButton) {
+        //輸入驗證
+        guard let emailAddress = emailTextField.text , emailAddress != "" ,
+            let password = passwordTextField.text , password != ""
+            else {
+                let alertController = UIAlertController(title: "Login Error" , message: "Both fields must not be blank.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK" , style: .cancel,handler: nil)
+                alertController.addAction(okayAction)
+                present(alertController,animated: true, completion: nil)
+                return
         }
-        else{
-            nextButton.isHidden = true
-        }
-    }
-    
-    // Password 欄位輸入時
-    @IBAction func passwordChange() {
-        if emailTextField.text != "" && passwordTextField.text != ""{
-            nextButton.isHidden = false
-        }
-        else{
-            nextButton.isHidden = true
-        }
+        //呼叫Firebase API 執行登入
+        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: { (user , error) in
+            if let error = error{
+                let alertController = UIAlertController(title: "Login Error",message: error.localizedDescription,preferredStyle : .alert )
+                let okayAction = UIAlertAction(title: "OK", style: .cancel,handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            //Email驗證
+            guard let currentUser = user, currentUser.isEmailVerified
+                else{
+                    let alertController = UIAlertController(title: "Login Error",message: "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verifiction link in that email. If you need us to send the confirmation email again, please tap Resend Email.",preferredStyle:
+                        .alert)
+                    let okayAction = UIAlertAction(title: "Resend email", style: .default,handler:{(action) in user?.sendEmailVerification(completion: nil)})
+                    let cancelAction = UIAlertAction(title: "Cancel",style: .cancel,handler: nil)
+                    alertController.addAction(okayAction)
+                    alertController.addAction(cancelAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    return
+            }
+            let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
+            usersDatabaseRef.child("Name").setValue(user?.displayName)
+            usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
+            
+            //usersDatabaseRef.child("picture")
+            //解除鍵盤
+            self.view.endEditing(true)
+            
+            //呈現主視圖
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
+                self.present(viewController, animated: true, completion: nil)
+            }
+        })
     }
     
     // 忘記密碼按鈕功能
@@ -83,53 +108,6 @@ class LogInViewController: UIViewController {
         present(alertController,animated: true, completion: nil)
     }
 
-    // 登入按鈕功能
-    @IBAction func loginAction(_ sender: UIButton) {
-        //輸入驗證
-        guard let emailAddress = emailTextField.text , emailAddress != "" ,
-                   let password = passwordTextField.text , password != ""
-        else {
-            let alertController = UIAlertController(title: "Login Error" , message: "Both fields must not be blank.", preferredStyle: .alert)
-            let okayAction = UIAlertAction(title: "OK" , style: .cancel,handler: nil)
-            alertController.addAction(okayAction)
-            present(alertController,animated: true, completion: nil)
-            return
-        }
-        //呼叫Firebase API 執行登入
-        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: { (user , error) in
-            if let error = error{
-                let alertController = UIAlertController(title: "Login Error",message: error.localizedDescription,preferredStyle : .alert )
-                let okayAction = UIAlertAction(title: "OK", style: .cancel,handler: nil)
-                alertController.addAction(okayAction)
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
-            //Email驗證
-            guard let currentUser = user, currentUser.isEmailVerified
-                else{
-                    let alertController = UIAlertController(title: "Login Error",message: "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verifiction link in that email. If you need us to send the confirmation email again, please tap Resend Email.",preferredStyle:
-                        .alert)
-                    let okayAction = UIAlertAction(title: "Resend email", style: .default,handler:{(action) in user?.sendEmailVerification(completion: nil)})
-                    let cancelAction = UIAlertAction(title: "Cancel",style: .cancel,handler: nil)
-                    alertController.addAction(okayAction)
-                    alertController.addAction(cancelAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    return
-            }
-            let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
-            usersDatabaseRef.child("Name").setValue(user?.displayName)
-            usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
-            
-            //usersDatabaseRef.child("picture")
-            //解除鍵盤
-            self.view.endEditing(true)
-            
-            //呈現主視圖
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
-                self.present(viewController, animated: true, completion: nil)
-            }
-        })
-    }
 }
 
 

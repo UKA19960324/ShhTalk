@@ -13,45 +13,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signupButton: UIButton!
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        signupButton.isHidden = true
     }
     
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    // Name 欄位輸入時
-    @IBAction func nameChange() {
-        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
-            signupButton.isHidden = false
-        }
-        else{
-            signupButton.isHidden = true
-        }
-    }
-    
-    // Email 欄位輸入時
-    @IBAction func emailChange() {
-        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
-            signupButton.isHidden = false
-        }
-        else{
-            signupButton.isHidden = true
-        }
-    }
-    @IBAction func passwordChange() {
-        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
-            signupButton.isHidden = false
-        }
-        else{
-            signupButton.isHidden = true
-        }
     }
     
     // 註冊按鈕功能

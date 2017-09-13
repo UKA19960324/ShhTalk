@@ -9,21 +9,20 @@
 import UIKit
 
 class FriendsListViewController: UIViewController {
-    
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-    
+        
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSideBarMenu(leftMenuButton: menuButton)
+        addSideButton()
     }
 
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    @IBAction func AddFriendBtnAction(_ sender: UIBarButtonItem) {
+    
+    // 點下+後跳出動作清單 (actionSheet)
+    @IBAction func AddFriendBtnAction(_ sender: UIButton) {
         // 建立一個 UIAlertController 的實體
         // 設定 UIAlertController 的標題與樣式為 動作清單 (actionSheet)
         let AddFriendAlertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
@@ -36,7 +35,7 @@ class FriendsListViewController: UIViewController {
         let QRcodeAction = UIAlertAction(title: "QRcode", style: .default) { (Void) in
             
         }
-        let scanAction = UIAlertAction(title: "Scan", style: .default) { (Void) in
+        let scanAction = UIAlertAction(title: "QRcode reader", style: .default) { (Void) in
         }
         // 新增一個取消動作，讓使用者可以跳出 UIAlertController
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (Void) in

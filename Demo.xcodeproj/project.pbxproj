@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5535AB331F3C3A9F004062C5 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535AB321F3C3A9F004062C5 /* MenuTableViewController.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
 		556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556084281F27791A00B0D8EC /* SWRevealViewController.m */; };
@@ -15,7 +14,6 @@
 		5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */; };
 		5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */; };
 		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
-		55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B751F4472600076CE60 /* SidebarMenu.swift */; };
 		55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B791F46BAD30076CE60 /* Button.swift */; };
 		55B7A5861F683968006D3559 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55B7A57D1F683968006D3559 /* Info.plist */; };
 		55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A57F1F683968006D3559 /* RHButtonView.swift */; };
@@ -27,7 +25,6 @@
 		55B7A5901F68C669006D3559 /* SideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A58F1F68C669006D3559 /* SideButton.swift */; };
 		55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C529D31F6548C200F5927F /* HomeViewController.swift */; };
 		55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F61F1475280002CCA3 /* AppDelegate.swift */; };
-		55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB88F81F1475280002CCA3 /* ViewController.swift */; };
 		55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FA1F1475280002CCA3 /* Main.storyboard */; };
 		55DB88FE1F1475280002CCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FD1F1475280002CCA3 /* Assets.xcassets */; };
 		55DB89011F1475280002CCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */; };
@@ -41,7 +38,6 @@
 /* Begin PBXFileReference section */
 		0851D89E137C11BBFECCA286 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		2967EDC36D1AC222AE841D80 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		5535AB321F3C3A9F004062C5 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		556084261F27791900B0D8EC /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -51,7 +47,6 @@
 		5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
-		55A79B751F4472600076CE60 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		55A79B791F46BAD30076CE60 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		55B7A57D1F683968006D3559 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B7A57F1F683968006D3559 /* RHButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHButtonView.swift; sourceTree = "<group>"; };
@@ -62,10 +57,10 @@
 		55B7A5841F683968006D3559 /* RHTriggerButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHTriggerButtonView.swift; sourceTree = "<group>"; };
 		55B7A5851F683968006D3559 /* RHSideButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSideButtons.h; sourceTree = "<group>"; };
 		55B7A58F1F68C669006D3559 /* SideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButton.swift; sourceTree = "<group>"; };
+		55B7A5911F690C67006D3559 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 		55C529D31F6548C200F5927F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55DB88F31F1475280002CCA3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DB88F61F1475280002CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55DB88F81F1475280002CCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55DB88FB1F1475280002CCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55DB88FD1F1475280002CCA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55DB89001F1475280002CCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,18 +138,16 @@
 		55DB88F51F1475280002CCA3 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				55B7A5911F690C67006D3559 /* Demo.entitlements */,
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
-				55DB88F81F1475280002CCA3 /* ViewController.swift */,
 				55DB891B1F1661F20002CCA3 /* LogInViewController.swift */,
 				55DB891D1F1729810002CCA3 /* SignUpViewController.swift */,
 				5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */,
 				5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */,
 				5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */,
 				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
-				5535AB321F3C3A9F004062C5 /* MenuTableViewController.swift */,
-				55A79B751F4472600076CE60 /* SidebarMenu.swift */,
 				C246545F1F612ED800E8643B /* IBTextField.swift */,
 				55A79B791F46BAD30076CE60 /* Button.swift */,
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
@@ -225,6 +218,11 @@
 						DevelopmentTeam = R577YJV57H;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -316,10 +314,7 @@
 			files = (
 				5560842B1F29BCD200B0D8EC /* MyProfileViewController.swift in Sources */,
 				556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */,
-				5535AB331F3C3A9F004062C5 /* MenuTableViewController.swift in Sources */,
 				55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */,
-				55A79B761F4472600076CE60 /* SidebarMenu.swift in Sources */,
-				55DB88F91F1475280002CCA3 /* ViewController.swift in Sources */,
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
