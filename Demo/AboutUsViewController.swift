@@ -10,12 +10,10 @@ import UIKit
 
 class AboutUsViewController: UIViewController {
     
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-    
      // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSideBarMenu(leftMenuButton: menuButton)
+        addSideButton()
     }
 
     // Dispose of any resources that can be recreated.
@@ -32,5 +30,4 @@ class AboutUsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

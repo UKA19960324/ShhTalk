@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zTH-pC-k3J">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="-602.39999999999998" y="-409.7451274362819"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="Xq0-yD-Ouh">
             <objects>
-                <viewController id="zTH-pC-k3J" sceneMemberID="viewController">
+                <viewController id="zTH-pC-k3J" customClass="AboutUsViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nmH-pC-7Is"/>
                         <viewControllerLayoutGuide type="bottom" id="If9-mL-Tci"/>
@@ -725,7 +725,7 @@
         <!--About Us (趕工中)-->
         <scene sceneID="6mH-TH-oJS">
             <objects>
-                <viewController id="MgA-ct-xc1" customClass="AboutUsViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MgA-ct-xc1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pW8-Sc-npv"/>
                         <viewControllerLayoutGuide type="bottom" id="GrY-xn-qMB"/>
@@ -738,9 +738,6 @@
                     <navigationItem key="navigationItem" title="About Us (趕工中)" id="I8W-FX-VkG">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="uhb-6K-qgJ"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="menuButton" destination="uhb-6K-qgJ" id="KQO-iq-aCB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tV-r5-mbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

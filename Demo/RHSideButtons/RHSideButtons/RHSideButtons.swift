@@ -29,7 +29,7 @@ public class RHSideButtons {
     public weak var delegate: RHSideButtonsDelegate?
     public weak var dataSource: RHSideButtonsDataSource?
 
-    fileprivate let buttonSize = CGSize(width: 55, height: 55)
+    fileprivate let buttonSize = CGSize(width: 45, height: 45)
     fileprivate let verticalSpacing = CGFloat(15)
     fileprivate var hideStateOffset: CGFloat {
         get {
