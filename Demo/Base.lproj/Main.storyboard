@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ipq-GE-inM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="aCR-Ns-aKO">
             <objects>
-                <viewController id="GQp-tj-IeF" customClass="HomeViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="GQp-tj-IeF" customClass="HomeViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ng1-FM-Mez"/>
                         <viewControllerLayoutGuide type="bottom" id="jKd-EN-S6a"/>
@@ -161,6 +161,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msn-Qu-0F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1031" y="251"/>
+        </scene>
+        <!--GenerateQ Rcode View Controller-->
+        <scene sceneID="Chz-B6-P3W">
+            <objects>
+                <viewController storyboardIdentifier="QRcode" id="Ipq-GE-inM" customClass="GenerateQRcodeViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ue-J6-f69"/>
+                        <viewControllerLayoutGuide type="bottom" id="3DP-Jd-7Mq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1C6-WA-wyH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Friends-1" translatesAutoresizingMaskIntoConstraints="NO" id="gmF-N3-mEQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAr-RQ-Ugc">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="FriendBackButtonIcon"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-xd-1av">
+                                <rect key="frame" x="31" y="232" width="252" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zwp-xd-1av" id="INt-2x-DdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5N2-B8-72Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="251"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="Xq0-yD-Ouh">
@@ -467,6 +503,7 @@
         <image name="About 2" width="375" height="667"/>
         <image name="AddFriendIcon" width="118" height="124"/>
         <image name="FBButtonIcon" width="102" height="96"/>
+        <image name="FriendBackButtonIcon" width="78" height="76"/>
         <image name="Friends-1" width="375" height="667"/>
         <image name="GoogleButtonIcon" width="106" height="108"/>
         <image name="My Profile 2" width="375" height="667"/>
