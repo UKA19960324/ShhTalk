@@ -72,11 +72,11 @@ class LogInViewController: UIViewController {
     
     // 忘記密碼按鈕功能
     @IBAction func forgetPassword(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "重設密碼 🔑", message: "請輸入您忘記密碼的信箱", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Reset Password 🔑", message: "Please enter your alternate             email address.", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: {(textField: UITextField) -> Void in
             textField.placeholder = "Email"
         })
-        let resetAction = UIAlertAction(title: "重新發送" , style: .default , handler:{ (action:UIAlertAction!) -> Void in
+        let resetAction = UIAlertAction(title: "Resend" , style: .default , handler:{ (action:UIAlertAction!) -> Void in
             // let email = (alertController.textFields?.first)! .text!
             // print (email)
             guard let email = (alertController.textFields?.first)!.text , email != ""
