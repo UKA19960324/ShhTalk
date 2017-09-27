@@ -44,6 +44,7 @@ class ChooseMViewController: UIViewController {
             }
         }else {
             ModelName = ""
+            BChooseOne = false
             sender.backgroundColor = UIColor.clear
         }
         
