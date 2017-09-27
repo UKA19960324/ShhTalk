@@ -34,6 +34,13 @@
 		7E70447E7E1D5533907920C3 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7EFD29A223606BF9C62292 /* Pods_Demo.framework */; };
 		C24654601F612ED800E8643B /* IBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246545F1F612ED800E8643B /* IBTextField.swift */; };
 		C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24654611F66AEEA00E8643B /* IBImageView.swift */; };
+		CEB41CD71F7BFA34001B8594 /* Charmander.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEB41CD11F7BFA34001B8594 /* Charmander.mtl */; };
+		CEB41CD81F7BFA34001B8594 /* Charmander.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEB41CD21F7BFA34001B8594 /* Charmander.obj */; };
+		CEB41CD91F7BFA34001B8594 /* Charmander.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB41CD31F7BFA34001B8594 /* Charmander.png */; };
+		CEB41CDA1F7BFA34001B8594 /* hitokage_0_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEB41CD51F7BFA34001B8594 /* hitokage_0_0.tga */; };
+		CEB41CDB1F7BFA34001B8594 /* hitokage_0_1.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEB41CD61F7BFA34001B8594 /* hitokage_0_1.tga */; };
+		CEB41CDD1F7BFB67001B8594 /* ChooseMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB41CDC1F7BFB67001B8594 /* ChooseMViewController.swift */; };
+		CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB41CDE1F7BFBBA001B8594 /* ShowMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +79,13 @@
 		C246545F1F612ED800E8643B /* IBTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTextField.swift; sourceTree = "<group>"; };
 		C24654611F66AEEA00E8643B /* IBImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBImageView.swift; sourceTree = "<group>"; };
 		CD7EFD29A223606BF9C62292 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB41CD11F7BFA34001B8594 /* Charmander.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Charmander.mtl; sourceTree = "<group>"; };
+		CEB41CD21F7BFA34001B8594 /* Charmander.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Charmander.obj; sourceTree = "<group>"; };
+		CEB41CD31F7BFA34001B8594 /* Charmander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Charmander.png; sourceTree = "<group>"; };
+		CEB41CD51F7BFA34001B8594 /* hitokage_0_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = hitokage_0_0.tga; sourceTree = "<group>"; };
+		CEB41CD61F7BFA34001B8594 /* hitokage_0_1.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = hitokage_0_1.tga; sourceTree = "<group>"; };
+		CEB41CDC1F7BFB67001B8594 /* ChooseMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseMViewController.swift; sourceTree = "<group>"; };
+		CEB41CDE1F7BFBBA001B8594 /* ShowMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				55B7A5911F690C67006D3559 /* Demo.entitlements */,
+				CEB41CCF1F7BFA34001B8594 /* Model */,
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
@@ -150,6 +165,8 @@
 				5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */,
 				5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */,
 				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
+				CEB41CDC1F7BFB67001B8594 /* ChooseMViewController.swift */,
+				CEB41CDE1F7BFBBA001B8594 /* ShowMViewController.swift */,
 				C246545F1F612ED800E8643B /* IBTextField.swift */,
 				55A79B791F46BAD30076CE60 /* Button.swift */,
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
@@ -181,6 +198,34 @@
 				2967EDC36D1AC222AE841D80 /* Pods-Demo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEB41CCF1F7BFA34001B8594 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB41CD01F7BFA34001B8594 /* Charmander */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEB41CD01F7BFA34001B8594 /* Charmander */ = {
+			isa = PBXGroup;
+			children = (
+				CEB41CD11F7BFA34001B8594 /* Charmander.mtl */,
+				CEB41CD21F7BFA34001B8594 /* Charmander.obj */,
+				CEB41CD31F7BFA34001B8594 /* Charmander.png */,
+				CEB41CD41F7BFA34001B8594 /* Textures */,
+			);
+			path = Charmander;
+			sourceTree = "<group>";
+		};
+		CEB41CD41F7BFA34001B8594 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				CEB41CD51F7BFA34001B8594 /* hitokage_0_0.tga */,
+				CEB41CD61F7BFA34001B8594 /* hitokage_0_1.tga */,
+			);
+			path = Textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +297,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB41CD71F7BFA34001B8594 /* Charmander.mtl in Resources */,
+				CEB41CD81F7BFA34001B8594 /* Charmander.obj in Resources */,
 				55DB89011F1475280002CCA3 /* LaunchScreen.storyboard in Resources */,
 				556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */,
 				55DB88FE1F1475280002CCA3 /* Assets.xcassets in Resources */,
+				CEB41CDB1F7BFA34001B8594 /* hitokage_0_1.tga in Resources */,
 				55B7A5861F683968006D3559 /* Info.plist in Resources */,
+				CEB41CDA1F7BFA34001B8594 /* hitokage_0_0.tga in Resources */,
+				CEB41CD91F7BFA34001B8594 /* Charmander.png in Resources */,
 				55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +371,7 @@
 				55B7A5931F6A413D006D3559 /* GenerateQRcodeViewController.swift in Sources */,
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
+				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
 				55B7A58C1F683968006D3559 /* RHTriggerButtonView.swift in Sources */,
 				55B7A58B1F683968006D3559 /* RHSideButtons.swift in Sources */,
@@ -328,6 +379,7 @@
 				55B7A5891F683968006D3559 /* RHSideButtonAnimator.swift in Sources */,
 				55B7A5901F68C669006D3559 /* SideButton.swift in Sources */,
 				55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */,
+				CEB41CDD1F7BFB67001B8594 /* ChooseMViewController.swift in Sources */,
 				5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */,
 				55B7A58A1F683968006D3559 /* RHSideButtonAnimatorProtocol.swift in Sources */,
 				55B7A5881F683968006D3559 /* RHButtonViewConfigProtocol.swift in Sources */,

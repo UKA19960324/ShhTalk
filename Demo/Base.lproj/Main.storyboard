@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nz9-5J-wvU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="-1031.2" y="1460.4197901049477"/>
         </scene>
-        <!--View Controller-->
+        <!--ChooseM View Controller-->
         <scene sceneID="eDE-nU-Azw">
             <objects>
-                <viewController id="Nz9-5J-wvU" sceneMemberID="viewController">
+                <viewController id="Nz9-5J-wvU" customClass="ChooseMViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lSC-VL-Vm5"/>
                         <viewControllerLayoutGuide type="bottom" id="gWX-Lr-31U"/>
@@ -229,9 +229,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgi-Jb-q9T">
+                                <rect key="frame" x="62" y="534" width="166" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Choose One">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sf2-cZ-gEr" kind="show" id="48m-6a-uOQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-Ns-xCy">
+                                <rect key="frame" x="16" y="178" width="88" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Charmander.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="f9d-lK-d6k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="BTN_Charmander" destination="rBy-Ns-xCy" id="87K-Id-nyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEI-XL-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="1525.5999999999999" y="1844.5277361319343"/>
         </scene>
-        <!--View Controller-->
+        <!--ShowM View Controller-->
         <scene sceneID="07T-Lw-sRu">
             <objects>
-                <viewController id="sf2-cZ-gEr" sceneMemberID="viewController">
+                <viewController id="sf2-cZ-gEr" customClass="ShowMViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OQL-ui-NTy"/>
                         <viewControllerLayoutGuide type="bottom" id="CHK-aA-Ahh"/>
@@ -357,9 +380,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-O2-JUd">
+                                <rect key="frame" x="16" y="170" width="240" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ModelView" destination="fLx-O2-JUd" id="p8b-5J-oC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVE-Fi-I0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -945,6 +975,7 @@
         <image name="About" width="375" height="667"/>
         <image name="Add The Message" width="375" height="667"/>
         <image name="AddFriendIcon" width="118" height="124"/>
+        <image name="Charmander.png" width="210" height="237"/>
         <image name="Chat" width="375" height="667"/>
         <image name="Check Model" width="375" height="667"/>
         <image name="Check Model File" width="375" height="667"/>
