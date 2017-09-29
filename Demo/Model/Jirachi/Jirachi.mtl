@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 4
 
-newmtl mat1.001
+newmtl mat1.002
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -12,7 +12,7 @@ d 1.000000
 illum 2
 map_Kd Textures/JirachiDh.tga
 
-newmtl mat2.001
+newmtl mat2.002
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -23,7 +23,7 @@ d 1.000000
 illum 2
 map_Kd Textures/JirachiEyeDh.tga
 
-newmtl mat3.001
+newmtl mat3.002
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -34,7 +34,7 @@ d 1.000000
 illum 2
 map_Kd Textures/JirachiEye3Dh.tga
 
-newmtl mat4
+newmtl mat4.002
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000

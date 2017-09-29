@@ -21,7 +21,7 @@ class ChooseMViewController: UIViewController {
     @IBOutlet weak var BTN_Vulpix: UIButton!
     @IBOutlet weak var BTN_Teddiursa: UIButton!
     @IBOutlet weak var BTN_Jirachi: UIButton!
-    @IBOutlet weak var BTN_Mew: UIButton!
+    @IBOutlet weak var BTN_Haunter: UIButton!
     
     @IBOutlet weak var UpBTNModel:UIButton?
     var ModelName = ""
@@ -69,8 +69,8 @@ class ChooseMViewController: UIViewController {
         case BTN_Vulpix:
             ModelName = "Vulpix.obj"
             break
-        case BTN_Mew:
-            ModelName = "Mew.obj"
+        case BTN_Haunter:
+            ModelName = "Haunter.obj"
             break
         case BTN_Teddiursa:
             ModelName = "Teddiursa.obj"

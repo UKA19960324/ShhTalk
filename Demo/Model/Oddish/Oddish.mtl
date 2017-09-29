@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 3
 
-newmtl mat1.004
+newmtl mat1.007
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -12,7 +12,7 @@ d 1.000000
 illum 2
 map_Kd Textures/NazonokusaDh.tga
 
-newmtl mat2.004
+newmtl mat2.007
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -23,7 +23,7 @@ d 1.000000
 illum 2
 map_Kd Textures/NazonokusaEyeDh.tga
 
-newmtl mat3.002
+newmtl mat3.005
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000

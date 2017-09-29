@@ -49,10 +49,6 @@
 		CEC580461F7E8DFE00ED18E3 /* HimegumaMouthDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FEC1F7E8DFD00ED18E3 /* HimegumaMouthDh.tga */; };
 		CEC5804D1F7E8DFE00ED18E3 /* Pikachu.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FF51F7E8DFD00ED18E3 /* Pikachu.mtl */; };
 		CEC5804E1F7E8DFE00ED18E3 /* Pikachu.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FF61F7E8DFD00ED18E3 /* Pikachu.obj */; };
-		CEC5804F1F7E8DFE00ED18E3 /* pm0025_00_BodyA1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FF81F7E8DFD00ED18E3 /* pm0025_00_BodyA1.png */; };
-		CEC580501F7E8DFE00ED18E3 /* pm0025_00_BodyB1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FF91F7E8DFD00ED18E3 /* pm0025_00_BodyB1.png */; };
-		CEC580511F7E8DFE00ED18E3 /* pm0025_00_Eye1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FFA1F7E8DFD00ED18E3 /* pm0025_00_Eye1.png */; };
-		CEC580521F7E8DFE00ED18E3 /* pm0025_00_Mouth1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FFB1F7E8DFD00ED18E3 /* pm0025_00_Mouth1.png */; };
 		CEC580531F7E8DFE00ED18E3 /* Jirachi.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FFD1F7E8DFD00ED18E3 /* Jirachi.mtl */; };
 		CEC580541F7E8DFE00ED18E3 /* Jirachi.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FFE1F7E8DFD00ED18E3 /* Jirachi.obj */; };
 		CEC580551F7E8DFE00ED18E3 /* Jirachi.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC57FFF1F7E8DFD00ED18E3 /* Jirachi.png */; };
@@ -81,13 +77,6 @@
 		CEC5806C1F7E8DFE00ED18E3 /* Jigglypuff.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC5801E1F7E8DFD00ED18E3 /* Jigglypuff.obj */; };
 		CEC5806D1F7E8DFE00ED18E3 /* Jigglypuff.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5801F1F7E8DFD00ED18E3 /* Jigglypuff.png */; };
 		CEC5806E1F7E8DFE00ED18E3 /* purin_0_0.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580211F7E8DFD00ED18E3 /* purin_0_0.tga */; };
-		CEC5806F1F7E8DFE00ED18E3 /* Mew.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC580231F7E8DFD00ED18E3 /* Mew.mtl */; };
-		CEC580701F7E8DFE00ED18E3 /* Mew.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC580241F7E8DFD00ED18E3 /* Mew.obj */; };
-		CEC580711F7E8DFE00ED18E3 /* Mew.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC580251F7E8DFD00ED18E3 /* Mew.png */; };
-		CEC580721F7E8DFE00ED18E3 /* pm0151_00_Body1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC580271F7E8DFD00ED18E3 /* pm0151_00_Body1.png */; };
-		CEC580731F7E8DFE00ED18E3 /* pm0151_00_Eye1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC580281F7E8DFD00ED18E3 /* pm0151_00_Eye1.png */; };
-		CEC580741F7E8DFE00ED18E3 /* pm0151_00_Iris1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC580291F7E8DFD00ED18E3 /* pm0151_00_Iris1.png */; };
-		CEC580751F7E8DFE00ED18E3 /* pm0151_00_Mouth1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5802A1F7E8DFD00ED18E3 /* pm0151_00_Mouth1.png */; };
 		CEC580761F7E8DFE00ED18E3 /* Oddish.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC5802C1F7E8DFD00ED18E3 /* Oddish.mtl */; };
 		CEC580771F7E8DFE00ED18E3 /* Oddish.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC5802D1F7E8DFD00ED18E3 /* Oddish.obj */; };
 		CEC580781F7E8DFE00ED18E3 /* oddish.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5802E1F7E8DFD00ED18E3 /* oddish.png */; };
@@ -104,6 +93,15 @@
 		CEC580831F7E8DFE00ED18E3 /* Vulpix.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC5803E1F7E8DFE00ED18E3 /* Vulpix.mtl */; };
 		CEC580841F7E8DFE00ED18E3 /* Vulpix.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC5803F1F7E8DFE00ED18E3 /* Vulpix.obj */; };
 		CEC580851F7E8DFE00ED18E3 /* Vulpix.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC580401F7E8DFE00ED18E3 /* Vulpix.png */; };
+		CEC5808C1F7EB34400ED18E3 /* PikachuDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580871F7EB34400ED18E3 /* PikachuDh.tga */; };
+		CEC5808D1F7EB34400ED18E3 /* PikachuEyeDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580881F7EB34400ED18E3 /* PikachuEyeDh.tga */; };
+		CEC5808E1F7EB34400ED18E3 /* PikachuHohoDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580891F7EB34400ED18E3 /* PikachuHohoDh.tga */; };
+		CEC5808F1F7EB34400ED18E3 /* PikachuMouthDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC5808A1F7EB34400ED18E3 /* PikachuMouthDh.tga */; };
+		CEC580971F7EB6BD00ED18E3 /* Haunter.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CEC580921F7EB6BD00ED18E3 /* Haunter.mtl */; };
+		CEC580981F7EB6BD00ED18E3 /* Haunter.obj in Resources */ = {isa = PBXBuildFile; fileRef = CEC580931F7EB6BD00ED18E3 /* Haunter.obj */; };
+		CEC580991F7EB6BD00ED18E3 /* GhostDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580951F7EB6BD00ED18E3 /* GhostDh.tga */; };
+		CEC5809A1F7EB6BD00ED18E3 /* GhostEyeDh.tga in Resources */ = {isa = PBXBuildFile; fileRef = CEC580961F7EB6BD00ED18E3 /* GhostEyeDh.tga */; };
+		CEC5809E1F7EBA6500ED18E3 /* Haunter.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5809D1F7EBA6500ED18E3 /* Haunter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,10 +155,6 @@
 		CEC57FEC1F7E8DFD00ED18E3 /* HimegumaMouthDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = HimegumaMouthDh.tga; sourceTree = "<group>"; };
 		CEC57FF51F7E8DFD00ED18E3 /* Pikachu.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pikachu.mtl; sourceTree = "<group>"; };
 		CEC57FF61F7E8DFD00ED18E3 /* Pikachu.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pikachu.obj; sourceTree = "<group>"; };
-		CEC57FF81F7E8DFD00ED18E3 /* pm0025_00_BodyA1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_BodyA1.png; sourceTree = "<group>"; };
-		CEC57FF91F7E8DFD00ED18E3 /* pm0025_00_BodyB1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_BodyB1.png; sourceTree = "<group>"; };
-		CEC57FFA1F7E8DFD00ED18E3 /* pm0025_00_Eye1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_Eye1.png; sourceTree = "<group>"; };
-		CEC57FFB1F7E8DFD00ED18E3 /* pm0025_00_Mouth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0025_00_Mouth1.png; sourceTree = "<group>"; };
 		CEC57FFD1F7E8DFD00ED18E3 /* Jirachi.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jirachi.mtl; sourceTree = "<group>"; };
 		CEC57FFE1F7E8DFD00ED18E3 /* Jirachi.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jirachi.obj; sourceTree = "<group>"; };
 		CEC57FFF1F7E8DFD00ED18E3 /* Jirachi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jirachi.png; sourceTree = "<group>"; };
@@ -189,13 +183,6 @@
 		CEC5801E1F7E8DFD00ED18E3 /* Jigglypuff.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jigglypuff.obj; sourceTree = "<group>"; };
 		CEC5801F1F7E8DFD00ED18E3 /* Jigglypuff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jigglypuff.png; sourceTree = "<group>"; };
 		CEC580211F7E8DFD00ED18E3 /* purin_0_0.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = purin_0_0.tga; sourceTree = "<group>"; };
-		CEC580231F7E8DFD00ED18E3 /* Mew.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mew.mtl; sourceTree = "<group>"; };
-		CEC580241F7E8DFD00ED18E3 /* Mew.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mew.obj; sourceTree = "<group>"; };
-		CEC580251F7E8DFD00ED18E3 /* Mew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mew.png; sourceTree = "<group>"; };
-		CEC580271F7E8DFD00ED18E3 /* pm0151_00_Body1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0151_00_Body1.png; sourceTree = "<group>"; };
-		CEC580281F7E8DFD00ED18E3 /* pm0151_00_Eye1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0151_00_Eye1.png; sourceTree = "<group>"; };
-		CEC580291F7E8DFD00ED18E3 /* pm0151_00_Iris1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0151_00_Iris1.png; sourceTree = "<group>"; };
-		CEC5802A1F7E8DFD00ED18E3 /* pm0151_00_Mouth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm0151_00_Mouth1.png; sourceTree = "<group>"; };
 		CEC5802C1F7E8DFD00ED18E3 /* Oddish.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oddish.mtl; sourceTree = "<group>"; };
 		CEC5802D1F7E8DFD00ED18E3 /* Oddish.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oddish.obj; sourceTree = "<group>"; };
 		CEC5802E1F7E8DFD00ED18E3 /* oddish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oddish.png; sourceTree = "<group>"; };
@@ -212,6 +199,15 @@
 		CEC5803E1F7E8DFE00ED18E3 /* Vulpix.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vulpix.mtl; sourceTree = "<group>"; };
 		CEC5803F1F7E8DFE00ED18E3 /* Vulpix.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vulpix.obj; sourceTree = "<group>"; };
 		CEC580401F7E8DFE00ED18E3 /* Vulpix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vulpix.png; sourceTree = "<group>"; };
+		CEC580871F7EB34400ED18E3 /* PikachuDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = PikachuDh.tga; sourceTree = "<group>"; };
+		CEC580881F7EB34400ED18E3 /* PikachuEyeDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = PikachuEyeDh.tga; sourceTree = "<group>"; };
+		CEC580891F7EB34400ED18E3 /* PikachuHohoDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = PikachuHohoDh.tga; sourceTree = "<group>"; };
+		CEC5808A1F7EB34400ED18E3 /* PikachuMouthDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = PikachuMouthDh.tga; sourceTree = "<group>"; };
+		CEC580921F7EB6BD00ED18E3 /* Haunter.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haunter.mtl; sourceTree = "<group>"; };
+		CEC580931F7EB6BD00ED18E3 /* Haunter.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haunter.obj; sourceTree = "<group>"; };
+		CEC580951F7EB6BD00ED18E3 /* GhostDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = GhostDh.tga; sourceTree = "<group>"; };
+		CEC580961F7EB6BD00ED18E3 /* GhostEyeDh.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = GhostEyeDh.tga; sourceTree = "<group>"; };
+		CEC5809D1F7EBA6500ED18E3 /* Haunter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Haunter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +325,7 @@
 		CEB41CCF1F7BFA34001B8594 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEC580911F7EB6BD00ED18E3 /* Haunter */,
 				CEC57FE51F7E8DFD00ED18E3 /* Teddiursa */,
 				CEC57FF41F7E8DFD00ED18E3 /* Pikachu */,
 				CEC57FFC1F7E8DFD00ED18E3 /* Jirachi */,
@@ -336,7 +333,6 @@
 				CEC5800C1F7E8DFD00ED18E3 /* Clefairy */,
 				CEC580141F7E8DFD00ED18E3 /* Eevee */,
 				CEC5801C1F7E8DFD00ED18E3 /* Jigglypuff */,
-				CEC580221F7E8DFD00ED18E3 /* Mew */,
 				CEC5802B1F7E8DFD00ED18E3 /* Oddish */,
 				CEC580331F7E8DFE00ED18E3 /* Squirtle */,
 				CEC580391F7E8DFE00ED18E3 /* Vulpix */,
@@ -389,22 +385,11 @@
 		CEC57FF41F7E8DFD00ED18E3 /* Pikachu */ = {
 			isa = PBXGroup;
 			children = (
+				CEC580861F7EB34400ED18E3 /* Textures */,
 				CEC57FF51F7E8DFD00ED18E3 /* Pikachu.mtl */,
 				CEC57FF61F7E8DFD00ED18E3 /* Pikachu.obj */,
-				CEC57FF71F7E8DFD00ED18E3 /* Textures */,
 			);
 			path = Pikachu;
-			sourceTree = "<group>";
-		};
-		CEC57FF71F7E8DFD00ED18E3 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				CEC57FF81F7E8DFD00ED18E3 /* pm0025_00_BodyA1.png */,
-				CEC57FF91F7E8DFD00ED18E3 /* pm0025_00_BodyB1.png */,
-				CEC57FFA1F7E8DFD00ED18E3 /* pm0025_00_Eye1.png */,
-				CEC57FFB1F7E8DFD00ED18E3 /* pm0025_00_Mouth1.png */,
-			);
-			path = Textures;
 			sourceTree = "<group>";
 		};
 		CEC57FFC1F7E8DFD00ED18E3 /* Jirachi */ = {
@@ -510,28 +495,6 @@
 			path = Textures;
 			sourceTree = "<group>";
 		};
-		CEC580221F7E8DFD00ED18E3 /* Mew */ = {
-			isa = PBXGroup;
-			children = (
-				CEC580231F7E8DFD00ED18E3 /* Mew.mtl */,
-				CEC580241F7E8DFD00ED18E3 /* Mew.obj */,
-				CEC580251F7E8DFD00ED18E3 /* Mew.png */,
-				CEC580261F7E8DFD00ED18E3 /* Textures */,
-			);
-			path = Mew;
-			sourceTree = "<group>";
-		};
-		CEC580261F7E8DFD00ED18E3 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				CEC580271F7E8DFD00ED18E3 /* pm0151_00_Body1.png */,
-				CEC580281F7E8DFD00ED18E3 /* pm0151_00_Eye1.png */,
-				CEC580291F7E8DFD00ED18E3 /* pm0151_00_Iris1.png */,
-				CEC5802A1F7E8DFD00ED18E3 /* pm0151_00_Mouth1.png */,
-			);
-			path = Textures;
-			sourceTree = "<group>";
-		};
 		CEC5802B1F7E8DFD00ED18E3 /* Oddish */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +552,37 @@
 				CEC5803B1F7E8DFE00ED18E3 /* RokonDh.tga */,
 				CEC5803C1F7E8DFE00ED18E3 /* RokonEyeDh.tga */,
 				CEC5803D1F7E8DFE00ED18E3 /* RokonMouthDh.tga */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		CEC580861F7EB34400ED18E3 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				CEC580871F7EB34400ED18E3 /* PikachuDh.tga */,
+				CEC580881F7EB34400ED18E3 /* PikachuEyeDh.tga */,
+				CEC580891F7EB34400ED18E3 /* PikachuHohoDh.tga */,
+				CEC5808A1F7EB34400ED18E3 /* PikachuMouthDh.tga */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		CEC580911F7EB6BD00ED18E3 /* Haunter */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5809D1F7EBA6500ED18E3 /* Haunter.png */,
+				CEC580921F7EB6BD00ED18E3 /* Haunter.mtl */,
+				CEC580931F7EB6BD00ED18E3 /* Haunter.obj */,
+				CEC580941F7EB6BD00ED18E3 /* Textures */,
+			);
+			path = Haunter;
+			sourceTree = "<group>";
+		};
+		CEC580941F7EB6BD00ED18E3 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				CEC580951F7EB6BD00ED18E3 /* GhostDh.tga */,
+				CEC580961F7EB6BD00ED18E3 /* GhostEyeDh.tga */,
 			);
 			path = Textures;
 			sourceTree = "<group>";
@@ -664,35 +658,33 @@
 			files = (
 				CEC580691F7E8DFE00ED18E3 /* pm0133_00_Eye1.png in Resources */,
 				CEC5806D1F7E8DFE00ED18E3 /* Jigglypuff.png in Resources */,
+				CEC5808E1F7EB34400ED18E3 /* PikachuHohoDh.tga in Resources */,
 				CEC580591F7E8DFE00ED18E3 /* JirachiMouthDh.tga in Resources */,
 				CEC580671F7E8DFE00ED18E3 /* Eevee.png in Resources */,
+				CEC580971F7EB6BD00ED18E3 /* Haunter.mtl in Resources */,
 				CEB41CD71F7BFA34001B8594 /* Charmander.mtl in Resources */,
 				CEC5804E1F7E8DFE00ED18E3 /* Pikachu.obj in Resources */,
 				CEB41CD81F7BFA34001B8594 /* Charmander.obj in Resources */,
 				CEC5807B1F7E8DFE00ED18E3 /* NazonokusaMouthDh.tga in Resources */,
 				CEC580801F7E8DFE00ED18E3 /* RokonDh.tga in Resources */,
+				CEC5808D1F7EB34400ED18E3 /* PikachuEyeDh.tga in Resources */,
 				CEC5805E1F7E8DFE00ED18E3 /* FushigidaneEyeDh.tga in Resources */,
 				CEC580611F7E8DFE00ED18E3 /* Clefairy.png in Resources */,
 				CEC580621F7E8DFE00ED18E3 /* pippi_0_0.tga in Resources */,
 				CEC580811F7E8DFE00ED18E3 /* RokonEyeDh.tga in Resources */,
 				CEC5806E1F7E8DFE00ED18E3 /* purin_0_0.tga in Resources */,
 				CEC580651F7E8DFE00ED18E3 /* Eevee.mtl in Resources */,
-				CEC580751F7E8DFE00ED18E3 /* pm0151_00_Mouth1.png in Resources */,
 				CEC5807E1F7E8DFE00ED18E3 /* Squirtle.png in Resources */,
-				CEC580711F7E8DFE00ED18E3 /* Mew.png in Resources */,
 				55DB89011F1475280002CCA3 /* LaunchScreen.storyboard in Resources */,
 				CEC5807A1F7E8DFE00ED18E3 /* NazonokusaEyeDh.tga in Resources */,
+				CEC580981F7EB6BD00ED18E3 /* Haunter.obj in Resources */,
 				CEC580461F7E8DFE00ED18E3 /* HimegumaMouthDh.tga in Resources */,
 				CEC580661F7E8DFE00ED18E3 /* Eevee.obj in Resources */,
 				CEC5806B1F7E8DFE00ED18E3 /* Jigglypuff.mtl in Resources */,
 				CEC580771F7E8DFE00ED18E3 /* Oddish.obj in Resources */,
-				CEC580721F7E8DFE00ED18E3 /* pm0151_00_Body1.png in Resources */,
 				CEC580531F7E8DFE00ED18E3 /* Jirachi.mtl in Resources */,
 				CEC5805A1F7E8DFE00ED18E3 /* Bulbasaur.mtl in Resources */,
-				CEC580741F7E8DFE00ED18E3 /* pm0151_00_Iris1.png in Resources */,
-				CEC580511F7E8DFE00ED18E3 /* pm0025_00_Eye1.png in Resources */,
 				CEC580791F7E8DFE00ED18E3 /* NazonokusaDh.tga in Resources */,
-				CEC5804F1F7E8DFE00ED18E3 /* pm0025_00_BodyA1.png in Resources */,
 				CEC580831F7E8DFE00ED18E3 /* Vulpix.mtl in Resources */,
 				CEC5806A1F7E8DFE00ED18E3 /* pm0133_00_Mouth1.png in Resources */,
 				CEC580841F7E8DFE00ED18E3 /* Vulpix.obj in Resources */,
@@ -704,21 +696,22 @@
 				CEC580761F7E8DFE00ED18E3 /* Oddish.mtl in Resources */,
 				CEC580821F7E8DFE00ED18E3 /* RokonMouthDh.tga in Resources */,
 				CEC580601F7E8DFE00ED18E3 /* Clefairy.obj in Resources */,
-				CEC580701F7E8DFE00ED18E3 /* Mew.obj in Resources */,
 				CEC580781F7E8DFE00ED18E3 /* oddish.png in Resources */,
 				CEC5807C1F7E8DFE00ED18E3 /* Squirtle.mtl in Resources */,
 				CEC580851F7E8DFE00ED18E3 /* Vulpix.png in Resources */,
 				CEC580431F7E8DFE00ED18E3 /* Teddiursa.png in Resources */,
 				CEB41CDB1F7BFA34001B8594 /* hitokage_0_1.tga in Resources */,
 				CEC580411F7E8DFE00ED18E3 /* Teddiursa.mtl in Resources */,
-				CEC580521F7E8DFE00ED18E3 /* pm0025_00_Mouth1.png in Resources */,
 				CEC580631F7E8DFE00ED18E3 /* pippi_0_1.tga in Resources */,
 				CEC5805B1F7E8DFE00ED18E3 /* Bulbasaur.obj in Resources */,
 				CEC580581F7E8DFE00ED18E3 /* JirachiEyeDh.tga in Resources */,
+				CEC5808F1F7EB34400ED18E3 /* PikachuMouthDh.tga in Resources */,
 				55B7A5861F683968006D3559 /* Info.plist in Resources */,
 				CEC5805D1F7E8DFE00ED18E3 /* FushigidaneDh.tga in Resources */,
+				CEC5809A1F7EB6BD00ED18E3 /* GhostEyeDh.tga in Resources */,
 				CEC5806C1F7E8DFE00ED18E3 /* Jigglypuff.obj in Resources */,
 				CEC5804D1F7E8DFE00ED18E3 /* Pikachu.mtl in Resources */,
+				CEC5809E1F7EBA6500ED18E3 /* Haunter.png in Resources */,
 				CEB41CDA1F7BFA34001B8594 /* hitokage_0_0.tga in Resources */,
 				CEC580641F7E8DFE00ED18E3 /* pippi_0_2.tga in Resources */,
 				CEB41CD91F7BFA34001B8594 /* Charmander.png in Resources */,
@@ -726,12 +719,11 @@
 				CEC580451F7E8DFE00ED18E3 /* HimegumaEyeDh.tga in Resources */,
 				CEC580441F7E8DFE00ED18E3 /* HimegumaDh.tga in Resources */,
 				CEC580681F7E8DFE00ED18E3 /* pm0133_00_Body1.png in Resources */,
-				CEC580501F7E8DFE00ED18E3 /* pm0025_00_BodyB1.png in Resources */,
-				CEC5806F1F7E8DFE00ED18E3 /* Mew.mtl in Resources */,
+				CEC580991F7EB6BD00ED18E3 /* GhostDh.tga in Resources */,
 				CEC580561F7E8DFE00ED18E3 /* JirachiDh.tga in Resources */,
 				55DB88FC1F1475280002CCA3 /* Main.storyboard in Resources */,
 				CEC580421F7E8DFE00ED18E3 /* Teddiursa.obj in Resources */,
-				CEC580731F7E8DFE00ED18E3 /* pm0151_00_Eye1.png in Resources */,
+				CEC5808C1F7EB34400ED18E3 /* PikachuDh.tga in Resources */,
 				CEC580571F7E8DFE00ED18E3 /* JirachiEye3Dh.tga in Resources */,
 				CEC5807F1F7E8DFE00ED18E3 /* zenigame_1_0.tga in Resources */,
 				CEC5807D1F7E8DFE00ED18E3 /* Squirtle.obj in Resources */,

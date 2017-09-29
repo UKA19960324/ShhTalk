@@ -265,17 +265,8 @@
                                     <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="QKc-VV-unz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-gu-6yD">
-                                <rect key="frame" x="26" y="440" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button" image="Teddiursa.png"/>
-                                <connections>
-                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="l9z-po-t43"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-u6-SNq">
-                                <rect key="frame" x="117" y="440" width="75" height="75"/>
+                                <rect key="frame" x="208" y="440" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button" image="Jirachi.png"/>
@@ -340,12 +331,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOF-VM-LAq">
-                                <rect key="frame" x="208" y="440" width="75" height="75"/>
+                                <rect key="frame" x="26" y="440" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button" image="Mew.png"/>
+                                <state key="normal" title="Button" image="Haunter.png"/>
                                 <connections>
                                     <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="Ayv-ky-nwz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-gu-6yD">
+                                <rect key="frame" x="117" y="440" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Teddiursa.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="l9z-po-t43"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -356,9 +356,9 @@
                         <outlet property="BTN_Charmander" destination="rBy-Ns-xCy" id="87K-Id-nyw"/>
                         <outlet property="BTN_Clefairy" destination="RsU-N0-nvM" id="zhc-2K-fIE"/>
                         <outlet property="BTN_Eevee" destination="5Pl-2o-x9x" id="OXV-84-HpI"/>
+                        <outlet property="BTN_Haunter" destination="dOF-VM-LAq" id="7o8-7w-7bo"/>
                         <outlet property="BTN_Jigglypuff" destination="0Ci-Rr-Q72" id="Zbb-70-hZu"/>
                         <outlet property="BTN_Jirachi" destination="b8j-u6-SNq" id="ddx-sl-3LP"/>
-                        <outlet property="BTN_Mew" destination="dOF-VM-LAq" id="6Or-3K-a0c"/>
                         <outlet property="BTN_Oddish" destination="xas-40-ChP" id="3xr-NN-srR"/>
                         <outlet property="BTN_Pikachu" destination="U6E-f3-J20" id="AI0-S4-N7e"/>
                         <outlet property="BTN_Squirtle" destination="vfr-ot-l5q" id="hQq-ug-cUc"/>
@@ -1111,9 +1111,9 @@
         <image name="FBButtonIcon" width="102" height="96"/>
         <image name="Friends" width="375" height="667"/>
         <image name="GoogleButtonIcon" width="106" height="108"/>
+        <image name="Haunter.png" width="800" height="682"/>
         <image name="Jigglypuff.png" width="920" height="868"/>
         <image name="Jirachi.png" width="770" height="582"/>
-        <image name="Mew.png" width="250" height="250"/>
         <image name="My Profile" width="375" height="667"/>
         <image name="Pikachu" width="206" height="189"/>
         <image name="QRcode" width="375" height="667"/>
