@@ -229,8 +229,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ci-Rr-Q72">
+                                <rect key="frame" x="208" y="266" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Jigglypuff.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="KmT-zW-H5O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xas-40-ChP">
+                                <rect key="frame" x="26" y="353" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="oddish.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="uFm-lh-AdL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsU-N0-nvM">
+                                <rect key="frame" x="117" y="353" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Clefairy.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="qhe-Ga-6M7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-QV-NuF">
+                                <rect key="frame" x="208" y="353" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Vulpix.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="QKc-VV-unz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-gu-6yD">
+                                <rect key="frame" x="26" y="440" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Teddiursa.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="l9z-po-t43"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-u6-SNq">
+                                <rect key="frame" x="117" y="440" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Jirachi.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="fqS-dm-BOr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pl-2o-x9x">
+                                <rect key="frame" x="117" y="266" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Eevee.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="yIX-zV-EB1"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgi-Jb-q9T">
-                                <rect key="frame" x="62" y="534" width="166" height="41"/>
+                                <rect key="frame" x="75" y="538" width="166" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Choose One">
@@ -241,7 +304,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-Ns-xCy">
-                                <rect key="frame" x="16" y="178" width="88" height="103"/>
+                                <rect key="frame" x="26" y="179" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button" image="Charmander.png"/>
@@ -249,11 +312,58 @@
                                     <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="f9d-lK-d6k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6E-f3-J20">
+                                <rect key="frame" x="26" y="266" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Pikachu"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="mbO-Gc-LMv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKt-1v-UVV">
+                                <rect key="frame" x="117" y="179" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Bulbasaur.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="Ffx-uD-a0m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfr-ot-l5q">
+                                <rect key="frame" x="208" y="179" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Squirtle.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="YxK-Y0-avP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOF-VM-LAq">
+                                <rect key="frame" x="208" y="440" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button" image="Mew.png"/>
+                                <connections>
+                                    <action selector="ChooseAction:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="Ayv-ky-nwz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="BTN_Bulbasaur" destination="OKt-1v-UVV" id="r3z-ta-c31"/>
                         <outlet property="BTN_Charmander" destination="rBy-Ns-xCy" id="87K-Id-nyw"/>
+                        <outlet property="BTN_Clefairy" destination="RsU-N0-nvM" id="zhc-2K-fIE"/>
+                        <outlet property="BTN_Eevee" destination="5Pl-2o-x9x" id="OXV-84-HpI"/>
+                        <outlet property="BTN_Jigglypuff" destination="0Ci-Rr-Q72" id="Zbb-70-hZu"/>
+                        <outlet property="BTN_Jirachi" destination="b8j-u6-SNq" id="ddx-sl-3LP"/>
+                        <outlet property="BTN_Mew" destination="dOF-VM-LAq" id="6Or-3K-a0c"/>
+                        <outlet property="BTN_Oddish" destination="xas-40-ChP" id="3xr-NN-srR"/>
+                        <outlet property="BTN_Pikachu" destination="U6E-f3-J20" id="AI0-S4-N7e"/>
+                        <outlet property="BTN_Squirtle" destination="vfr-ot-l5q" id="hQq-ug-cUc"/>
+                        <outlet property="BTN_Teddiursa" destination="uh5-gu-6yD" id="kZr-4C-aYf"/>
+                        <outlet property="BTN_Vulpix" destination="tBY-QV-NuF" id="6fX-KR-v6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEI-XL-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,10 +491,21 @@
                                 </state>
                             </button>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whj-n0-nU6">
-                                <rect key="frame" x="16" y="176" width="240" height="337"/>
+                                <rect key="frame" x="35" y="178" width="240" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-R5-cAq">
+                                <rect key="frame" x="100" y="575" width="116" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nz9-5J-wvU" kind="show" id="mNQ-Lo-yle"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -976,6 +1097,7 @@
         <image name="About" width="375" height="667"/>
         <image name="Add The Message" width="375" height="667"/>
         <image name="AddFriendIcon" width="118" height="124"/>
+        <image name="Bulbasaur.png" width="250" height="250"/>
         <image name="Charmander.png" width="210" height="237"/>
         <image name="Chat" width="375" height="667"/>
         <image name="Check Model" width="375" height="667"/>
@@ -983,15 +1105,25 @@
         <image name="Check friend" width="375" height="667"/>
         <image name="Choose Model" width="375" height="667"/>
         <image name="Choose Model File" width="375" height="667"/>
+        <image name="Clefairy.png" width="250" height="250"/>
+        <image name="Eevee.png" width="250" height="250"/>
         <image name="Encrypt" width="375" height="667"/>
         <image name="FBButtonIcon" width="102" height="96"/>
         <image name="Friends" width="375" height="667"/>
         <image name="GoogleButtonIcon" width="106" height="108"/>
+        <image name="Jigglypuff.png" width="920" height="868"/>
+        <image name="Jirachi.png" width="770" height="582"/>
+        <image name="Mew.png" width="250" height="250"/>
         <image name="My Profile" width="375" height="667"/>
+        <image name="Pikachu" width="206" height="189"/>
         <image name="QRcode" width="375" height="667"/>
         <image name="QRcode reader" width="375" height="667"/>
         <image name="SearchIcon" width="120" height="124"/>
         <image name="Show The Message" width="375" height="667"/>
         <image name="Sign In 2" width="375" height="667"/>
+        <image name="Squirtle.png" width="250" height="250"/>
+        <image name="Teddiursa.png" width="705" height="742"/>
+        <image name="Vulpix.png" width="250" height="250"/>
+        <image name="oddish.png" width="364" height="369"/>
     </resources>
 </document>

@@ -1,0 +1,38 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl mat_0.003
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Textures/pippi_0_0.tga
+map_d Textures/pippi_0_0.tga
+
+newmtl mat_1.003
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Textures/pippi_0_1.tga
+map_d Textures/pippi_0_1.tga
+
+newmtl mat_2.001
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Textures/pippi_0_2.tga
+map_d Textures/pippi_0_2.tga

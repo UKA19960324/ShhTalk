@@ -11,8 +11,20 @@ import UIKit
 class ChooseMViewController: UIViewController {
     
     @IBOutlet weak var BTN_Charmander: UIButton!
+    @IBOutlet weak var BTN_Bulbasaur: UIButton!
+    @IBOutlet weak var BTN_Squirtle: UIButton!
+    @IBOutlet weak var BTN_Pikachu: UIButton!
+    @IBOutlet weak var BTN_Eevee: UIButton!
+    @IBOutlet weak var BTN_Jigglypuff: UIButton!
+    @IBOutlet weak var BTN_Oddish: UIButton!
+    @IBOutlet weak var BTN_Clefairy: UIButton!
+    @IBOutlet weak var BTN_Vulpix: UIButton!
+    @IBOutlet weak var BTN_Teddiursa: UIButton!
+    @IBOutlet weak var BTN_Jirachi: UIButton!
+    @IBOutlet weak var BTN_Mew: UIButton!
+    
+    @IBOutlet weak var UpBTNModel:UIButton?
     var ModelName = ""
-    var BChooseOne = false
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
@@ -26,26 +38,51 @@ class ChooseMViewController: UIViewController {
     
     @IBAction func ChooseAction(_ sender: UIButton) {
         
-        if sender.backgroundColor == UIColor.clear{
-            
-            if BChooseOne == false{
-                
-                BChooseOne = true
-                sender.backgroundColor = UIColor.blue
-                
-                switch sender {
-                case BTN_Charmander:
-                    ModelName = "Charmander.obj"
-                    break
-                    
-                default:
-                    break
-                }
-            }
-        }else {
-            ModelName = ""
-            BChooseOne = false
-            sender.backgroundColor = UIColor.clear
+        UpBTNModel?.backgroundColor = UIColor.clear
+        
+        sender.backgroundColor = UIColor.lightGray
+        
+        UpBTNModel = sender
+        
+        switch sender {
+        case BTN_Charmander:
+            ModelName = "Charmander.obj"
+            break
+        case BTN_Bulbasaur:
+            ModelName = "Bulbasaur.obj"
+            break
+        case BTN_Squirtle:
+            ModelName = "Squirtle.obj"
+            break
+        case BTN_Clefairy:
+            ModelName = "Clefairy.obj"
+            break
+        case BTN_Eevee:
+            ModelName = "Eevee.obj"
+            break
+        case BTN_Jigglypuff:
+            ModelName = "Jigglypuff.obj"
+            break
+        case BTN_Oddish:
+            ModelName = "Oddish.obj"
+            break
+        case BTN_Vulpix:
+            ModelName = "Vulpix.obj"
+            break
+        case BTN_Mew:
+            ModelName = "Mew.obj"
+            break
+        case BTN_Teddiursa:
+            ModelName = "Teddiursa.obj"
+            break
+        case BTN_Jirachi:
+            ModelName = "Jirachi.obj"
+            break
+        case BTN_Pikachu:
+            ModelName = "Pikachu.obj"
+            break
+        default:
+            break
         }
         
     }
