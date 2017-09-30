@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 5
 
-newmtl mat1.003
+newmtl mat1.001
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -10,9 +10,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd /Textures/PikachuDh.tga
+map_Kd Textures/PikachuDh.tga
 
-newmtl mat2.003
+newmtl mat2.001
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -21,9 +21,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd /Textures/PikachuEyeDh.tga
+map_Kd Textures/PikachuEyeDh.tga
 
-newmtl mat3
+newmtl mat3.001
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -32,9 +32,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd /Textures/PikachuHohoDh.tga
+map_Kd Textures/PikachuHohoDh.tga
 
-newmtl mat4.003
+newmtl mat4.000
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -43,9 +43,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd /Textures/PikachuMouthDh.tga
+map_Kd Textures/PikachuMouthDH.png
 
-newmtl mat5
+newmtl mat5.001
 Ns 9.803922
 Ka 0.500000 0.500000 0.500000
 Kd 0.900000 0.900000 0.900000
@@ -54,4 +54,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd /Textures/PikachuDh.tga
+map_Kd Textures/PikachuDh.tga
