@@ -33,13 +33,13 @@ class GenerateQRcodeViewController: UIViewController {
             let codeImage = UIImage(ciImage: ciimage.applying(transform))
             if let iconImage = UIImage(named: image){
                 let qrImageBounds = CGRect.init(x: 0, y: 0, width: codeImage.size.width , height: codeImage.size.height)
+                UIGraphicsBeginImageContext(qrImageBounds.size)
                 codeImage.draw(in:qrImageBounds)
                 let logoSize = CGSize.init(width: qrImageBounds.size.width * 0.25, height: qrImageBounds.size.height * 0.25)
                 let x = (qrImageBounds.width - logoSize.width) * 0.5
                 let y = (qrImageBounds.height - logoSize.height) * 0.5
                 iconImage.draw(in: CGRect(x:x, y:y, width: logoSize.width,height: logoSize.height) )
                 let resultImage = UIGraphicsGetImageFromCurrentImageContext()
-                UIGraphicsBeginImageContext(qrImageBounds.size)
                 UIGraphicsEndImageContext()
                 return resultImage
             }
