@@ -14,6 +14,7 @@
 		5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */; };
 		5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */; };
 		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
+		5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585E7431F828A9B003A3687 /* ScannerViewController.swift */; };
 		55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A79B791F46BAD30076CE60 /* Button.swift */; };
 		55B7A5861F683968006D3559 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55B7A57D1F683968006D3559 /* Info.plist */; };
 		55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A57F1F683968006D3559 /* RHButtonView.swift */; };
@@ -117,6 +118,7 @@
 		5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		5585E7431F828A9B003A3687 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		55A79B791F46BAD30076CE60 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		55B7A57D1F683968006D3559 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B7A57F1F683968006D3559 /* RHButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RHButtonView.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				55C529D31F6548C200F5927F /* HomeViewController.swift */,
 				55B7A58F1F68C669006D3559 /* SideButton.swift */,
 				55B7A5921F6A413D006D3559 /* GenerateQRcodeViewController.swift */,
+				5585E7431F828A9B003A3687 /* ScannerViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
+				5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
 				55B7A58C1F683968006D3559 /* RHTriggerButtonView.swift in Sources */,
 				55B7A58B1F683968006D3559 /* RHSideButtons.swift in Sources */,

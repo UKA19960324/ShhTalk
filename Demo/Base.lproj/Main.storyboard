@@ -375,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEI-XL-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146.40000000000001" y="1093.4032983508246"/>
+            <point key="canvasLocation" x="-180" y="1149"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TMz-ht-VXq">
@@ -612,6 +612,9 @@
                                 <state key="normal" image="FriendReturn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kIX-6a-d5v" kind="show" id="tgT-Qs-gze"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-xd-1av" customClass="IBImageView" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="31" y="232" width="252" height="253"/>
@@ -631,12 +634,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5N2-B8-72Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="347"/>
+            <point key="canvasLocation" x="-180" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Scanner View Controller-->
         <scene sceneID="k5W-LO-bWC">
             <objects>
-                <viewController id="0C6-y1-92J" sceneMemberID="viewController">
+                <viewController id="0C6-y1-92J" customClass="ScannerViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1a5-2n-wx4"/>
                         <viewControllerLayoutGuide type="bottom" id="urx-rY-V1o"/>
@@ -655,6 +658,9 @@
                                 <state key="normal" image="FriendReturn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kIX-6a-d5v" kind="show" id="Bo5-dc-2qF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-Uh-Ksg">
                                 <rect key="frame" x="75" y="538" width="166" height="28"/>
@@ -663,13 +669,18 @@
                                 <state key="normal" title="Show QRcode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Ipq-GE-inM" kind="show" id="N8T-gq-He1"/>
-                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndn-TK-eip">
+                                <rect key="frame" x="38" y="218" width="252" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="scannerView" destination="Ndn-TK-eip" id="Sy2-3H-ZQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRZ-3o-CPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -697,6 +708,9 @@
                                 <state key="normal" image="FriendReturn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kIX-6a-d5v" kind="show" id="Hg8-lq-exD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-fP-1e8">
                                 <rect key="frame" x="75" y="538" width="166" height="34"/>
@@ -705,9 +719,6 @@
                                 <state key="normal" title="Add friend">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="kIX-6a-d5v" kind="show" id="SzE-Jh-1k3"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-l0-jPI" customClass="IBImageView" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="73" y="232" width="169" height="169"/>
@@ -1205,4 +1216,7 @@
         <image name="Vulpix.png" width="250" height="250"/>
         <image name="oddish.png" width="364" height="369"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tgT-Qs-gze"/>
+    </inferredMetricsTieBreakers>
 </document>
