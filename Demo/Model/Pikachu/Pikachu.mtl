@@ -43,7 +43,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd Textures/PikachuMouthDH.png
+map_Kd Textures/PikachuMouthDh.png
 
 newmtl mat5.001
 Ns 9.803922
