@@ -17,7 +17,7 @@ class GenerateQRcodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //addSideButton()
-        imageView.image = generateQRCode(from: "https://github.com/UKA19960324", icon: "Pikachu")
+        imageView.image = generateQRCode(from: "https://github.com/UKA19960324", icon: "APPQRcodeIcon")
     }
     
     // Dispose of any resources that can be recreated.
