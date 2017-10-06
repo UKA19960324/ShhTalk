@@ -23,8 +23,8 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
         sideButtonsView?.setTriggerButtonPosition(CGPoint(x: view.bounds.width - 53,
                                                           y: view.bounds.height - 55))
         
-        for index in 1...3 {
-            buttonsArr.append(generateButton(withImgName: "icon_\(index)"))
+        for index in 1...6 {
+            buttonsArr.append(generateButton(withImgName: "Icon_\(index)"))
         }
         sideButtonsView?.reloadButtons()
     }
