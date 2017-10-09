@@ -20,9 +20,8 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
         sideButtonsView = RHSideButtons(parentView: view, triggerButton: triggerButton)
         sideButtonsView?.delegate = self
         sideButtonsView?.dataSource = self
-        sideButtonsView?.setTriggerButtonPosition(CGPoint(x: view.bounds.width - 53,
-                                                          y: view.bounds.height - 55))
-        
+        sideButtonsView?.setTriggerButtonPosition(CGPoint(x: view.bounds.width - 53,y: view.bounds.height - 55))
+        buttonsArr.removeAll()
         for index in 1...6 {
             buttonsArr.append(generateButton(withImgName: "Icon_\(index)"))
         }
@@ -45,19 +44,53 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
     }
 
     public func sideButtons(_ sideButtons: RHSideButtons, didSelectButtonAtIndex index: Int) {
-        //print("🍭 button index tapped: \(index)")
         switch index {
+        // 點選 設定 iCon
         case 0:
-            print("You Tube ! ")
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Setting"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("Setting ! ")
+            }
+        // 點選 關於 iCon
         case 1:
-            print("iN ! ")
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "About"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("About Us ! ")
+            }
+        // 點選 聊天 iCon
         case 2:
-            print("Yahoo ! ")
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                 print("Chat ! ")
+            }
+        // 點選 3D iCon
+        case 3:
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "3D"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("3D ! ")
+            }
+        // 點選 好友 iCon
+        case 4:
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Friends"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("Friends ! ")
+            }
+        // 點選 個人資料 iCon
+        case 5:
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("MyProfile ! ")
+            }
         default:
             break
         }
     }
-    
     public func sideButtons(_ sideButtons: RHSideButtons, didTriggerButtonChangeStateTo state: RHButtonState) {
         print("🍭 Trigger button")
     }
