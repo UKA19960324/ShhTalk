@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class GenerateQRcodeViewController: UIViewController {
     
     
@@ -16,8 +16,12 @@ class GenerateQRcodeViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
-        //addSideButton()
-        imageView.image = generateQRCode(from: "https://github.com/UKA19960324", icon: "APPQRcodeIcon")
+        let userId = Auth.auth().currentUser?.uid
+        imageView.image = generateQRCode(from: userId! , icon: "APPQRcodeIcon")
+//        let rootRef = Database.database().reference().child("Friends").observe( .childAdded , with: {  (snap:DataSnapshot)  in
+//            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+//            print(snap)
+//        })
     }
     
     // Dispose of any resources that can be recreated.

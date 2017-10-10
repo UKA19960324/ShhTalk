@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5535CB0C1F8B944400D199DB /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
 		556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556084281F27791A00B0D8EC /* SWRevealViewController.m */; };
@@ -109,6 +110,7 @@
 /* Begin PBXFileReference section */
 		0851D89E137C11BBFECCA286 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		2967EDC36D1AC222AE841D80 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		556084261F27791900B0D8EC /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				55B7A58F1F68C669006D3559 /* SideButton.swift */,
 				55B7A5921F6A413D006D3559 /* GenerateQRcodeViewController.swift */,
 				5585E7431F828A9B003A3687 /* ScannerViewController.swift */,
+				5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
 				C24654601F612ED800E8643B /* IBTextField.swift in Sources */,
 				556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */,
+				5535CB0C1F8B944400D199DB /* AddFriendViewController.swift in Sources */,
 				55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */,
 				55DB891C1F1661F20002CCA3 /* LogInViewController.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import AVFoundation
 class ScannerViewController: UIViewController , AVCaptureMetadataOutputObjectsDelegate{
     
@@ -67,26 +68,36 @@ class ScannerViewController: UIViewController , AVCaptureMetadataOutputObjectsDe
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             if metadataObj.stringValue != nil {
-                
+             
+                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "AddFriend"){
+                    let addvc = viewController as! AddFriendViewController
+                    let rootRef = Database.database().reference()
+                    let NameRef = rootRef.child("Users").child(metadataObj.stringValue).child("Name")
+                    let photoRef = rootRef.child("Users").child(metadataObj.stringValue).child("Photo")
+                    
+                    NameRef.observe(.value , with: {(snap) in
+                        let name = snap.value.debugDescription
+                        addvc.nameLabel.text = snap.value as! String
+                    })
+                    
+                    photoRef.observe(.value , with: {(snap) in
+                        let ProfileImageUrl = snap.value as! String
+                        if let encodedString = ProfileImageUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed){
+                            do {
+                                let url = URL(string: encodedString)
+                                let image = try Data(contentsOf: url!)
+                                addvc.image.image = UIImage(data: image)
+                            }catch{
+                                print("Unale to load data")
+                            }
+                        }
+                    })
+                    
+                addvc.uID = metadataObj.stringValue
+                UIApplication.shared.keyWindow?.rootViewController = addvc
+                self.dismiss(animated: true, completion: nil)
+                }
             }
-                
         }
     }
-    // Dispose of any resources that can be recreated.
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

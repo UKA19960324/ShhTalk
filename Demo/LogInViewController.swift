@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
             let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
             usersDatabaseRef.child("Name").setValue(user?.displayName)
             usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
-            
+            usersDatabaseRef.child("Friends").child("X").setValue("X")
             //usersDatabaseRef.child("picture")
             //解除鍵盤
             self.view.endEditing(true)

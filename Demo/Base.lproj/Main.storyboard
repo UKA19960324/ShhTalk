@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kIX-6a-d5v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -632,6 +632,9 @@
                                 <state key="normal" title="QRcode Reader">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0C6-y1-92J" kind="show" id="avx-Q5-JK3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -647,7 +650,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="k5W-LO-bWC">
             <objects>
-                <viewController id="0C6-y1-92J" customClass="ScannerViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Scanner" id="0C6-y1-92J" customClass="ScannerViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1a5-2n-wx4"/>
                         <viewControllerLayoutGuide type="bottom" id="urx-rY-V1o"/>
@@ -677,6 +680,9 @@
                                 <state key="normal" title="Show QRcode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ipq-GE-inM" kind="show" id="utk-E8-arm"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndn-TK-eip">
                                 <rect key="frame" x="31" y="232" width="252" height="253"/>
@@ -694,10 +700,10 @@
             </objects>
             <point key="canvasLocation" x="710" y="347"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Friend View Controller-->
         <scene sceneID="FuP-ZK-d7f">
             <objects>
-                <viewController id="fPj-7k-LnR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddFriend" id="fPj-7k-LnR" customClass="AddFriendViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Uw-Gs-tfp"/>
                         <viewControllerLayoutGuide type="bottom" id="QpW-G4-Wrr"/>
@@ -727,6 +733,9 @@
                                 <state key="normal" title="Add friend">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFriend:" destination="fPj-7k-LnR" eventType="touchUpInside" id="vpa-cM-sa3"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-l0-jPI" customClass="IBImageView" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="73" y="232" width="169" height="169"/>
@@ -737,8 +746,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Hq-39V">
-                                <rect key="frame" x="133" y="425" width="49" height="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-no-wzy" customClass="IBImageView" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="74" y="232" width="169" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Hq-39V">
+                                <rect key="frame" x="98" y="409" width="119" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.94982637049999996" blue="0.87113865329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -747,10 +765,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="Bi7-no-wzy" id="Il6-bD-s4C"/>
+                        <outlet property="nameLabel" destination="xSp-Hq-39V" id="O7n-ev-aVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bei-D2-89s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="348"/>
+            <point key="canvasLocation" x="1525.5999999999999" y="347.67616191904051"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZNQ-v6-ZI0">
@@ -1391,6 +1413,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="48m-6a-uOQ"/>
-        <segue reference="tgT-Qs-gze"/>
+        <segue reference="utk-E8-arm"/>
+        <segue reference="Hg8-lq-exD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -33,9 +33,16 @@ class FriendsListViewController: UIViewController {
         // 建立三個 UIAlertAction 的實體
         // 新增 UIAlertAction 在 UIAlertController actionSheet 的 動作 (action) 與標題
         let QRcodeAction = UIAlertAction(title: "QRcode", style: .default) { (Void) in
-            
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "QRcode"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         let scanAction = UIAlertAction(title: "QRcode reader", style: .default) { (Void) in
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Scanner"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         // 新增一個取消動作，讓使用者可以跳出 UIAlertController
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (Void) in
