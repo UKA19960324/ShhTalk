@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FriendsListViewController: UIViewController {
-        
+class FriendsListViewController: UIViewController, UITableViewDataSource , UITableViewDelegate {
+    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class FriendsListViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    let NameList = ["Joan Wang" , "Andy" , "Lita", "Tom", "Jack", "Mary","Sandy","777"]
     
     // 點下+後跳出動作清單 (actionSheet)
     @IBAction func AddFriendBtnAction(_ sender: UIButton) {
@@ -55,6 +56,17 @@ class FriendsListViewController: UIViewController {
         
         // 當使用者按下 AddFriendAction 時會 present 剛剛建立好的三個 UIAlertAction 動作與
         present(AddFriendAlertController, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return NameList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "Cell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsTableViewCell
+        cell.nameLabel.text = NameList[indexPath.row]
+        return cell
     }
     
     /*
