@@ -23,7 +23,6 @@ class ChooseMViewController: UIViewController {
     @IBOutlet weak var BTN_Jirachi: UIButton!
     @IBOutlet weak var BTN_Haunter: UIButton!
     
-    @IBOutlet weak var UpBTNModel:UIButton?
     var ModelName = ""
     
     // Do any additional setup after loading the view.
@@ -37,13 +36,7 @@ class ChooseMViewController: UIViewController {
     }
     
     @IBAction func ChooseAction(_ sender: UIButton) {
-        
-        UpBTNModel?.backgroundColor = UIColor.clear
-        
-        sender.backgroundColor = UIColor.lightGray
-        
-        UpBTNModel = sender
-        
+
         switch sender {
         case BTN_Charmander:
             ModelName = "Charmander.obj"
@@ -84,14 +77,13 @@ class ChooseMViewController: UIViewController {
         default:
             break
         }
-        
-    }
     
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! ShowMViewController
         controller.ModelName = ModelName
         
     }
-    
 
 }

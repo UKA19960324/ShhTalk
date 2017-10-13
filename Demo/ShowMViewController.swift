@@ -12,9 +12,8 @@ import SceneKit
 class ShowMViewController: UIViewController {
     
     @IBOutlet weak var ModelView: SCNView!
-    
     var ModelName = ""
-    
+
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +28,12 @@ class ShowMViewController: UIViewController {
         let LightNode = SCNNode()
         LightNode.light = SCNLight()
         LightNode.light?.type = .ambient
-        LightNode.light?.color = UIColor.white
+        LightNode.light?.color = UIColor.darkGray
         ModelScene?.rootNode.addChildNode(LightNode)
         
         ModelView.scene = ModelScene
         ModelView.allowsCameraControl = true
+    
     }
     
     // Dispose of any resources that can be recreated.
