@@ -16,6 +16,10 @@ class LogInViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.attributedPlaceholder = NSAttributedString(string:
+            "Email", attributes:
+            [NSForegroundColorAttributeName:#colorLiteral(red: 0.6216775179, green: 0.9486287236, blue: 1, alpha: 0.6)])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSForegroundColorAttributeName:#colorLiteral(red: 0.6216775179, green: 0.9486287236, blue: 1, alpha: 0.6)])
     }
     
     // Dispose of any resources that can be recreated.
