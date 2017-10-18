@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5535CB0C1F8B944400D199DB /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */; };
+		5541028A1F97ADC4007800A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554102891F97ADC4007800A8 /* User.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
 		556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556084281F27791A00B0D8EC /* SWRevealViewController.m */; };
@@ -112,6 +113,7 @@
 		0851D89E137C11BBFECCA286 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		2967EDC36D1AC222AE841D80 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		554102891F97ADC4007800A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		556084261F27791900B0D8EC /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -250,6 +252,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		554102881F97ACB6007800A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				554102891F97ADC4007800A8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		556084251F27784D00B0D8EC /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +323,7 @@
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				554102871F97A828007800A8 /* ViewControllers */,
+				554102881F97ACB6007800A8 /* Model */,
 				C246545F1F612ED800E8643B /* IBTextField.swift */,
 				55A79B791F46BAD30076CE60 /* Button.swift */,
 				C24654611F66AEEA00E8643B /* IBImageView.swift */,
@@ -811,6 +822,7 @@
 				55B7A5871F683968006D3559 /* RHButtonView.swift in Sources */,
 				55B7A5931F6A413D006D3559 /* GenerateQRcodeViewController.swift in Sources */,
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
+				5541028A1F97ADC4007800A8 /* User.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
 				5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */,
