@@ -309,7 +309,7 @@
 				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
 				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
 				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
-				CEB41CCF1F7BFA34001B8594 /* Model */,
+				CEB41CCF1F7BFA34001B8594 /* 3D */,
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				554102871F97A828007800A8 /* ViewControllers */,
@@ -361,7 +361,7 @@
 			path = Textures;
 			sourceTree = "<group>";
 		};
-		CEB41CCF1F7BFA34001B8594 /* Model */ = {
+		CEB41CCF1F7BFA34001B8594 /* 3D */ = {
 			isa = PBXGroup;
 			children = (
 				CE4F7D241F7F43D3007E35FD /* Squirtle */,
@@ -377,7 +377,7 @@
 				CEC580391F7E8DFE00ED18E3 /* Vulpix */,
 				CEB41CD01F7BFA34001B8594 /* Charmander */,
 			);
-			path = Model;
+			path = 3D;
 			sourceTree = "<group>";
 		};
 		CEB41CD01F7BFA34001B8594 /* Charmander */ = {
