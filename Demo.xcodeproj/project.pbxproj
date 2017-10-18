@@ -230,6 +230,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		554102871F97A828007800A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55C529D31F6548C200F5927F /* HomeViewController.swift */,
+				55DB891D1F1729810002CCA3 /* SignUpViewController.swift */,
+				55DB891B1F1661F20002CCA3 /* LogInViewController.swift */,
+				5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */,
+				5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */,
+				5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */,
+				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
+				CEB41CDC1F7BFB67001B8594 /* ChooseMViewController.swift */,
+				CEB41CDE1F7BFBBA001B8594 /* ShowMViewController.swift */,
+				55B7A5921F6A413D006D3559 /* GenerateQRcodeViewController.swift */,
+				5585E7431F828A9B003A3687 /* ScannerViewController.swift */,
+				5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */,
+				5581642B1F8E0C2700A7B554 /* FriendsTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		556084251F27784D00B0D8EC /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,33 +305,21 @@
 			isa = PBXGroup;
 			children = (
 				55B7A5911F690C67006D3559 /* Demo.entitlements */,
+				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
+				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
+				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
+				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
 				CEB41CCF1F7BFA34001B8594 /* Model */,
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
 				556084251F27784D00B0D8EC /* SWRevealViewController */,
-				55DB88F61F1475280002CCA3 /* AppDelegate.swift */,
-				55DB891B1F1661F20002CCA3 /* LogInViewController.swift */,
-				55DB891D1F1729810002CCA3 /* SignUpViewController.swift */,
-				5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */,
-				5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */,
-				5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */,
-				556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */,
-				CEB41CDC1F7BFB67001B8594 /* ChooseMViewController.swift */,
-				CEB41CDE1F7BFBBA001B8594 /* ShowMViewController.swift */,
+				554102871F97A828007800A8 /* ViewControllers */,
 				C246545F1F612ED800E8643B /* IBTextField.swift */,
 				55A79B791F46BAD30076CE60 /* Button.swift */,
-				55DB88FA1F1475280002CCA3 /* Main.storyboard */,
 				C24654611F66AEEA00E8643B /* IBImageView.swift */,
-				55DB88FF1F1475280002CCA3 /* LaunchScreen.storyboard */,
-				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
+				554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */,
+				55B7A58F1F68C669006D3559 /* SideButton.swift */,
 				55DB89021F1475280002CCA3 /* Info.plist */,
 				556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */,
-				554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */,
-				55C529D31F6548C200F5927F /* HomeViewController.swift */,
-				55B7A58F1F68C669006D3559 /* SideButton.swift */,
-				55B7A5921F6A413D006D3559 /* GenerateQRcodeViewController.swift */,
-				5585E7431F828A9B003A3687 /* ScannerViewController.swift */,
-				5535CB0B1F8B944400D199DB /* AddFriendViewController.swift */,
-				5581642B1F8E0C2700A7B554 /* FriendsTableViewCell.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
