@@ -110,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="33" id="PBg-2g-c7n"/>
                                     <constraint firstAttribute="width" constant="31" id="Qmw-Fk-Rcz"/>
                                 </constraints>
-                                <state key="normal" image="AddFriendIcon"/>
+                                <state key="normal" image="FriendAddIcon"/>
                                 <connections>
                                     <action selector="AddFriendBtnAction:" destination="kIX-6a-d5v" eventType="touchUpInside" id="LG7-S0-cXf"/>
                                 </connections>
@@ -1874,7 +1874,6 @@
         <image name="About" width="375" height="667"/>
         <image name="Account" width="375" height="667"/>
         <image name="Add The Message" width="375" height="667"/>
-        <image name="AddFriendIcon" width="118" height="124"/>
         <image name="Bulbasaur.png" width="250" height="250"/>
         <image name="ChangePicture" width="49" height="49"/>
         <image name="Charmander.png" width="210" height="237"/>
@@ -1890,6 +1889,7 @@
         <image name="Embedding" width="375" height="667"/>
         <image name="EmbeddingReturnIcon" width="64" height="64"/>
         <image name="FBButtonIcon" width="102" height="96"/>
+        <image name="FriendAddIcon" width="64" height="64"/>
         <image name="FriendReturn" width="64" height="64"/>
         <image name="Friends" width="375" height="667"/>
         <image name="GoogleButtonIcon" width="106" height="108"/>
@@ -1912,8 +1912,8 @@
         <image name="oddish.png" width="364" height="369"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="utk-E8-arm"/>
+        <segue reference="avx-Q5-JK3"/>
         <segue reference="hJi-oD-PdC"/>
-        <segue reference="Bo5-dc-2qF"/>
+        <segue reference="tgT-Qs-gze"/>
     </inferredMetricsTieBreakers>
 </document>
