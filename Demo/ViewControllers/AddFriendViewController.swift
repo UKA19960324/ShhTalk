@@ -11,7 +11,7 @@ import Firebase
 class AddFriendViewController: UIViewController {
     
     var uID: String?
-    let rootRef = Database.database().reference().child("Users")
+    let rootRef = Database.database().reference().child("users")
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
