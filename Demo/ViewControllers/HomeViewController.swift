@@ -75,10 +75,10 @@ class HomeViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDelega
                 self.present(alertController,animated: true,completion: nil)
                 return
             }
-            let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
-            usersDatabaseRef.child("Name").setValue(user?.displayName)
-            usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
-            usersDatabaseRef.child("Friends").child("X").setValue("X")
+            let usersDatabaseRef = Database.database().reference().child("users").child((user?.uid)!)
+            usersDatabaseRef.child("credentials").child("name").setValue(user?.displayName)
+            usersDatabaseRef.child("credentials").child("email").setValue(user?.email)
+            usersDatabaseRef.child("credentials").child("profilePicLink").setValue( user?.photoURL?.absoluteString)
             //登入成功 轉畫面
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
@@ -122,10 +122,10 @@ class HomeViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDelega
                         print("Login error: \(error.localizedDescription)")
                         return
                     }
-                    let usersDatabaseRef = Database.database().reference().child("Users").child((user?.uid)!)
-                    usersDatabaseRef.child("Name").setValue(user?.displayName)
-                    usersDatabaseRef.child("Photo").setValue( user?.photoURL?.absoluteString)
-                    usersDatabaseRef.child("Friends").child("X").setValue("X")
+                    let usersDatabaseRef = Database.database().reference().child("users").child((user?.uid)!)
+                    usersDatabaseRef.child("credentials").child("name").setValue(user?.displayName)
+                    usersDatabaseRef.child("credentials").child("email").setValue(user?.email)
+                    usersDatabaseRef.child("credentials").child("profilePicLink").setValue( user?.photoURL?.absoluteString)
                     // 跳制登入後的app畫面
                     if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile") {
                         UIApplication.shared.keyWindow?.rootViewController = viewController
