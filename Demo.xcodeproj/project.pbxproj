@@ -11,7 +11,6 @@
 		5541028A1F97ADC4007800A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554102891F97ADC4007800A8 /* User.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
-		556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556084281F27791A00B0D8EC /* SWRevealViewController.m */; };
 		5560842B1F29BCD200B0D8EC /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */; };
 		5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */; };
 		5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */; };
@@ -116,9 +115,6 @@
 		554102891F97ADC4007800A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		556084261F27791900B0D8EC /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		556084271F27791A00B0D8EC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		556084281F27791A00B0D8EC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5560842A1F29BCD200B0D8EC /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -260,22 +256,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		556084251F27784D00B0D8EC /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				556084271F27791A00B0D8EC /* SWRevealViewController.h */,
-				556084281F27791A00B0D8EC /* SWRevealViewController.m */,
-				556084261F27791900B0D8EC /* Demo-Bridging-Header.h */,
-			);
-			name = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		55B7A57C1F683968006D3559 /* RHSideButtons */ = {
 			isa = PBXGroup;
 			children = (
+				55B7A58F1F68C669006D3559 /* SideButton.swift */,
+				55B7A5851F683968006D3559 /* RHSideButtons.h */,
 				55B7A57D1F683968006D3559 /* Info.plist */,
 				55B7A57E1F683968006D3559 /* RHSideButtons */,
-				55B7A5851F683968006D3559 /* RHSideButtons.h */,
 			);
 			path = RHSideButtons;
 			sourceTree = "<group>";
@@ -321,14 +308,12 @@
 				55DB88FD1F1475280002CCA3 /* Assets.xcassets */,
 				CEB41CCF1F7BFA34001B8594 /* 3D */,
 				55B7A57C1F683968006D3559 /* RHSideButtons */,
-				556084251F27784D00B0D8EC /* SWRevealViewController */,
 				554102871F97A828007800A8 /* ViewControllers */,
 				554102881F97ACB6007800A8 /* Model */,
 				C246545F1F612ED800E8643B /* IBTextField.swift */,
 				55A79B791F46BAD30076CE60 /* Button.swift */,
 				C24654611F66AEEA00E8643B /* IBImageView.swift */,
 				554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */,
-				55B7A58F1F68C669006D3559 /* SideButton.swift */,
 				55DB89021F1475280002CCA3 /* Info.plist */,
 				556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */,
 			);
@@ -840,7 +825,6 @@
 				55B7A5881F683968006D3559 /* RHButtonViewConfigProtocol.swift in Sources */,
 				55DB88F71F1475280002CCA3 /* AppDelegate.swift in Sources */,
 				C24654601F612ED800E8643B /* IBTextField.swift in Sources */,
-				556084291F27791A00B0D8EC /* SWRevealViewController.m in Sources */,
 				5535CB0C1F8B944400D199DB /* AddFriendViewController.swift in Sources */,
 				55DB891E1F1729810002CCA3 /* SignUpViewController.swift in Sources */,
 				55DB891C1F1661F20002CCA3 /* LogInViewController.swift in Sources */,
@@ -973,7 +957,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.3Dtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -990,7 +973,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.3Dtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
