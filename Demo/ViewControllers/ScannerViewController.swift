@@ -68,34 +68,18 @@ class ScannerViewController: UIViewController , AVCaptureMetadataOutputObjectsDe
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             if metadataObj.stringValue != nil {
-             
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "AddFriend"){
                     let addvc = viewController as! AddFriendViewController
-                    let rootRef = Database.database().reference()
-                    let NameRef = rootRef.child("Users").child(metadataObj.stringValue).child("Name")
-                    let photoRef = rootRef.child("Users").child(metadataObj.stringValue).child("Photo")
-                    
-                    NameRef.observe(.value , with: {(snap) in
-                        let name = snap.value.debugDescription
-                        addvc.nameLabel.text = snap.value as! String
-                    })
-                    
-                    photoRef.observe(.value , with: {(snap) in
-                        let ProfileImageUrl = snap.value as! String
-                        if let encodedString = ProfileImageUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed){
-                            do {
-                                let url = URL(string: encodedString)
-                                let image = try Data(contentsOf: url!)
-                                addvc.image.image = UIImage(data: image)
-                            }catch{
-                                print("Unale to load data")
-                            }
+                    addvc.uID = metadataObj.stringValue
+                    User.info(forUserID: metadataObj.stringValue!, completion: { /*[weak weakSelf = self]*/ (user) in
+                        DispatchQueue.main.async {
+                            /*weakSelf?.*/addvc.image.image = user.profilePic
+                            /*weakSelf?.*/addvc.nameLabel.text = user.name
+                            //weakSelf = nil
                         }
                     })
-                    
-                addvc.uID = metadataObj.stringValue
-                UIApplication.shared.keyWindow?.rootViewController = addvc
-                self.dismiss(animated: true, completion: nil)
+                    UIApplication.shared.keyWindow?.rootViewController = addvc
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
