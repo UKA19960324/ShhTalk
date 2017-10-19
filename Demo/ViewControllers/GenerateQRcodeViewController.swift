@@ -18,10 +18,6 @@ class GenerateQRcodeViewController: UIViewController {
         super.viewDidLoad()
         let userId = Auth.auth().currentUser?.uid
         imageView.image = generateQRCode(from: userId! , icon: "APPQRcodeIcon")
-//        let rootRef = Database.database().reference().child("Friends").observe( .childAdded , with: {  (snap:DataSnapshot)  in
-//            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-//            print(snap)
-//        })
     }
     
     // Dispose of any resources that can be recreated.
