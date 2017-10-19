@@ -50,7 +50,7 @@ class User : NSObject {
     
     // 讀取使用者好友資料
     class func downloadAllFriedns(forUserID: String, completion: @escaping (User) -> Void ){
-        Database.database().reference().child("users").child(forUserID).child("friends").observe(.childAdded, with: {(snapshot) in
+        Database.database().reference().child("users").child(forUserID).child("Friends").observe(.childAdded, with: {(snapshot) in
             //            print("======================")
             //            print(snapshot)
             //            print(snapshot.key)

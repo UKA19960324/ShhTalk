@@ -7,20 +7,21 @@
 //
 
 import UIKit
-
+import Firebase
 class FriendsListViewController: UIViewController, UITableViewDataSource , UITableViewDelegate {
-    
+    @IBOutlet weak var friendsTableView: UITableView!
+    var items = [User]()
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         addSideButton()
+        fetchUsers()
     }
 
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    let NameList = ["Joan Wang" , "Andy" , "Lita", "Tom", "Jack", "Mary","Sandy","777"]
     
     // 點下+後跳出動作清單 (actionSheet)
     @IBAction func AddFriendBtnAction(_ sender: UIButton) {
@@ -59,16 +60,27 @@ class FriendsListViewController: UIViewController, UITableViewDataSource , UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NameList.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsTableViewCell
-        cell.nameLabel.text = NameList[indexPath.row]
+        cell.nameLabel.text = items[indexPath.row].name
+        cell.photoImageView.image = items[indexPath.row].profilePic
         return cell
     }
-    
+    //Downloads user friends list
+    func fetchUsers()  {
+        if let id = Auth.auth().currentUser?.uid{
+            User.downloadAllFriedns(forUserID: id, completion: { (user) in
+                DispatchQueue.main.async {
+                    self.items.append(user)
+                    self.friendsTableView.reloadData()
+                }
+            })
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -78,5 +90,4 @@ class FriendsListViewController: UIViewController, UITableViewDataSource , UITab
         // Pass the selected object to the new view controller.
     }
     */
-
 }

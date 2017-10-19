@@ -223,6 +223,9 @@
                             <constraint firstItem="Z6m-u5-fHd" firstAttribute="leading" secondItem="Q1t-Tq-Gie" secondAttribute="leading" id="x0x-jS-d87"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="friendsTableView" destination="seY-uv-DYV" id="zZR-Zz-Wl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msn-Qu-0F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
