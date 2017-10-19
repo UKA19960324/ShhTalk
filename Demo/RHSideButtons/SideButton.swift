@@ -22,7 +22,7 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
         sideButtonsView?.dataSource = self
         sideButtonsView?.setTriggerButtonPosition(CGPoint(x: view.bounds.width - 53,y: view.bounds.height - 55))
         buttonsArr.removeAll()
-        for index in 1...6 {
+        for index in 0...6 {
             buttonsArr.append(generateButton(withImgName: "Icon_\(index)"))
         }
         sideButtonsView?.reloadButtons()
@@ -45,43 +45,50 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
 
     public func sideButtons(_ sideButtons: RHSideButtons, didSelectButtonAtIndex index: Int) {
         switch index {
-        // 點選 設定 iCon
+        // 點選 登出 iCon (未完成)
         case 0:
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Home"){
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+                print("LogOut ! ")
+            }
+        // 點選 設定 iCon
+        case 1:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Setting"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("Setting ! ")
             }
         // 點選 關於 iCon
-        case 1:
+        case 2:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "About"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("About Us ! ")
             }
         // 點選 聊天 iCon
-        case 2:
+        case 3:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                  print("Chat ! ")
             }
         // 點選 3D iCon
-        case 3:
+        case 4:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "3D"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("3D ! ")
             }
         // 點選 好友 iCon
-        case 4:
+        case 5:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Friends"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("Friends ! ")
             }
         // 點選 個人資料 iCon
-        case 5:
+        case 6:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
