@@ -27,8 +27,8 @@ class AddFriendViewController: UIViewController {
     @IBAction func addFriend(_ sender: UIButton) {
         let userId = Auth.auth().currentUser?.uid
         let userName = Auth.auth().currentUser?.displayName
-        rootRef.child(userId!).child("Friends").child(uID!).setValue(nameLabel.text)
-        rootRef.child(uID!).child("Friends").child(userId!).setValue(userName)
+        rootRef.child(userId!).child("friends").child(uID!).setValue(nameLabel.text)
+        rootRef.child(uID!).child("friends").child(userId!).setValue(userName)
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Friends"){
             UIApplication.shared.keyWindow?.rootViewController = viewController
             self.dismiss(animated: true, completion: nil)
