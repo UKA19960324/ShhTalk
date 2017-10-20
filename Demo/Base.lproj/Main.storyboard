@@ -1469,6 +1469,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countLabel" destination="VkN-Bc-qWU" id="RTz-M1-dzk"/>
                         <outlet property="emailLabel" destination="wlu-ze-yGS" id="xaU-vN-95c"/>
                         <outlet property="imageView" destination="8Ez-q5-2XY" id="FDE-gh-F5P"/>
                         <outlet property="nameLabel" destination="fhU-1f-tjb" id="SwF-uo-h8J"/>

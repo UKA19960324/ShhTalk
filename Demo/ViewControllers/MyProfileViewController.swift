@@ -13,6 +13,7 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
@@ -37,6 +38,12 @@ class MyProfileViewController: UIViewController {
                     print("Unale to load data")
                 }
             }
+            let rootRef = Database.database().reference()
+            let friends = rootRef.child("users").child(currentuser.uid).child("friends")
+            friends.observe(.value , with: { (snap) in
+                print(snap.childrenCount)
+                self.countLabel.text = String(snap.childrenCount)
+            })
         }
     }
     
