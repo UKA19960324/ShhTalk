@@ -97,7 +97,7 @@
         <!--Friends List View Controller-->
         <scene sceneID="Ccr-eg-VcD">
             <objects>
-                <viewController id="kIX-6a-d5v" customClass="FriendsListViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Friends" id="kIX-6a-d5v" customClass="FriendsListViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q9v-BZ-etH"/>
                         <viewControllerLayoutGuide type="bottom" id="hGd-5N-u6w"/>
@@ -1082,24 +1082,6 @@
             <point key="canvasLocation" x="1589.5999999999999" y="347.67616191904051"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="ZNQ-v6-ZI0">
-            <objects>
-                <viewController storyboardIdentifier="Chat" id="sbd-2A-dnf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OhF-3p-zYD"/>
-                        <viewControllerLayoutGuide type="bottom" id="MeH-oh-Blc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I0D-lA-ZN1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yh9-za-vi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2335" y="348"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="keC-QB-uBL">
             <objects>
                 <viewController id="zdR-Bg-R7T" sceneMemberID="viewController">
@@ -1771,7 +1753,7 @@
         <!--Message View Controller-->
         <scene sceneID="mng-Ik-r9a">
             <objects>
-                <viewController storyboardIdentifier="Friends" id="2V9-VR-yew" customClass="MessageViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chat" id="2V9-VR-yew" customClass="MessageViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e5G-9W-u16"/>
                         <viewControllerLayoutGuide type="bottom" id="eKy-1m-due"/>
