@@ -1081,10 +1081,10 @@
             </objects>
             <point key="canvasLocation" x="1589.5999999999999" y="347.67616191904051"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="keC-QB-uBL">
             <objects>
-                <viewController id="zdR-Bg-R7T" sceneMemberID="viewController">
+                <viewController id="zdR-Bg-R7T" customClass="ChatViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qce-0v-hXL"/>
                         <viewControllerLayoutGuide type="bottom" id="h28-oT-gbB"/>
@@ -1843,6 +1843,7 @@
                                             <outlet property="nameLabel" destination="Mt8-jL-7ZB" id="dWf-4U-VGM"/>
                                             <outlet property="photoImageView" destination="iJm-FX-rwJ" id="gYe-MF-5Hk"/>
                                             <outlet property="timeLabel" destination="Ann-eq-qQj" id="ZNg-6b-2u9"/>
+                                            <segue destination="zdR-Bg-R7T" kind="show" identifier="segue" id="05O-7S-2p8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1860,7 +1861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBy-r5-dOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1130" y="2623"/>
+            <point key="canvasLocation" x="-1260" y="2623"/>
         </scene>
     </scenes>
     <resources>

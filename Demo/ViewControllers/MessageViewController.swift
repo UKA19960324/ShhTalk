@@ -11,18 +11,32 @@ import Firebase
 class MessageViewController: UIViewController, UITableViewDataSource , UITableViewDelegate {
     
     @IBOutlet weak var messageTableView: UITableView!
-    var items = [User]()
+     var items = [Conversation]()
+    var selectedUser: User?
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         addSideButton()
-        fetchUsers()
+        //fetchUsers()
+        self.fetchData()
     }
  
     // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //Downloads conversations
+    func fetchData() {
+        if let id = Auth.auth().currentUser?.uid {
+            Conversation.showConversations(forUserID: id, completion: { (conversations) in
+                DispatchQueue.main.async {
+                    self.items = conversations
+                    self.messageTableView.reloadData()
+                }
+            })
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -30,29 +44,31 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MessageTableViewCell
-        cell.nameLabel.text = items[indexPath.row].name
-        cell.photoImageView.image = items[indexPath.row].profilePic
+        cell.nameLabel.text = items[indexPath.row].user.name
+        cell.photoImageView.image = items[indexPath.row].user.profilePic
         return cell
     }
-    //Downloads user friends list
-    func fetchUsers()  {
-        if let id = Auth.auth().currentUser?.uid{
-            User.downloadAllFriedns(forUserID: id, completion: { (user) in
-                DispatchQueue.main.async {
-                    self.items.append(user)
-                    self.messageTableView.reloadData()
-                }
-            })
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //print(items[indexPath.row].user.name)
+            //        if self.items.count > 0 {
+                        self.selectedUser = self.items[indexPath.row].user
+            print("%%%%%%%%%")
+            print(self.selectedUser)
+            print("%%%%%%%%%")
+                        self.performSegue(withIdentifier: "segue", sender: self)
+            //        }
         }
-    }
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segue" {
+        //self.selectedUser = user
+        let vc = segue.destination as! ChatViewController
+        print("==================")
+        print(self.selectedUser)
+        print("==================")
+        vc.currentUser = self.selectedUser
+        }
     }
-    */
-
 }
