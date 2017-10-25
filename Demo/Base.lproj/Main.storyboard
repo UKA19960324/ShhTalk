@@ -1081,10 +1081,10 @@
             </objects>
             <point key="canvasLocation" x="1589.5999999999999" y="347.67616191904051"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="keC-QB-uBL">
             <objects>
-                <viewController id="zdR-Bg-R7T" sceneMemberID="viewController">
+                <viewController id="zdR-Bg-R7T" customClass="ChatViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qce-0v-hXL"/>
                         <viewControllerLayoutGuide type="bottom" id="h28-oT-gbB"/>
@@ -1856,6 +1856,7 @@
                     </view>
                     <connections>
                         <outlet property="messageTableView" destination="wAc-n1-O2E" id="Gkg-rt-MuD"/>
+                        <segue destination="zdR-Bg-R7T" kind="show" identifier="segue" id="hhG-Ly-par"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBy-r5-dOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
