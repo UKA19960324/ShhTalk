@@ -11,5 +11,16 @@ import UIKit
 import Firebase
 class Conversation {
     
+    //MARK: Properties
+    
+    let user: User
+//    var lastMessage: Message
+    
+    //MARK: Inits
+    init(user: User/*, lastMessage: Message*/) {
+        self.user = user
+//        self.lastMessage = lastMessage
+    }
+    
     
 }
