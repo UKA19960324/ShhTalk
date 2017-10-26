@@ -47,6 +47,8 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MessageTableViewCell
         cell.nameLabel.text = items[indexPath.row].user.name
         cell.photoImageView.image = items[indexPath.row].user.profilePic
+        let message = self.items[indexPath.row].lastMessage.content as! String
+        cell.messageLabel.text = message
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
