@@ -14,13 +14,13 @@ class Conversation {
     //MARK: Properties
     
     let user: User
-//    var lastMessage: Message
+    var lastMessage: Message
     
     //MARK: Inits
     
-    init(user: User/*, lastMessage: Message*/) {
+    init(user: User, lastMessage: Message) {
         self.user = user
-//        self.lastMessage = lastMessage
+        self.lastMessage = lastMessage
     }
     
     //MARK: Methods
@@ -28,13 +28,18 @@ class Conversation {
         var conversations = [Conversation]()
         Database.database().reference().child("users").child(forUserID).child("friends").observe(.childAdded, with: { (snapshot) in
             let friendsId = snapshot.key
+            let emptyMessage = Message.init(type: .text, content: "", owner: .sender, timestamp: 0, isRead: true)
             User.info(forUserID: friendsId , completion: { (user) in
+                let conversation = Conversation.init(user: user, lastMessage: emptyMessage)
                 Database.database().reference().child("users").child(user.id).child("conversations").observe(.childAdded, with: { (snapshot) in
                     if snapshot.exists() {
-                    // ...
+                        let values = snapshot.value as! [String: String]
+                        let location = values["location"]! // 訊息位置
+                        conversation.lastMessage.downloadLastMessage(forLocation: location, completion:{(_) in
+                            completion(conversations)
+                        })
                     }
                 })
-                let conversation = Conversation.init(user: user/*, lastMessage: emptyMessage*/)
                 conversations.append(conversation)
                 completion(conversations)
             })
