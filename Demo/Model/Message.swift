@@ -89,5 +89,39 @@ class Message {
         }
     }
     
+    func downloadLastMessage(forLocation: String, completion: @escaping (Void) -> Swift.Void) {
+        if let currentUserID = Auth.auth().currentUser?.uid {
+            Database.database().reference().child("conversations").child(forLocation).observe(.value, with: { (snapshot) in
+                if snapshot.exists() {
+                    for snap in snapshot.children {
+                        let receivedMessage = (snap as! DataSnapshot).value as! [String: Any]
+                        self.content = receivedMessage["content"]!
+                        self.timestamp = receivedMessage["timestamp"] as! Int
+                        let messageType = receivedMessage["type"] as! String
+                        let fromID = receivedMessage["fromID"] as! String
+                        self.isRead = receivedMessage["isRead"] as! Bool
+                        var type = MessageType.text
+                        switch messageType {
+                        case "text":
+                            type = .text
+                        case "photo":
+                            type = .photo
+                        case "location":
+                            type = .location
+                        default: break
+                        }
+                        self.type = type
+                        if currentUserID == fromID {
+                            self.owner = .receiver
+                        } else {
+                            self.owner = .sender
+                        }
+                        completion()
+                    }
+                }
+            })
+        }
+    }
+    
 }
 
