@@ -49,6 +49,16 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         cell.photoImageView.image = items[indexPath.row].user.profilePic
         let message = self.items[indexPath.row].lastMessage.content as! String
         cell.messageLabel.text = message
+        if message != "" {
+            let messageDate = Date.init(timeIntervalSince1970: TimeInterval(self.items[indexPath.row].lastMessage.timestamp))
+            let dataformatter = DateFormatter.init()
+            dataformatter.timeStyle = .short
+            let date = dataformatter.string(from: messageDate)
+            cell.timeLabel.text = date
+        }
+        else {
+            cell.timeLabel.text = ""
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
