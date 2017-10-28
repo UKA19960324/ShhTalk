@@ -13,11 +13,11 @@ class Conversation {
     
     //MARK: Properties
     let user: User
-    //var lastMessage: Message
+    var lastMessage: Message
     //MARK: Inits
-    init(user: User/*, lastMessage: Message*/) {
+    init(user: User, lastMessage: Message) {
         self.user = user
-        //self.lastMessage = lastMessage
+        self.lastMessage = lastMessage
     }
     //MARK: Methods
     class func showConversations(forUserID: String,completion: @escaping ([Conversation]) -> Swift.Void) {
@@ -29,12 +29,22 @@ class Conversation {
 //            print(snapshot.value )
 //            print("======================")
             let friendId = snapshot.key
-            User.info(forUserID: friendId, completion: { (user) in                Database.database().reference().child("users").child(user.id).child("conversations").observe(.childAdded, with: { (snapshot) in
+            let emptyMessage = Message.init(type: .text, content: "", owner: .sender, timestamp: 0, isRead: true)
+
+            User.info(forUserID: friendId, completion: { (user) in
+                
+                let conversation = Conversation.init(user: user, lastMessage: emptyMessage)
+                
+                Database.database().reference().child("users").child(user.id).child("conversations").observe(.childAdded, with: { (snapshot) in
                     if snapshot.exists() {
-                        print("Yes")
-//                        let fromID = snapshot.key
-//                        let values = snapshot.value as! [String: String]
-//                        let location = values["location"]!
+//                        print("Yes")
+                        //let fromID = snapshot.key // 朋友ＩＤ
+                        let values = snapshot.value as! [String: String]
+                        let location = values["location"]! // 訊息位置
+                        conversation.lastMessage.downloadLastMessage(forLocation: location, completion:{(_) in
+                            completion(conversations)
+                        })
+                        
 //                        User.info(forUserID: fromID, completion: { (user) in
 //                            let emptyMessage = Message.init(type: .text, content: "loading", owner: .sender, timestamp: 0, isRead: true)
 //                            let conversation = Conversation.init(user: user, lastMessage: emptyMessage)
@@ -45,10 +55,10 @@ class Conversation {
 //                        })
                     }
                 })
-                    //print(user.name)
-                    //print("~~~~~~~~~~~")
-                    let conversation = Conversation.init(user: user/*, lastMessage: emptyMessage*/)
-                    conversations.append(conversation)
+                
+                //var conversation = Conversation.init(user: user, lastMessage: emptyMessage)
+                
+                conversations.append(conversation)
                 completion(conversations)
             })
         })

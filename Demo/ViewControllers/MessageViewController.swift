@@ -46,17 +46,23 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MessageTableViewCell
         cell.nameLabel.text = items[indexPath.row].user.name
         cell.photoImageView.image = items[indexPath.row].user.profilePic
+        let message = self.items[indexPath.row].lastMessage.content as! String
+        cell.messageLabel.text = message
+        if message != "" {
+        let messageDate = Date.init(timeIntervalSince1970: TimeInterval(self.items[indexPath.row].lastMessage.timestamp))
+        let dataformatter = DateFormatter.init()
+        dataformatter.timeStyle = .short
+        let date = dataformatter.string(from: messageDate)
+        cell.timeLabel.text = date
+        }
+        else {
+        cell.timeLabel.text = ""
+        }
         return cell
     }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //print(items[indexPath.row].user.name)
-            //        if self.items.count > 0 {
-                        self.selectedUser = self.items[indexPath.row].user
-            print("%%%%%%%%%")
-            print(self.selectedUser)
-            print("%%%%%%%%%")
-                        self.performSegue(withIdentifier: "segue", sender: self)
-            //        }
+            self.selectedUser = self.items[indexPath.row].user
+            self.performSegue(withIdentifier: "segue", sender: self)
         }
     
     // MARK: - Navigation
@@ -65,9 +71,9 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         if segue.identifier == "segue" {
         //self.selectedUser = user
         let vc = segue.destination as! ChatViewController
-        print("==================")
-        print(self.selectedUser)
-        print("==================")
+//        print("==================")
+//        print(self.selectedUser)
+//        print("==================")
         vc.currentUser = self.selectedUser
         }
     }
