@@ -34,7 +34,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.customization()
+        self.customization()
+        self.fetchData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +58,19 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         })
     }
     
+    func fetchData() {
+        Message.downloadAllMessages(forUserID: self.currentUser!.id, completion: {[weak weakSelf = self] (message) in
+            weakSelf?.items.append(message)
+            weakSelf?.items.sort{ $0.timestamp < $1.timestamp }
+            DispatchQueue.main.async {
+                if let state = weakSelf?.items.isEmpty, state == false {
+                    weakSelf?.tableView.reloadData()
+                    weakSelf?.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: false)
+                }
+            }
+        })
+    }
+    
     @IBAction func sendMessage(_ sender: Any) {
         if let text = self.inputTextField.text {
             if text.count > 0 {
@@ -69,13 +83,37 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     //MARK: Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Receiver", for: indexPath) as! ReceiverCell
-        cell.clearCellData()
-        return cell
+        switch self.items[indexPath.row].owner {
+        case .receiver:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Receiver", for: indexPath) as! ReceiverCell
+            cell.clearCellData()
+            switch self.items[indexPath.row].type {
+            case .text:
+                cell.message.text = self.items[indexPath.row].content as! String
+            case .photo:
+                break
+            case .location:
+                break
+            }
+            return cell
+        case .sender:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Sender", for: indexPath) as! SenderCell
+            cell.clearCellData()
+            cell.profilePic.image = self.currentUser?.profilePic
+            switch self.items[indexPath.row].type {
+            case .text:
+                cell.message.text = self.items[indexPath.row].content as! String
+            case .photo:
+                break
+            case .location:
+                break
+            }
+            return cell
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
