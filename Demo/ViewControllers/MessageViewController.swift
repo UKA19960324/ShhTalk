@@ -48,8 +48,15 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         cell.nameLabel.text = items[indexPath.row].user.name
         cell.photoImageView.image = items[indexPath.row].user.profilePic
         let message = self.items[indexPath.row].lastMessage.content as! String
-        cell.messageLabel.text = message
         if message != "" {
+            switch self.items[indexPath.row].lastMessage.type {
+            case .text:
+                cell.messageLabel.text = message
+            case .photo:
+                cell.messageLabel.text = "Photo"
+            case .location:
+                break
+            }
             let messageDate = Date.init(timeIntervalSince1970: TimeInterval(self.items[indexPath.row].lastMessage.timestamp))
             let dataformatter = DateFormatter.init()
             dataformatter.timeStyle = .short

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     //MARK: Properties
     
@@ -19,6 +19,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     var items = [Message]()
     var currentUser: User?
     let barHeight: CGFloat = 50
+    let imagePicker = UIImagePickerController()
     override var inputAccessoryView: UIView? {
         get {
             self.inputBar.frame.size.height = self.barHeight
@@ -46,6 +47,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     //MARK: Methods
     
     func customization() {
+        self.imagePicker.delegate = self
         self.tableView.estimatedRowHeight = self.barHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.contentInset.bottom = self.barHeight
@@ -99,6 +101,22 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         self.animateExtraButtons(toHide: false)
     }
     
+    @IBAction func showMessage(_ sender: Any) {
+        self.animateExtraButtons(toHide: true)
+    }
+    
+    @IBAction func selectPhoto(_ sender: Any) {
+        self.animateExtraButtons(toHide: true)
+        // 判斷是否可以從照片圖庫取得照片來源
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            // 如果可以，指定 UIImagePickerController 的照片來源為 照片圖庫 (.photoLibrary)，並 present UIImagePickerController
+            self.imagePicker.sourceType = .photoLibrary
+            self.inputBar.isHidden = true
+            //imagePicker.delegate = self
+            self.present(imagePicker,animated: true,completion: nil)
+        }
+    }
+    
     //MARK: Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,7 +132,20 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             case .text:
                 cell.message.text = self.items[indexPath.row].content as! String
             case .photo:
-                break
+                if let image = self.items[indexPath.row].image {
+                    cell.messageBackground.image = image
+                    cell.message.isHidden = true
+                }
+                else {
+                    cell.messageBackground.image = UIImage.init(named: "loading")
+                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                        if state == true {
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    })
+                }
             case .location:
                 break
             }
@@ -127,7 +158,20 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             case .text:
                 cell.message.text = self.items[indexPath.row].content as! String
             case .photo:
-                break
+                if let image = self.items[indexPath.row].image {
+                    cell.messageBackground.image = image
+                    cell.message.isHidden = true
+                }
+                else {
+                    cell.messageBackground.image = UIImage.init(named: "loading")
+                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                        if state == true {
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    })
+                }
             case .location:
                 break
             }
@@ -139,6 +183,22 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         textField.resignFirstResponder()
         return true
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//            print(" SelectImage ! ")
+            self.composeMessage(type: .photo, content: selectedImage)
+        }
+        self.inputBar.isHidden = false
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.inputBar.isHidden = false
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation

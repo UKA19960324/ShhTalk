@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseStorage
 class Message {
 
     //MARK: Properties
@@ -36,30 +37,41 @@ class Message {
     
     class func send(message: Message, toID: String, completion: @escaping (Bool) -> Swift.Void)  {
         if let currentUserID = Auth.auth().currentUser?.uid {
-//            switch message.type {
+            switch message.type {
+            case .text:
+                let values = ["type": "text", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
+                Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
+                    completion(status)
+                })
+            case .photo:
+                let uniqueString = UUID().uuidString // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
+                let storageRef = Storage.storage().reference().child("messagePics").child("\(uniqueString).jpg")
+                if  let uploadData = UIImageJPEGRepresentation(message.content as! UIImage, 1){
+                    // 這行就是 FirebaseStorage 關鍵的存取方法。
+                    storageRef.putData(uploadData, metadata: nil, completion: {(data , error) in
+                        if error != nil {
+                            // 若有接收到錯誤，我們就直接印在 Console 就好，在這邊就不另外做處理。
+                            print("Error: \(error!.localizedDescription)")
+                            return
+                        }
+                        if let uploadImageUrl = data?.downloadURL()?.absoluteString {
+                            // 我們可以 print 出來看看這個連結事不是我們剛剛所上傳的照片。
+                            print ("Photo Url : \(uploadImageUrl)")
+                            let values = ["type": "photo", "content": uploadImageUrl, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false] as [String : Any]
+                            Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
+                                completion(status)
+                            })
+                        }
+                    })
+                }
 //            case .location:
 //                let values = ["type": "location", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
 //                Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
 //                    completion(status)
 //                })
-//            case .photo:
-//                let imageData = UIImageJPEGRepresentation((message.content as! UIImage), 0.5)
-//                let child = UUID().uuidString
-//                FIRStorage.storage().reference().child("messagePics").child(child).put(imageData!, metadata: nil, completion: { (metadata, error) in
-//                    if error == nil {
-//                        let path = metadata?.downloadURL()?.absoluteString
-//                        let values = ["type": "photo", "content": path!, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false] as [String : Any]
-//                        Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
-//                            completion(status)
-//                        })
-//                    }
-//                })
-//            case .text:
-            let values = ["type": "text", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
-            Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
-                completion(status)
-            })
-            //            }
+            case .location:
+                break
+            }
         }
     }
     
@@ -97,7 +109,7 @@ class Message {
                     for snap in snapshot.children {
                         let receivedMessage = (snap as! DataSnapshot).value as! [String: Any]
                         self.content = receivedMessage["content"]!
-                        print(self.content)
+                        //print(self.content)
                         self.timestamp = receivedMessage["timestamp"] as! Int
                         let messageType = receivedMessage["type"] as! String
                         let fromID = receivedMessage["fromID"] as! String
@@ -157,6 +169,19 @@ class Message {
                     })
                 }
             })
+        }
+    }
+    
+    func downloadImage(indexpathRow: Int, completion: @escaping (Bool, Int) -> Swift.Void)  {
+        if self.type == .photo {
+            let imageLink = self.content as! String
+            let imageURL = URL.init(string: imageLink)
+            URLSession.shared.dataTask(with: imageURL!, completionHandler: { (data, response, error) in
+                if error == nil {
+                    self.image = UIImage.init(data: data!)
+                    completion(true, indexpathRow)
+                }
+            }).resume()
         }
     }
     
