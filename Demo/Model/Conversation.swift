@@ -31,7 +31,7 @@ class Conversation {
             let emptyMessage = Message.init(type: .text, content: "", owner: .sender, timestamp: 0, isRead: true)
             User.info(forUserID: friendsId , completion: { (user) in
                 let conversation = Conversation.init(user: user, lastMessage: emptyMessage)
-                Database.database().reference().child("users").child(user.id).child("conversations").observe(.childAdded, with: { (snapshot) in
+                Database.database().reference().child("users").child(user.id).child("conversations").observeSingleEvent(of: .childAdded, with:{ (snapshot) in
                     if snapshot.exists() {
                         let values = snapshot.value as! [String: String]
                         let location = values["location"]! // 訊息位置

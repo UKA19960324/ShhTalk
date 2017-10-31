@@ -92,10 +92,12 @@ class Message {
     func downloadLastMessage(forLocation: String, completion: @escaping (Void) -> Swift.Void) {
         if let currentUserID = Auth.auth().currentUser?.uid {
             Database.database().reference().child("conversations").child(forLocation).observe(.value, with: { (snapshot) in
+                //print(forLocation)
                 if snapshot.exists() {
                     for snap in snapshot.children {
                         let receivedMessage = (snap as! DataSnapshot).value as! [String: Any]
                         self.content = receivedMessage["content"]!
+                        print(self.content)
                         self.timestamp = receivedMessage["timestamp"] as! Int
                         let messageType = receivedMessage["type"] as! String
                         let fromID = receivedMessage["fromID"] as! String
