@@ -2038,6 +2038,9 @@
                                         <constraint firstAttribute="width" constant="32" id="1fF-N5-Ur2"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="more"/>
+                                    <connections>
+                                        <action selector="showOptions:" destination="5tp-Ub-o6N" eventType="touchUpInside" id="HHs-JE-bRa"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

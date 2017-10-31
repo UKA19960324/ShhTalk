@@ -71,6 +71,21 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         })
     }
     
+    func animateExtraButtons(toHide: Bool)  {
+        switch toHide {
+        case true:
+            self.bottomConstraint.constant = 0
+            UIView.animate(withDuration: 0.3) {
+                self.inputBar.layoutIfNeeded()
+            }
+        default:
+            self.bottomConstraint.constant = -50
+            UIView.animate(withDuration: 0.3) {
+                self.inputBar.layoutIfNeeded()
+            }
+        }
+    }
+    
     @IBAction func sendMessage(_ sender: Any) {
         if let text = self.inputTextField.text {
             if text.count > 0 {
@@ -78,6 +93,10 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 self.inputTextField.text = ""
             }
         }
+    }
+    
+    @IBAction func showOptions(_ sender: Any) {
+        self.animateExtraButtons(toHide: false)
     }
     
     //MARK: Delegates
