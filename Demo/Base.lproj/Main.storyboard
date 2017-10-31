@@ -2027,6 +2027,9 @@
                                         <constraint firstAttribute="width" constant="32" id="FVz-Wz-0kW"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="send"/>
+                                    <connections>
+                                        <action selector="sendMessage:" destination="5tp-Ub-o6N" eventType="touchUpInside" id="NDe-s7-ghq"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0c-0R-kGa">
                                     <rect key="frame" x="12" y="13" width="32" height="25"/>

@@ -57,6 +57,15 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         })
     }
     
+    @IBAction func sendMessage(_ sender: Any) {
+        if let text = self.inputTextField.text {
+            if text.count > 0 {
+                self.composeMessage(type: .text, content: self.inputTextField.text!)
+                self.inputTextField.text = ""
+            }
+        }
+    }
+    
     //MARK: Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +78,11 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         return cell
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
