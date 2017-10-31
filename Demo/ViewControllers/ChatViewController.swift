@@ -8,26 +8,47 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate {
     
     //MARK: Properties
     
-//    var items = [Message]()
+    @IBOutlet var inputBar: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    var items = [Message]()
     var currentUser: User?
-
+    let barHeight: CGFloat = 50
+    override var inputAccessoryView: UIView? {
+        get {
+            self.inputBar.frame.size.height = self.barHeight
+            self.inputBar.clipsToBounds = true
+            return self.inputBar
+        }
+    }
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+    //MARK: ViewController lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print(currentUser?.name)
-        print(currentUser?.id)
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        self.composeMessage(type: .text, content: " 測試3 23:58 ! " )
+         self.customization()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Methods
+    
+    func customization() {
+        self.tableView.estimatedRowHeight = self.barHeight
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.contentInset.bottom = self.barHeight
+        self.tableView.scrollIndicatorInsets.bottom = self.barHeight
     }
     
     func composeMessage(type: MessageType, content: Any)  {
@@ -36,6 +57,17 @@ class ChatViewController: UIViewController {
         })
     }
     
+    //MARK: Delegates
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Receiver", for: indexPath) as! ReceiverCell
+        cell.clearCellData()
+        return cell
+    }
 
     /*
     // MARK: - Navigation
