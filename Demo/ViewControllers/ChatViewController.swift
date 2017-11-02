@@ -16,6 +16,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     var items = [Message]()
     var currentUser: User?
     let barHeight: CGFloat = 50
@@ -37,6 +38,13 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         super.viewDidLoad()
         self.customization()
         self.fetchData()
+        let statusBar = UIView(frame: CGRect(x: 0, y: -20, width: view.frame.width, height: 20))
+        statusBar.backgroundColor = UIColor(red: 255.0/255.0, green: 132.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+        navigationBar.isTranslucent = false
+//         self.navigationItem.title = self.currentUser?.name
+        self.navigationBar.topItem?.title = self.currentUser?.name
+        navigationBar.addSubview(statusBar)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,6 +124,13 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.present(imagePicker,animated: true,completion: nil)
         }
     }
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat") {
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     
     //MARK: Delegates
     
@@ -200,14 +215,13 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     //In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
+
 
 }

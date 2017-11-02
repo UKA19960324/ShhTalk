@@ -81,9 +81,9 @@ class ChooseMViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! ShowMViewController
-        controller.ModelName = ModelName
-        
+        if segue.identifier != "back"{
+            let controller = segue.destination as! ShowMViewController
+            controller.ModelName = ModelName
+        }
     }
-
 }
