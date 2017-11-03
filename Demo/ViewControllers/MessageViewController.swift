@@ -65,6 +65,7 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
         }
         else {
             cell.timeLabel.text = ""
+            cell.messageLabel.text = ""
         }
         return cell
     }

@@ -41,7 +41,6 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         let statusBar = UIView(frame: CGRect(x: 0, y: -20, width: view.frame.width, height: 20))
         statusBar.backgroundColor = UIColor(red: 255.0/255.0, green: 132.0/255.0, blue: 175.0/255.0, alpha: 1.0)
         navigationBar.isTranslucent = false
-//         self.navigationItem.title = self.currentUser?.name
         self.navigationBar.topItem?.title = self.currentUser?.name
         navigationBar.addSubview(statusBar)
 
