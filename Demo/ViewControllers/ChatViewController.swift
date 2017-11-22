@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate{
     
     //MARK: Properties
     
@@ -21,6 +22,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     var currentUser: User?
     let barHeight: CGFloat = 50
     let imagePicker = UIImagePickerController()
+    let locationManager = CLLocationManager()
+    var canSendLocation = true
     override var inputAccessoryView: UIView? {
         get {
             self.inputBar.frame.size.height = self.barHeight
@@ -55,6 +58,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     
     func customization() {
         self.imagePicker.delegate = self
+        self.locationManager.delegate = self
         self.tableView.estimatedRowHeight = self.barHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.contentInset.bottom = self.barHeight
@@ -95,6 +99,19 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         }
     }
     
+    //要求地圖權限
+    func checkLocationPermission() -> Bool {
+        var state = false
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            state = true
+        case .authorizedAlways:
+            state = true
+        default: break
+        }
+        return state
+    }
+    
     @IBAction func sendMessage(_ sender: Any) {
         if let text = self.inputTextField.text {
             if text.count > 0 {
@@ -123,6 +140,19 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.present(imagePicker,animated: true,completion: nil)
         }
     }
+    
+    @IBAction func selectLocation(_ sender: Any) {
+        self.animateExtraButtons(toHide: true)
+        self.canSendLocation = true
+        if self.checkLocationPermission() {
+            self.locationManager.startUpdatingLocation()
+        }
+        else{
+            self.locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat") {
             UIApplication.shared.keyWindow?.rootViewController = viewController
@@ -161,7 +191,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                     })
                 }
             case .location:
-                break
+                cell.messageBackground.image = UIImage.init(named: "location")
+                cell.message.isHidden = true
             }
             return cell
         case .sender:
@@ -187,7 +218,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                     })
                 }
             case .location:
-                break
+                cell.messageBackground.image = UIImage.init(named: "location")
+                cell.message.isHidden = true
             }
             return cell
         }
@@ -213,6 +245,20 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         picker.dismiss(animated: true, completion: nil)
     }
     
+    // 每次CLLocationManager 更新位置後 觸發
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.locationManager.stopUpdatingHeading()
+        // 拿到目前的座標
+        if let lastLocation = locations.last {
+            if self.canSendLocation {
+                let coordinate = String(lastLocation.coordinate.latitude) + ":" + String(lastLocation.coordinate.longitude)
+                let message = Message.init(type: .location, content: coordinate, owner: .sender, timestamp: Int(Date().timeIntervalSince1970), isRead: false)
+                Message.send(message: message, toID: self.currentUser!.id, completion: {(_) in
+                })
+                self.canSendLocation = false
+            }
+        }
+    }
     
     
     // MARK: - Navigation

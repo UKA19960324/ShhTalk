@@ -64,13 +64,11 @@ class Message {
                         }
                     })
                 }
-//            case .location:
-//                let values = ["type": "location", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
-//                Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
-//                    completion(status)
-//                })
             case .location:
-                break
+                let values = ["type": "location", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
+                Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
+                    completion(status)
+                })
             }
         }
     }

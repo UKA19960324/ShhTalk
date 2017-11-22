@@ -2030,6 +2030,9 @@
                                         <constraint firstAttribute="height" constant="25" id="cFy-Z2-Lsx"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="selectLocation"/>
+                                    <connections>
+                                        <action selector="selectLocation:" destination="5tp-Ub-o6N" eventType="touchUpInside" id="77p-x6-vqZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
