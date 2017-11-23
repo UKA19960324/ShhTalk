@@ -69,6 +69,11 @@ class Message {
                 Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
                     completion(status)
                 })
+            case .model:
+                let values = ["type": "model", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
+                Message.uploadMessage(withValues: values, toID: toID, completion: { (status) in
+                    completion(status)
+                })
             }
         }
     }
@@ -120,6 +125,8 @@ class Message {
                             type = .photo
                         case "location":
                             type = .location
+                        case "model":
+                            type = .model
                         default: break
                         }
                         self.type = type
@@ -151,6 +158,8 @@ class Message {
                                 type = .photo
                             case "location":
                                 type = .location
+                            case "model":
+                                type = .model
                             default: break
                             }
                             let content = receivedMessage["content"] as! String

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SceneKit
 class SenderCell: UITableViewCell {
     
     @IBOutlet weak var profilePic: RoundedImageView!
     @IBOutlet weak var message: UITextView!
     @IBOutlet weak var messageBackground: UIImageView!
+    @IBOutlet weak var message3D: SCNView!
     
     func clearCellData()  {
         self.message.text = nil
@@ -31,8 +33,8 @@ class SenderCell: UITableViewCell {
 class ReceiverCell: UITableViewCell {
     
     @IBOutlet weak var message: UITextView!
-    @IBOutlet weak var messageBackground: UIImageView!
-    
+    @IBOutlet weak var messageBackground: UIImageView!    
+    @IBOutlet weak var message3D: SCNView!
     func clearCellData()  {
         self.message.text = nil
         self.message.isHidden = false

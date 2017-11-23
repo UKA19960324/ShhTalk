@@ -1883,6 +1883,10 @@
                                                         <constraint firstAttribute="height" constant="36" id="Ee5-3q-CRN"/>
                                                     </constraints>
                                                 </imageView>
+                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-gP-Pej">
+                                                    <rect key="frame" x="56" y="6" width="20" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </sceneKitView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="leading" secondItem="acN-TV-DRD" secondAttribute="trailing" constant="10" id="6ch-XZ-IYn"/>
@@ -1898,6 +1902,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="message" destination="ee2-nU-B4a" id="owX-Zn-iP9"/>
+                                            <outlet property="message3D" destination="LgF-gP-Pej" id="09q-a5-gdx"/>
                                             <outlet property="messageBackground" destination="C2l-wc-TV9" id="E5T-oD-m6k"/>
                                             <outlet property="profilePic" destination="acN-TV-DRD" id="x6b-WP-f9o"/>
                                         </connections>
@@ -1927,6 +1932,10 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                                 </textView>
+                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b60-8E-RTz">
+                                                    <rect key="frame" x="340" y="6" width="20" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </sceneKitView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="lmC-Qh-qaH" secondAttribute="bottom" constant="6" id="9eg-GF-pl6"/>
@@ -1940,6 +1949,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="message" destination="dL0-F4-VsY" id="xrZ-nJ-U2e"/>
+                                            <outlet property="message3D" destination="b60-8E-RTz" id="sck-km-tRF"/>
                                             <outlet property="messageBackground" destination="lmC-Qh-qaH" id="lN0-du-5yr"/>
                                         </connections>
                                     </tableViewCell>
@@ -2021,7 +2031,10 @@
                                         <constraint firstAttribute="height" constant="25" id="osE-Ze-kD2"/>
                                         <constraint firstAttribute="width" constant="32" id="xek-BB-25T"/>
                                     </constraints>
-                                    <state key="normal" backgroundImage="selectCamera"/>
+                                    <state key="normal" backgroundImage="Model"/>
+                                    <connections>
+                                        <action selector="selectModel:" destination="5tp-Ub-o6N" eventType="touchUpInside" id="vwg-4o-bgL"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-Vr-OTd">
                                     <rect key="frame" x="269" y="12.5" width="32" height="25"/>
@@ -2113,7 +2126,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-146" y="2613"/>
+            <point key="canvasLocation" x="-1" y="2613"/>
         </scene>
     </scenes>
     <resources>
@@ -2141,6 +2154,7 @@
         <image name="Haunter.png" width="800" height="682"/>
         <image name="Jigglypuff.png" width="920" height="868"/>
         <image name="Jirachi.png" width="770" height="582"/>
+        <image name="Model" width="64" height="50"/>
         <image name="My Profile" width="375" height="667"/>
         <image name="Pikachu.png" width="206" height="189"/>
         <image name="Profile" width="375" height="667"/>
@@ -2156,7 +2170,6 @@
         <image name="Vulpix.png" width="250" height="250"/>
         <image name="more" width="64" height="50"/>
         <image name="oddish.png" width="364" height="369"/>
-        <image name="selectCamera" width="64" height="50"/>
         <image name="selectLocation" width="64" height="50"/>
         <image name="selectMessage" width="64" height="50"/>
         <image name="selectPhoto" width="64" height="50"/>

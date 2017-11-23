@@ -56,6 +56,8 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
                 cell.messageLabel.text = "Photo"
             case .location:
                 cell.messageLabel.text = "Location"
+            case .model:
+                cell.messageLabel.text = "Model"
             }
             let messageDate = Date.init(timeIntervalSince1970: TimeInterval(self.items[indexPath.row].lastMessage.timestamp))
             let dataformatter = DateFormatter.init()

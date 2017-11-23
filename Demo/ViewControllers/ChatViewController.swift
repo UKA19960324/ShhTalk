@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import SceneKit
 class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDataSource,UITextFieldDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate{
     
     //MARK: Properties
@@ -141,6 +141,10 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         }
     }
     
+    @IBAction func selectModel(_ sender: Any) {
+        self.composeMessage(type: .model, content: "Pikachu.obj")
+    }
+    
     @IBAction func selectLocation(_ sender: Any) {
         self.animateExtraButtons(toHide: true)
         self.canSendLocation = true
@@ -174,8 +178,14 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             cell.clearCellData()
             switch self.items[indexPath.row].type {
             case .text:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 cell.message.text = self.items[indexPath.row].content as! String
             case .photo:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 if let image = self.items[indexPath.row].image {
                     cell.messageBackground.image = image
                     cell.message.isHidden = true
@@ -191,8 +201,33 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                     })
                 }
             case .location:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 cell.messageBackground.image = UIImage.init(named: "location")
                 cell.message.isHidden = true
+            case .model:
+                cell.message3D.isHidden = false
+                cell.message.isHidden = true
+                cell.messageBackground.isHidden = true
+                var ModelName = self.items[indexPath.row].content as! String
+                
+                let ModelScene = SCNScene(named: ModelName)
+                
+                let CameraNode = SCNNode()
+                CameraNode.camera = SCNCamera()
+                CameraNode.position = SCNVector3(x:0,y:0,z:5)
+                ModelScene?.rootNode.addChildNode(CameraNode)
+                
+                let LightNode = SCNNode()
+                LightNode.light = SCNLight()
+                LightNode.light?.type = .ambient
+                LightNode.light?.color = UIColor.darkGray
+                ModelScene?.rootNode.addChildNode(LightNode)
+                //cell.message3D.frame = self.view.bounds
+                //                cell.message3D.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
+                cell.message3D.scene = ModelScene
+                cell.message3D.allowsCameraControl = true
             }
             return cell
         case .sender:
@@ -201,8 +236,14 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             cell.profilePic.image = self.currentUser?.profilePic
             switch self.items[indexPath.row].type {
             case .text:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 cell.message.text = self.items[indexPath.row].content as! String
             case .photo:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 if let image = self.items[indexPath.row].image {
                     cell.messageBackground.image = image
                     cell.message.isHidden = true
@@ -218,8 +259,33 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                     })
                 }
             case .location:
+                cell.message.isHidden = false
+                cell.messageBackground.isHidden = false
+                cell.message3D.isHidden = true
                 cell.messageBackground.image = UIImage.init(named: "location")
                 cell.message.isHidden = true
+            case .model:
+                cell.message3D.isHidden = false
+                cell.message.isHidden = true
+                cell.messageBackground.isHidden = true
+                var ModelName = self.items[indexPath.row].content as! String
+                
+                let ModelScene = SCNScene(named: ModelName)
+                
+                let CameraNode = SCNNode()
+                CameraNode.camera = SCNCamera()
+                CameraNode.position = SCNVector3(x:0,y:0,z:5)
+                ModelScene?.rootNode.addChildNode(CameraNode)
+                
+                let LightNode = SCNNode()
+                LightNode.light = SCNLight()
+                LightNode.light?.type = .ambient
+                LightNode.light?.color = UIColor.darkGray
+                ModelScene?.rootNode.addChildNode(LightNode)
+                //cell.message3D.frame = self.view.bounds
+//                cell.message3D.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
+                cell.message3D.scene = ModelScene
+                cell.message3D.allowsCameraControl = true
             }
             return cell
         }
