@@ -1883,20 +1883,25 @@
                                                         <constraint firstAttribute="height" constant="36" id="Ee5-3q-CRN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-gP-Pej">
-                                                    <rect key="frame" x="56" y="6" width="20" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-gP-Pej">
+                                                    <rect key="frame" x="51" y="6" width="200" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="KqI-Dz-Ebo"/>
+                                                    </constraints>
                                                 </sceneKitView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="leading" secondItem="acN-TV-DRD" secondAttribute="trailing" constant="10" id="6ch-XZ-IYn"/>
+                                                <constraint firstItem="LgF-gP-Pej" firstAttribute="leading" secondItem="acN-TV-DRD" secondAttribute="trailing" constant="5" id="QjT-a7-FZs"/>
                                                 <constraint firstItem="ee2-nU-B4a" firstAttribute="top" secondItem="8Rc-27-trP" secondAttribute="top" constant="6" id="S5d-Vh-2Ib"/>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="height" secondItem="ee2-nU-B4a" secondAttribute="height" id="TUj-5H-w29"/>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="width" secondItem="ee2-nU-B4a" secondAttribute="width" constant="10" id="WlD-gV-AAe"/>
                                                 <constraint firstAttribute="bottom" secondItem="acN-TV-DRD" secondAttribute="bottom" constant="6" id="biz-7M-SxS"/>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="centerX" secondItem="ee2-nU-B4a" secondAttribute="centerX" id="hbS-gd-Qri"/>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="bottom" secondItem="acN-TV-DRD" secondAttribute="bottom" id="jle-aO-kH7"/>
+                                                <constraint firstItem="LgF-gP-Pej" firstAttribute="top" secondItem="8Rc-27-trP" secondAttribute="top" constant="6" id="mYH-tf-tla"/>
                                                 <constraint firstItem="acN-TV-DRD" firstAttribute="leading" secondItem="8Rc-27-trP" secondAttribute="leading" constant="10" id="mcV-op-gWA"/>
+                                                <constraint firstAttribute="bottom" secondItem="LgF-gP-Pej" secondAttribute="bottom" constant="6" id="mkx-jY-u15"/>
                                                 <constraint firstItem="C2l-wc-TV9" firstAttribute="centerY" secondItem="ee2-nU-B4a" secondAttribute="centerY" id="pyK-GF-zq2"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1932,12 +1937,17 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                                 </textView>
-                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b60-8E-RTz">
-                                                    <rect key="frame" x="340" y="6" width="20" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b60-8E-RTz">
+                                                    <rect key="frame" x="160" y="6" width="200" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="Erp-9r-U37"/>
+                                                    </constraints>
                                                 </sceneKitView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="b60-8E-RTz" firstAttribute="top" secondItem="cLa-Pe-nOo" secondAttribute="top" constant="6" id="33J-KF-Pqd"/>
+                                                <constraint firstAttribute="trailing" secondItem="b60-8E-RTz" secondAttribute="trailing" constant="15" id="6NZ-o9-9M2"/>
+                                                <constraint firstAttribute="bottom" secondItem="b60-8E-RTz" secondAttribute="bottom" constant="6" id="8C8-b3-od7"/>
                                                 <constraint firstAttribute="bottom" secondItem="lmC-Qh-qaH" secondAttribute="bottom" constant="6" id="9eg-GF-pl6"/>
                                                 <constraint firstItem="lmC-Qh-qaH" firstAttribute="centerX" secondItem="dL0-F4-VsY" secondAttribute="centerX" id="Gh7-kz-164"/>
                                                 <constraint firstItem="lmC-Qh-qaH" firstAttribute="width" secondItem="dL0-F4-VsY" secondAttribute="width" constant="10" id="T3l-7A-ejh"/>

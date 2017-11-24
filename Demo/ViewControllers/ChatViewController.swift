@@ -290,7 +290,14 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             return cell
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.items[indexPath.row].type == .model {
+            return 200
+        }
+        return UITableViewAutomaticDimension
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
