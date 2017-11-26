@@ -140,11 +140,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.present(imagePicker,animated: true,completion: nil)
         }
     }
-    
-    @IBAction func selectModel(_ sender: Any) {
-        self.composeMessage(type: .model, content: "Pikachu.obj")
-    }
-    
+        
     @IBAction func selectLocation(_ sender: Any) {
         self.animateExtraButtons(toHide: true)
         self.canSendLocation = true
@@ -224,8 +220,6 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 LightNode.light?.type = .ambient
                 LightNode.light?.color = UIColor.darkGray
                 ModelScene?.rootNode.addChildNode(LightNode)
-                //cell.message3D.frame = self.view.bounds
-                //                cell.message3D.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
                 cell.message3D.scene = ModelScene
                 cell.message3D.allowsCameraControl = true
             }
@@ -282,8 +276,6 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 LightNode.light?.type = .ambient
                 LightNode.light?.color = UIColor.darkGray
                 ModelScene?.rootNode.addChildNode(LightNode)
-                //cell.message3D.frame = self.view.bounds
-//                cell.message3D.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
                 cell.message3D.scene = ModelScene
                 cell.message3D.allowsCameraControl = true
             }
@@ -336,10 +328,13 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     
     // MARK: - Navigation
 
-     //In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "model"{
+            self.inputAccessoryView?.isHidden = true
+            let controller = segue.destination as! ChooseMViewController
+            controller.currentUser = currentUser
+        }
+    }
 
 
 }

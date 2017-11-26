@@ -458,6 +458,9 @@
                                 <state key="normal" image="EmbeddingReturnIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="KCJ-nQ-e04"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-u6-SNq">
                                 <rect key="frame" x="208" y="440" width="75" height="75"/>
@@ -725,6 +728,9 @@
                                 <state key="normal" title="Add the Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendModel:" destination="sf2-cZ-gEr" eventType="touchUpInside" id="XOj-ML-Bno"/>
+                                </connections>
                             </button>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whj-n0-nU6">
                                 <rect key="frame" x="41" y="339" width="240" height="234"/>
@@ -738,14 +744,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Nz9-5J-wvU" kind="show" id="mNQ-Lo-yle"/>
+                                    <action selector="backButton:" destination="sf2-cZ-gEr" eventType="touchUpInside" id="sDE-Du-N6x"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-eU-U5g">
+                                <rect key="frame" x="81" y="190" width="161" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="ModelView" destination="Whj-n0-nU6" id="cGy-yL-LZi"/>
+                        <outlet property="messageTextView" destination="0fd-eU-U5g" id="Vh8-m1-q8E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVE-Fi-I0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2016,7 +2031,7 @@
                                     </constraints>
                                     <state key="normal" backgroundImage="Model"/>
                                     <connections>
-                                        <action selector="selectModel:" destination="5tp-Ub-o6N" eventType="touchUpInside" id="vwg-4o-bgL"/>
+                                        <segue destination="Nz9-5J-wvU" kind="show" identifier="model" id="xge-tT-lHX"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-Vr-OTd">
@@ -2159,7 +2174,6 @@
         <image name="send" width="64" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mNQ-Lo-yle"/>
         <segue reference="avx-Q5-JK3"/>
         <segue reference="hJi-oD-PdC"/>
         <segue reference="Bo5-dc-2qF"/>

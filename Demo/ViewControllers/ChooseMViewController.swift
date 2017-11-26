@@ -24,7 +24,7 @@ class ChooseMViewController: UIViewController {
     @IBOutlet weak var BTN_Haunter: UIButton!
     
     var ModelName = ""
-    
+    var currentUser: User?
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,11 +79,15 @@ class ChooseMViewController: UIViewController {
         }
     
     }
-
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.inputAccessoryView?.isHidden = false
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "back"{
-            let controller = segue.destination as! ShowMViewController
-            controller.ModelName = ModelName
-        }
+        let controller = segue.destination as! ShowMViewController
+        controller.ModelName = ModelName
+        controller.currentUser = currentUser
     }
 }
