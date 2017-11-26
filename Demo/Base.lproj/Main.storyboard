@@ -267,9 +267,6 @@
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Nz9-5J-wvU" kind="show" id="XSC-WL-HNh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFt-4m-cnw" customClass="Button" customModule="Demo" customModuleProvider="target">
                                 <rect key="frame" x="107" y="390" width="177" height="50"/>
@@ -305,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdK-Uw-JYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031" y="1146"/>
+            <point key="canvasLocation" x="4114" y="1146"/>
         </scene>
         <!--ChooseM View Controller-->
         <scene sceneID="eDE-nU-Azw">
@@ -461,9 +458,6 @@
                                 <state key="normal" image="EmbeddingReturnIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="nt5-5r-alZ" kind="show" identifier="back" id="qiZ-eg-zNz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-u6-SNq">
                                 <rect key="frame" x="208" y="440" width="75" height="75"/>
@@ -559,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEI-XL-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="1149"/>
+            <point key="canvasLocation" x="604" y="1388"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TMz-ht-VXq">
@@ -608,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ui5-AS-J7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146.40000000000001" y="1845.4272863568217"/>
+            <point key="canvasLocation" x="3273" y="1146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Uhu-WH-a9y">
@@ -657,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyG-z8-3FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709.60000000000002" y="1844.5277361319343"/>
+            <point key="canvasLocation" x="3273" y="2571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZyF-E0-pHb">
@@ -706,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz1-2H-mCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.5999999999999" y="1844.5277361319343"/>
+            <point key="canvasLocation" x="3273" y="1845"/>
         </scene>
         <!--ShowM View Controller-->
         <scene sceneID="07T-Lw-sRu">
@@ -720,34 +714,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check Model" translatesAutoresizingMaskIntoConstraints="NO" id="roY-z0-E32">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Add the Message_Line" translatesAutoresizingMaskIntoConstraints="NO" id="roY-z0-E32">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTu-b2-VM9">
-                                <rect key="frame" x="61" y="538" width="188" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="6zg-Gg-8hp"/>
-                                    <constraint firstAttribute="width" constant="188" id="h2T-wQ-jHY"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTu-b2-VM9">
+                                <rect key="frame" x="67" y="565" width="188" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Add the Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whj-n0-nU6">
-                                <rect key="frame" x="35" y="190" width="240" height="323"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whj-n0-nU6">
+                                <rect key="frame" x="41" y="339" width="240" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="8z6-Uc-qtl"/>
-                                    <constraint firstAttribute="height" constant="323" id="tJx-lb-oJF"/>
-                                </constraints>
                             </sceneKitView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-R5-cAq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-R5-cAq">
                                 <rect key="frame" x="15" y="600" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="AMH-TE-Iwb"/>
-                                    <constraint firstAttribute="width" constant="45" id="QWO-9R-sIO"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="EmbeddingReturnIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -757,19 +743,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="CHK-aA-Ahh" firstAttribute="top" secondItem="roY-z0-E32" secondAttribute="bottom" id="1N1-AD-IYy"/>
-                            <constraint firstItem="Luv-R5-cAq" firstAttribute="leading" secondItem="Pcq-Ty-eaB" secondAttribute="leading" constant="15" id="8Iz-2O-yIh"/>
-                            <constraint firstItem="Whj-n0-nU6" firstAttribute="top" secondItem="OQL-ui-NTy" secondAttribute="bottom" constant="170" id="Ay1-I1-XqO"/>
-                            <constraint firstItem="VTu-b2-VM9" firstAttribute="top" secondItem="Whj-n0-nU6" secondAttribute="bottom" constant="25" id="OXO-Ot-uLZ"/>
-                            <constraint firstItem="VTu-b2-VM9" firstAttribute="centerX" secondItem="Whj-n0-nU6" secondAttribute="centerX" id="Oad-9I-0Oj"/>
-                            <constraint firstItem="roY-z0-E32" firstAttribute="top" secondItem="Pcq-Ty-eaB" secondAttribute="top" id="Pbm-Ry-uMR"/>
-                            <constraint firstItem="VTu-b2-VM9" firstAttribute="top" secondItem="Whj-n0-nU6" secondAttribute="bottom" constant="25" id="SmS-uZ-Z7c"/>
-                            <constraint firstItem="CHK-aA-Ahh" firstAttribute="top" secondItem="Luv-R5-cAq" secondAttribute="bottom" constant="22" id="VcY-HO-QDG"/>
-                            <constraint firstAttribute="trailing" secondItem="roY-z0-E32" secondAttribute="trailing" id="f2k-es-Vsi"/>
-                            <constraint firstItem="roY-z0-E32" firstAttribute="leading" secondItem="Pcq-Ty-eaB" secondAttribute="leading" id="kmk-fZ-F0F"/>
-                            <constraint firstItem="VTu-b2-VM9" firstAttribute="leading" secondItem="Pcq-Ty-eaB" secondAttribute="leadingMargin" constant="45" id="pC8-qd-2NT"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ModelView" destination="Whj-n0-nU6" id="cGy-yL-LZi"/>
@@ -777,7 +750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVE-Fi-I0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709.60000000000002" y="1147.3763118440781"/>
+            <point key="canvasLocation" x="1505" y="1388"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X04-FE-jwT">
@@ -833,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmR-wU-Y4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="1147"/>
+            <point key="canvasLocation" x="2492" y="1148"/>
         </scene>
         <!--GenerateQ Rcode View Controller-->
         <scene sceneID="Chz-B6-P3W">
@@ -1222,7 +1195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E74-3l-Wk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="2613"/>
+            <point key="canvasLocation" x="-1031" y="2131"/>
         </scene>
         <!--My Profile View Controller-->
         <scene sceneID="Wzh-uy-WSY">
@@ -1832,7 +1805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBy-r5-dOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031" y="2613"/>
+            <point key="canvasLocation" x="-1031" y="1388"/>
         </scene>
         <!--Chat-->
         <scene sceneID="Xmg-Cc-ImG">
@@ -2136,18 +2109,18 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1" y="2613"/>
+            <point key="canvasLocation" x="-180" y="1389"/>
         </scene>
     </scenes>
     <resources>
         <image name="About" width="375" height="667"/>
         <image name="Account" width="375" height="667"/>
         <image name="Add The Message" width="375" height="667"/>
+        <image name="Add the Message_Line" width="375" height="667"/>
         <image name="Bulbasaur.png" width="250" height="250"/>
         <image name="ChangePicture" width="49" height="49"/>
         <image name="Charmander.png" width="210" height="237"/>
         <image name="Chat" width="375" height="667"/>
-        <image name="Check Model" width="375" height="667"/>
         <image name="Check Model File" width="375" height="667"/>
         <image name="Check friend" width="375" height="667"/>
         <image name="Choose Model" width="375" height="667"/>
@@ -2186,9 +2159,9 @@
         <image name="send" width="64" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="mNQ-Lo-yle"/>
         <segue reference="avx-Q5-JK3"/>
         <segue reference="hJi-oD-PdC"/>
-        <segue reference="XSC-WL-HNh"/>
         <segue reference="Bo5-dc-2qF"/>
     </inferredMetricsTieBreakers>
 </document>
