@@ -18,12 +18,15 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var navigationBar: UINavigationBar!
+    
     var items = [Message]()
     var currentUser: User?
     let barHeight: CGFloat = 50
     let imagePicker = UIImagePickerController()
     let locationManager = CLLocationManager()
     var canSendLocation = true
+    var selectedImage: UIImage!
+    
     override var inputAccessoryView: UIView? {
         get {
             self.inputBar.frame.size.height = self.barHeight
@@ -290,15 +293,30 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         return UITableViewAutomaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.inputTextField.resignFirstResponder()
+        switch self.items[indexPath.row].type {
+        case .photo:
+            if let photo = self.items[indexPath.row].image {
+                self.selectedImage = photo
+                self.inputAccessoryView?.isHidden = true
+                self.performSegue(withIdentifier: "FullImage", sender: self)
+            }
+        case .location:
+            break
+        case .model:
+            break
+        default: break
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            print(" SelectImage ! ")
             self.composeMessage(type: .photo, content: selectedImage)
         }
         self.inputBar.isHidden = false
@@ -333,6 +351,10 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.inputAccessoryView?.isHidden = true
             let controller = segue.destination as! ChooseMViewController
             controller.currentUser = currentUser
+        }
+        else if  segue.identifier == "FullImage" {
+            let controller = segue.destination as! ShowImageViewController
+            controller.selectedImage = selectedImage
         }
     }
 

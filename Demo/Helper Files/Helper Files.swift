@@ -22,6 +22,11 @@ enum MessageOwner {
     case receiver
 }
 
+enum ShowExtraView {
+    case photo
+    case map
+}
+
 class RoundedImageView: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()
