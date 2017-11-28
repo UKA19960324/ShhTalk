@@ -136,6 +136,10 @@ class HomeViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDelega
         }
 
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 
     /*
     // MARK: - Navigation

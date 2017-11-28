@@ -15,6 +15,7 @@
 		554102A01FA08506007800A8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5541029F1FA08506007800A8 /* ChatViewController.swift */; };
 		554102A31FA2228A007800A8 /* Helper Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554102A21FA2228A007800A8 /* Helper Files.swift */; };
 		554102A51FA2246F007800A8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554102A41FA2246F007800A8 /* Message.swift */; };
+		55481EE61FCD911600A0EEE6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55481EE51FCD911600A0EEE6 /* MapViewController.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
 		554D24941FAA4C6E003E9675 /* EmbeddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */; };
 		555406691FC5B64D0004DD09 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555406681FC5B64D0004DD09 /* MapKit.framework */; };
@@ -129,6 +130,7 @@
 		5541029F1FA08506007800A8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		554102A21FA2228A007800A8 /* Helper Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Files.swift"; sourceTree = "<group>"; };
 		554102A41FA2246F007800A8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		55481EE51FCD911600A0EEE6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddingViewController.swift; sourceTree = "<group>"; };
 		555406681FC5B64D0004DD09 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -270,6 +272,7 @@
 				5554F8921FA858AE00C1B19D /* ChatTableViewCell.swift */,
 				554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */,
 				558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */,
+				55481EE51FCD911600A0EEE6 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
 				5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
+				55481EE61FCD911600A0EEE6 /* MapViewController.swift in Sources */,
 				55B7A58C1F683968006D3559 /* RHTriggerButtonView.swift in Sources */,
 				554102941F9CF84C007800A8 /* MessageTableViewCell.swift in Sources */,
 				558E9EA51FCC68A400D69CC8 /* ShowImageViewController.swift in Sources */,

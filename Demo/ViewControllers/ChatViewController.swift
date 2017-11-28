@@ -26,6 +26,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     let locationManager = CLLocationManager()
     var canSendLocation = true
     var selectedImage: UIImage!
+    var latitude  : CLLocationDegrees!
+    var longitude : CLLocationDegrees!
     
     override var inputAccessoryView: UIView? {
         get {
@@ -303,7 +305,11 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 self.performSegue(withIdentifier: "FullImage", sender: self)
             }
         case .location:
-            break
+            let coordinates = (self.items[indexPath.row].content as! String).components(separatedBy: ":")
+            latitude = CLLocationDegrees(coordinates[0])!
+            longitude = CLLocationDegrees(coordinates[1])!
+            self.inputAccessoryView?.isHidden = true
+            self.performSegue(withIdentifier: "Map", sender: self)
         case .model:
             break
         default: break
@@ -355,6 +361,11 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         else if  segue.identifier == "FullImage" {
             let controller = segue.destination as! ShowImageViewController
             controller.selectedImage = selectedImage
+        }
+        else if  segue.identifier == "Map" {
+            let controller = segue.destination as! MapViewController
+            controller.latitude = latitude
+            controller.longitude = longitude
         }
     }
 

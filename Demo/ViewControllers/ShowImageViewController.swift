@@ -37,19 +37,14 @@ class ShowImageViewController: UIViewController/* , UIScrollViewDelegate*/ {
 //        self.scrollView.maximumZoomScale = 3.0
     }
     
-    
     @IBAction func close(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         self.inputAccessoryView?.isHidden = false
     }
     
-//    override var preferredStatusBarStyle: UIStatusBarStyle{
-//        return .lightContent
-//    }
-
-//    override var prefersStatusBarHidden: Bool{
-//        return true
-//    }
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
     
 //    @IBAction func doubleTapGesture(_ sender: UITapGestureRecognizer) {
 //        if self.scrollView.zoomScale == 1 {
