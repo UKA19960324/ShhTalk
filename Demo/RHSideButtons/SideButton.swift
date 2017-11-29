@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
 var buttonsArr = [RHButtonView]()
 var sideButtonsView: RHSideButtons?
 extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
@@ -47,6 +50,24 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
         switch index {
         // 點選 登出 iCon (未完成)
         case 0:
+            if let providerData = Auth.auth().currentUser?.providerData{
+                let userInfo = providerData[0]
+                //print(userInfo.providerID)
+                switch userInfo.providerID {
+                case "google.com":
+                    GIDSignIn.sharedInstance().signOut()
+                case "facebook.com" :
+                    FBSDKLoginManager().logOut()
+                case "password":
+                    do{
+                      try Auth.auth().signOut()
+                    }
+                    catch{
+                    }
+                default:
+                    break
+                }
+            }
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Home"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
@@ -73,22 +94,15 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
                 self.dismiss(animated: true, completion: nil)
                  print("Chat ! ")
             }
-        // 點選 3D iCon
-        case 4:
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "3D"){
-                UIApplication.shared.keyWindow?.rootViewController = viewController
-                self.dismiss(animated: true, completion: nil)
-                print("3D ! ")
-            }
         // 點選 好友 iCon
-        case 5:
+        case 4:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Friends"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("Friends ! ")
             }
         // 點選 個人資料 iCon
-        case 6:
+        case 5:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)

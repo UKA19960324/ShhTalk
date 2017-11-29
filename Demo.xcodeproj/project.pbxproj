@@ -17,7 +17,6 @@
 		554102A51FA2246F007800A8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554102A41FA2246F007800A8 /* Message.swift */; };
 		55481EE61FCD911600A0EEE6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55481EE51FCD911600A0EEE6 /* MapViewController.swift */; };
 		554B0E3D1F471F0E0016E154 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */; };
-		554D24941FAA4C6E003E9675 /* EmbeddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */; };
 		555406691FC5B64D0004DD09 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555406681FC5B64D0004DD09 /* MapKit.framework */; };
 		5554F8931FA858AE00C1B19D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554F8921FA858AE00C1B19D /* ChatTableViewCell.swift */; };
 		556084241F26FA3E00B0D8EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */; };
@@ -132,7 +131,6 @@
 		554102A41FA2246F007800A8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		55481EE51FCD911600A0EEE6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		554B0E3C1F471F0D0016E154 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
-		554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddingViewController.swift; sourceTree = "<group>"; };
 		555406681FC5B64D0004DD09 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5554F8921FA858AE00C1B19D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		556084231F26FA3E00B0D8EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 				554102931F9CF84C007800A8 /* MessageTableViewCell.swift */,
 				5541029F1FA08506007800A8 /* ChatViewController.swift */,
 				5554F8921FA858AE00C1B19D /* ChatTableViewCell.swift */,
-				554D24931FAA4C6E003E9675 /* EmbeddingViewController.swift */,
 				558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */,
 				55481EE51FCD911600A0EEE6 /* MapViewController.swift */,
 			);
@@ -856,7 +853,6 @@
 				C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */,
 				5541028A1F97ADC4007800A8 /* User.swift in Sources */,
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
-				554D24941FAA4C6E003E9675 /* EmbeddingViewController.swift in Sources */,
 				554102A31FA2228A007800A8 /* Helper Files.swift in Sources */,
 				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
 				5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */,
