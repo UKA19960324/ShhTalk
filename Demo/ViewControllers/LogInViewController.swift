@@ -67,7 +67,7 @@ class LogInViewController: UIViewController {
             self.view.endEditing(true)
             
             //呈現主視圖
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat"){
                 self.present(viewController, animated: true, completion: nil)
             }
         })

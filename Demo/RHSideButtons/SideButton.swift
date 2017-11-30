@@ -74,35 +74,37 @@ extension UIViewController: RHSideButtonsDataSource , RHSideButtonsDelegate{
                 print("LogOut ! ")
             }
         // 點選 設定 iCon
+        /*
         case 1:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Setting"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("Setting ! ")
             }
+        */
         // 點選 關於 iCon
-        case 2:
+        case 1:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "About"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("About Us ! ")
             }
         // 點選 聊天 iCon
-        case 3:
+        case 2:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                  print("Chat ! ")
             }
         // 點選 好友 iCon
-        case 4:
+        case 3:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Friends"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
                 print("Friends ! ")
             }
         // 點選 個人資料 iCon
-        case 5:
+        case 4:
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)

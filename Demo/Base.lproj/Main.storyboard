@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GQp-tj-IeF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -494,55 +494,53 @@
         <!--View Controller-->
         <scene sceneID="Uhu-WH-a9y">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyG-z8-3FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="A18-6U-Xfw" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdd-ex-fQv"/>
                         <viewControllerLayoutGuide type="bottom" id="rxs-fQ-Ha1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CaZ-5D-Hl7">
+                    <view key="view" contentMode="scaleAspectFill" id="CaZ-5D-Hl7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check Model File" translatesAutoresizingMaskIntoConstraints="NO" id="YdN-YB-pGB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Extraction" translatesAutoresizingMaskIntoConstraints="NO" id="YdN-YB-pGB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg2-MO-Dbf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjk-ht-yL0">
                                 <rect key="frame" x="15" y="600" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="40u-vu-nt7"/>
-                                    <constraint firstAttribute="height" constant="45" id="V1D-ia-Hjv"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="EmbeddingReturnIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="sf2-cZ-gEr" eventType="touchUpInside" id="BMx-2N-SKh"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAl-zu-7gq">
-                                <rect key="frame" x="14" y="538" width="284" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are decrypted  the message yet." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdM-fV-oqv">
+                                <rect key="frame" x="37" y="376" width="252" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Decrypted the Message">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="YdN-YB-pGB" secondAttribute="trailing" id="Rux-qy-a0T"/>
-                            <constraint firstItem="Wg2-MO-Dbf" firstAttribute="leading" secondItem="CaZ-5D-Hl7" secondAttribute="leading" constant="15" id="XAd-eK-LWi"/>
                             <constraint firstItem="YdN-YB-pGB" firstAttribute="top" secondItem="CaZ-5D-Hl7" secondAttribute="top" id="Zwx-JG-ABv"/>
-                            <constraint firstItem="rxs-fQ-Ha1" firstAttribute="top" secondItem="Wg2-MO-Dbf" secondAttribute="bottom" constant="22" id="cTL-aL-B8D"/>
                             <constraint firstItem="YdN-YB-pGB" firstAttribute="leading" secondItem="CaZ-5D-Hl7" secondAttribute="leading" id="oum-co-hyb"/>
                             <constraint firstItem="rxs-fQ-Ha1" firstAttribute="top" secondItem="YdN-YB-pGB" secondAttribute="bottom" id="xtO-bm-7Rg"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iyG-z8-3FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3191" y="1388"/>
+            <point key="canvasLocation" x="3189.5999999999999" y="1387.5562218890557"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZyF-E0-pHb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz1-2H-mCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qii-Jd-BAD" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFS-vh-R1x"/>
@@ -552,40 +550,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Show The Message" translatesAutoresizingMaskIntoConstraints="NO" id="84g-C0-G5c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Extraction" translatesAutoresizingMaskIntoConstraints="NO" id="84g-C0-G5c">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmV-8H-lkA">
-                                <rect key="frame" x="15" y="600" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="FsQ-Xq-IEX"/>
-                                    <constraint firstAttribute="width" constant="45" id="vM9-pc-ptk"/>
-                                </constraints>
-                                <state key="normal" image="EmbeddingReturnIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-vo-Wka">
-                                <rect key="frame" x="75" y="559" width="166" height="41"/>
+                                <rect key="frame" x="35" y="559" width="248" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Done">
+                                <state key="normal" title="Decrypted the Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-6z-faB">
+                                <rect key="frame" x="81" y="190" width="161" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9d-nD-Zg6">
+                                <rect key="frame" x="41" y="339" width="240" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fmV-8H-lkA" firstAttribute="leading" secondItem="KxN-1J-HAk" secondAttribute="leading" constant="15" id="5XF-jJ-ulP"/>
                             <constraint firstItem="Pb0-1P-Uhz" firstAttribute="top" secondItem="84g-C0-G5c" secondAttribute="bottom" id="Dz2-Dy-j1Q"/>
                             <constraint firstItem="84g-C0-G5c" firstAttribute="top" secondItem="KxN-1J-HAk" secondAttribute="top" id="YCk-Mz-I8W"/>
                             <constraint firstItem="84g-C0-G5c" firstAttribute="leading" secondItem="KxN-1J-HAk" secondAttribute="leading" id="afp-3A-bt0"/>
-                            <constraint firstItem="Pb0-1P-Uhz" firstAttribute="top" secondItem="fmV-8H-lkA" secondAttribute="bottom" constant="22" id="nOP-I5-d4g"/>
                             <constraint firstAttribute="trailing" secondItem="84g-C0-G5c" secondAttribute="trailing" id="xnJ-7a-U3i"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz1-2H-mCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2364" y="1388"/>
         </scene>
@@ -2081,12 +2079,12 @@
         <image name="ChangePicture" width="49" height="49"/>
         <image name="Charmander.png" width="210" height="237"/>
         <image name="Chat" width="375" height="667"/>
-        <image name="Check Model File" width="375" height="667"/>
         <image name="Check friend" width="375" height="667"/>
         <image name="Choose Model" width="375" height="667"/>
         <image name="Clefairy.png" width="250" height="250"/>
         <image name="Eevee.png" width="250" height="250"/>
         <image name="EmbeddingReturnIcon" width="64" height="64"/>
+        <image name="Extraction" width="375" height="667"/>
         <image name="FBButtonIcon" width="102" height="96"/>
         <image name="FriendAddIcon" width="64" height="64"/>
         <image name="FriendReturn" width="64" height="64"/>
@@ -2103,7 +2101,6 @@
         <image name="QRcode reader" width="375" height="667"/>
         <image name="SearchIcon" width="120" height="124"/>
         <image name="Setting" width="375" height="667"/>
-        <image name="Show The Message" width="375" height="667"/>
         <image name="Sign In" width="375" height="667"/>
         <image name="SlideReturnIcon" width="64" height="64"/>
         <image name="Squirtle.png" width="250" height="250"/>

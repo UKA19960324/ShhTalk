@@ -324,12 +324,20 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.inputAccessoryView?.isHidden = true
             self.performSegue(withIdentifier: "Map", sender: self)
         case .model:
-            let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
-            let alertController = UIAlertController(title: "Want to say",message : Embeding(objName: objName[0]),preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Delete the Message", style: .cancel, handler: nil)
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true,completion: nil)
-            break
+            if self.inputAccessoryView?.isHidden == true {
+                //下載
+                
+                //顯示訊息
+                let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+                let alertController = UIAlertController(title: "Want to say",message : Embeding(objName: objName[0]),preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Delete the Message", style: .cancel, handler: nil)
+                alertController.addAction(okAction)
+                //刪除檔案
+                self.inputAccessoryView?.isHidden = false
+                
+                self.present(alertController, animated: true,completion: nil)
+                break
+            }
         default: break
         }
     }
@@ -366,6 +374,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             }
         }
     }
+    
     //萃取
     func Embeding(objName: String) -> String{
         var key = Auth.auth().currentUser!.uid

@@ -7,6 +7,7 @@
 //
 import UIKit
 import SceneKit
+import Firebase
 
 class ShowMViewController: UIViewController , UITextViewDelegate {
     
@@ -274,8 +275,19 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
                 print("Failed to write to URL")
             }
             //上傳
+            let storageRef = Storage.storage()
+            let uploadRef = storageRef.reference().child(toUser!.id).child(Auth.auth().currentUser!.uid).child(ModelName)
             
+            let uploadMetaData = StorageMetadata()
+            uploadMetaData.contentType = "model/obj"
             
+            uploadRef.putFile(from: NewfileURL,metadata: uploadMetaData,completion:{
+                (metadata, error) in
+                if error != nil {
+                    print ("Error: \(error!.localizedDescription)")
+                    return
+                }
+            })
         }catch{
             print("錯誤")
         }

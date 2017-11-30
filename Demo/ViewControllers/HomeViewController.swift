@@ -80,7 +80,7 @@ class HomeViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDelega
             usersDatabaseRef.child("credentials").child("email").setValue(user?.email)
             usersDatabaseRef.child("credentials").child("profilePicLink").setValue( user?.photoURL?.absoluteString)
             //登入成功 轉畫面
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile"){
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat"){
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
             }
@@ -127,7 +127,7 @@ class HomeViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDelega
                     usersDatabaseRef.child("credentials").child("email").setValue(user?.email)
                     usersDatabaseRef.child("credentials").child("profilePicLink").setValue( user?.photoURL?.absoluteString)
                     // 跳制登入後的app畫面
-                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MyProfile") {
+                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Chat") {
                         UIApplication.shared.keyWindow?.rootViewController = viewController
                         self.dismiss(animated: true, completion: nil)
                     }
