@@ -491,11 +491,11 @@
             </objects>
             <point key="canvasLocation" x="663" y="1388"/>
         </scene>
-        <!--View Controller-->
+        <!--No Extraction View Controller-->
         <scene sceneID="Uhu-WH-a9y">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyG-z8-3FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="A18-6U-Xfw" sceneMemberID="viewController">
+                <viewController id="A18-6U-Xfw" customClass="NoExtractionViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdd-ex-fQv"/>
                         <viewControllerLayoutGuide type="bottom" id="rxs-fQ-Ha1"/>
@@ -514,11 +514,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="sf2-cZ-gEr" eventType="touchUpInside" id="BMx-2N-SKh"/>
+                                    <action selector="Back:" destination="A18-6U-Xfw" eventType="touchUpInside" id="WVJ-e9-fJB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are decrypted  the message yet." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdM-fV-oqv">
-                                <rect key="frame" x="37" y="376" width="252" height="178"/>
+                                <rect key="frame" x="38" y="344" width="252" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -535,13 +535,13 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3189.5999999999999" y="1387.5562218890557"/>
+            <point key="canvasLocation" x="1589.5999999999999" y="2157.5712143928035"/>
         </scene>
-        <!--View Controller-->
+        <!--Extraction View Controller-->
         <scene sceneID="ZyF-E0-pHb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz1-2H-mCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qii-Jd-BAD" sceneMemberID="viewController">
+                <viewController id="qii-Jd-BAD" customClass="ExtractionViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFS-vh-R1x"/>
                         <viewControllerLayoutGuide type="bottom" id="Pb0-1P-Uhz"/>
@@ -554,17 +554,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-vo-Wka">
-                                <rect key="frame" x="35" y="559" width="248" height="41"/>
+                                <rect key="frame" x="35" y="559" width="248" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Decrypted the Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Delete:" destination="qii-Jd-BAD" eventType="touchUpInside" id="M9S-4w-Yel"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-6z-faB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-6z-faB">
                                 <rect key="frame" x="81" y="190" width="161" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -583,9 +589,13 @@
                             <constraint firstAttribute="trailing" secondItem="84g-C0-G5c" secondAttribute="trailing" id="xnJ-7a-U3i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SCNView" destination="v9d-nD-Zg6" id="0lL-Ah-MB8"/>
+                        <outlet property="messageTextView" destination="mkd-6z-faB" id="i61-pa-rUU"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2364" y="1388"/>
+            <point key="canvasLocation" x="928.79999999999995" y="2157.5712143928035"/>
         </scene>
         <!--ShowM View Controller-->
         <scene sceneID="07T-Lw-sRu">
@@ -612,6 +622,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendModel:" destination="sf2-cZ-gEr" eventType="touchUpInside" id="XOj-ML-Bno"/>
+                                    <segue destination="5tp-Ub-o6N" kind="show" identifier="back" id="8fP-wj-AJg"/>
                                 </connections>
                             </button>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whj-n0-nU6">
@@ -1811,6 +1822,8 @@
                         <outlet property="tableView" destination="T1a-nZ-mun" id="p72-iB-hO9"/>
                         <segue destination="0h5-EV-jyS" kind="show" identifier="FullImage" id="PbN-MP-SdD"/>
                         <segue destination="Rgu-LV-OCh" kind="show" identifier="Map" id="Uvj-0i-m2w"/>
+                        <segue destination="qii-Jd-BAD" kind="show" identifier="Extract" id="tVz-Pb-huB"/>
+                        <segue destination="A18-6U-Xfw" kind="show" identifier="NoExtract" id="81d-7N-Plb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcx-U7-9th" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2116,6 +2129,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="avx-Q5-JK3"/>
+        <segue reference="8fP-wj-AJg"/>
         <segue reference="hJi-oD-PdC"/>
         <segue reference="Bo5-dc-2qF"/>
     </inferredMetricsTieBreakers>

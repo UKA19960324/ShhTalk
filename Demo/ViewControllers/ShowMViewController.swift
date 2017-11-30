@@ -32,6 +32,7 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
     let Zero = "0"
     var binary = ""
     
+    
     //MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,10 +75,12 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
     @IBAction func sendModel(_ sender: UIButton) {
         let Name = ModelName.components(separatedBy: ".")
         let objName = Name[0]
+        let NewObjName = UUID().uuidString
+        var NewfileURL: URL
         //print(objName)
-        self.composeMessage(type: .model, content: ModelName)
+        self.composeMessage(type: .model, content: ModelName + " " + NewObjName)
         
-        Bundle.main.path(forResource: ModelName, ofType: "obj")
+        Bundle.main.path(forResource: objName, ofType: "obj")
         var key = toUser!.id
         let fileURL = Bundle.main.path(forResource: objName, ofType: "obj")
         let I4p = Ip/4
@@ -86,13 +89,15 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
         let Text = messageTextView.text!
         //創建新檔案
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let NewfileURL = DocumentDirURL.appendingPathComponent(objName).appendingPathExtension("obj")
-        print("File Path: \(NewfileURL)")
+        NewfileURL = DocumentDirURL.appendingPathComponent(NewObjName).appendingPathExtension("obj")
+        //print("File Path: \(NewfileURL)")
         //金鑰處理 最後兩位為起始位置
         var Sstart = String(key[key.index(before: key.endIndex)])
         key.remove(at: key.index(before: key.endIndex))
         Sstart = String(key[key.index(before: key.endIndex)]) + Sstart
-        start = Int(Sstart)!
+        for k in Sstart.unicodeScalars{
+            start = Int(k.value) - 48 + start
+        }
         //剩下轉2進 1藏 0不藏
         let binaryKey:Data? = key.data(using: .utf8)
         hideKey = (binaryKey?.reduce(""){(acc,byte) -> String! in
@@ -276,18 +281,24 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
             }
             //上傳
             let storageRef = Storage.storage()
-            let uploadRef = storageRef.reference().child(toUser!.id).child(Auth.auth().currentUser!.uid).child(ModelName)
+            let uploadRef = storageRef.reference().child(toUser!.id).child(Auth.auth().currentUser!.uid).child(NewObjName)
             
             let uploadMetaData = StorageMetadata()
             uploadMetaData.contentType = "model/obj"
             
+            var uploadUrl:String?
             uploadRef.putFile(from: NewfileURL,metadata: uploadMetaData,completion:{
                 (metadata, error) in
                 if error != nil {
                     print ("Error: \(error!.localizedDescription)")
                     return
                 }
+                uploadUrl = metadata?.downloadURL()?.absoluteString
             })
+            if uploadUrl != nil {
+                try FileManager.default.removeItem(at: NewfileURL)
+            }
+            
         }catch{
             print("錯誤")
         }
@@ -312,6 +323,14 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
     //點選空白區域(鍵盤收合)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "back"{
+            self.inputAccessoryView?.isHidden = true
+            let controller = segue.destination as! ChatViewController
+            controller.currentUser = toUser
+        }
     }
     
 }

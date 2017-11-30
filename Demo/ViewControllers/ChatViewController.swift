@@ -29,18 +29,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     var selectedImage: UIImage!
     var latitude  : CLLocationDegrees!
     var longitude : CLLocationDegrees!
-    
-    let p = 0.001 //區段大小
-    let Ip = 1000 //p的Int
-    let Ep = 1000000 as Double //轉浮點數用
-    var x = 0.0,y = 0.0,z = 0.0
-    var Ix = 0.0,Iy = 0.0,Iz = 0.0
-    var Rx = 0,Ry = 0,Rz = 0
-    var start = 0
-    var count = 0
-    var hideKey = ""
-    var hideKeyCount = 0
-    var buffer = [UInt8]()
+    var filePath : URL!
     
     override var inputAccessoryView: UIView? {
         get {
@@ -224,8 +213,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 cell.message3D.isHidden = false
                 cell.message.isHidden = true
                 cell.messageBackground.isHidden = true
-                let ModelName = self.items[indexPath.row].content as! String
-                
+                let obj = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+                var ModelName = obj[0]
                 let ModelScene = SCNScene(named: ModelName)
                 
                 let CameraNode = SCNNode()
@@ -280,8 +269,8 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 cell.message3D.isHidden = false
                 cell.message.isHidden = true
                 cell.messageBackground.isHidden = true
-                var ModelName = self.items[indexPath.row].content as! String
-                
+                let obj = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+                let ModelName = obj[0]
                 let ModelScene = SCNScene(named: ModelName)
                 
                 let CameraNode = SCNNode()
@@ -324,20 +313,18 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.inputAccessoryView?.isHidden = true
             self.performSegue(withIdentifier: "Map", sender: self)
         case .model:
-            if self.inputAccessoryView?.isHidden == true {
-                //下載
-                
-                //顯示訊息
-                let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
-                let alertController = UIAlertController(title: "Want to say",message : Embeding(objName: objName[0]),preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Delete the Message", style: .cancel, handler: nil)
-                alertController.addAction(okAction)
-                //刪除檔案
-                self.inputAccessoryView?.isHidden = false
-                
-                self.present(alertController, animated: true,completion: nil)
-                break
+            let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+            
+            if self.items[indexPath.row].isRead {
+                self.inputAccessoryView?.isHidden = true
+                self.items[indexPath.row].isRead = false
+                downlord(objName: objName[1])
+            }else{
+                self.inputAccessoryView?.isHidden = true
+                self.performSegue(withIdentifier: "NoExtract", sender: self)
             }
+            break
+            
         default: break
         }
     }
@@ -375,98 +362,28 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         }
     }
     
-    //萃取
-    func Embeding(objName: String) -> String{
-        var key = Auth.auth().currentUser!.uid
-        let I4p = Ip/4
-        //金鑰處理 最後兩位為起始位置
-        var Sstart = String(key[key.index(before: key.endIndex)])
-        key.remove(at: key.index(before: key.endIndex))
-        Sstart = String(key[key.index(before: key.endIndex)]) + Sstart
-        start = Int(Sstart)!
-        //剩下轉2進 1藏 0不藏
-        let binaryKey = key.data(using: .utf8)
-        hideKey = (binaryKey?.reduce(""){(acc,byte) -> String! in
-            acc+String(byte,radix:2)
-            })!
-        do{
-            var End = false
-            var Hide = ""
-            let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            let ReadURL = DocumentDirURL.appendingPathComponent(objName)
-            
-            let StringFile = try String(contentsOfFile: ReadURL.path , encoding: String.Encoding.utf8)
-            let lines = StringFile.components(separatedBy: "\n")
-            for line in lines {
-                let data = line.components(separatedBy: " ")
-                //print(data)
-                if data[0] == "v" && End == false{
-                    count += 1
-                    if count >= start && hideKey[hideKey.index(hideKey.startIndex, offsetBy: hideKeyCount)] == "1"{
-                        x = Double(data[1])!
-                        y = Double(data[2])!
-                        z = Double(data[3])!
-                        //取餘數（有誤差）
-                        Ix = x.truncatingRemainder(dividingBy: p)
-                        Iy = y.truncatingRemainder(dividingBy: p)
-                        Iz = z.truncatingRemainder(dividingBy: p)
-                        //刪除誤差轉int處理 浮點數處理上有誤差
-                        Rx = Int(round(Ix * Ep))
-                        Ry = Int(round(Iy * Ep))
-                        Rz = Int(round(Iz * Ep))
-                        //4個嵌入1的區段
-                        //print(String(Rx)+" "+String(Ry)+" "+String(Rz))
-                        let Ver = [Rx , Ry , Rz]
-                        for R in Ver{
-                            if R == 500 || R == -500{
-                                End = true
-                                //print("End \(count)" )
-                                break
-                            }
-                            if (R < 0 && (R < -(Ip - I4p) || R >= -I4p)) || (R > 0 && (R < I4p || R >= Ip - I4p)){
-                                Hide += "1"
-                                //print("\(count) \(R)")
-                            }else{
-                                Hide += "0"
-                                //print("\(count) \(R)")
-                            }
-                        }
-                        
-                        if hideKeyCount < hideKey.characters.count - 1 {
-                            hideKeyCount += 1
-                        }else{
-                            hideKeyCount = 0
-                        }
-                    }else if count >= start{
-                        if hideKeyCount < hideKey.characters.count - 1 {
-                            hideKeyCount += 1
-                        }else{
-                            hideKeyCount = 0
-                        }
-                    }
-                }else if End == true {
-                    break
-                }
+    func downlord(objName: String) {
+        let objURL = Storage.storage().reference().child(currentUser!.id).child(Auth.auth().currentUser!.uid).child(objName + ".obj")
+        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        filePath = DocumentDirURL.appendingPathComponent(objName).appendingPathExtension("obj")
+        
+        let downloadTask = objURL.write(toFile: filePath) { (url, error) in
+            if error != nil {
+                //有錯誤
+                print("有錯:\(String(describing: error?.localizedDescription))")
+                return
+            }else{
+                //return檔案位置
+                print("位置：\(String(describing: self.filePath))")
             }
-            var index = Hide.startIndex
-            for _ in 0..<Hide.characters.count/8{
-                let nextIndex = Hide.index(index, offsetBy: 8)
-                let charBits = Hide[index..<nextIndex]
-                let k = UInt8(charBits,radix:2)!
-                //print(k)
-                buffer.append(k)
-                index = nextIndex
-            }
-            let text = String(bytes: buffer, encoding: String.Encoding.utf8)!
-            return text
-        }catch{
-            print("萃取 Error")
+
         }
-        return "Nothing to say"
+        downloadTask.observe(.success){ snapshot in
+            self.performSegue(withIdentifier: "Extract", sender: self)
+        }
     }
     
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "model"{
             self.inputAccessoryView?.isHidden = true
@@ -482,7 +399,9 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             controller.latitude = latitude
             controller.longitude = longitude
         }
+        else if  segue.identifier == "Extract" {
+            let controller = segue.destination as! ExtractionViewController
+            controller.filePath = filePath
+        }
     }
-
-
 }
