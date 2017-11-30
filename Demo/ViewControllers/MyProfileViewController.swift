@@ -45,6 +45,7 @@ class MyProfileViewController: UIViewController {
                 self.countLabel.text = String(snap.childrenCount)
             })
         }
+        
     }
     
     // Dispose of any resources that can be recreated.
