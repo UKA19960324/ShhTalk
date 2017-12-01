@@ -13,12 +13,61 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
     @IBOutlet weak var messageTableView: UITableView!
     var items = [Conversation]()
     var selectedUser: User?
-    
+    let CopeMtlFile = [ "Squirtle","Haunter","Teddiursa","Pikachu","Jirachi","Bulbasaur","Clefairy","Eevee","Jigglypuff","Oddish","Vulpix","Charmander" ]
+    let CopeTgaFile = [ "ZenigameDh","ZenigameEyeDh","GhostDh","GhostEyeDh","HimegumaDh","HimegumaEyeDh","HimegumaMouthDh","PikachuDh","PikachuEyeDh","PikachuHohoDh","JirachiDh","JirachiEye3Dh","JirachiEyeDh","JirachiMouthDh","FushigidaneDh","FushigidaneEyeDh","pippi_0_0","pippi_0_1","pippi_0_2","purin_0_0","NazonokusaDh","NazonokusaEyeDh","NazonokusaMouthDh","RokonDh","RokonEyeDh","RokonMouthDh","hitokage_0_0","hitokage_0_1" ]
+    let CopePngFile = [ "PikachuMouthDh","pm0133_00_Body1","pm0133_00_Eye1","pm0133_00_Mouth1" ]
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         addSideButton()
         self.fetchData()
+        if UserDefaults.standard.bool(forKey: "First") == false{
+            var toFile = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            print(toFile.path + "\n\n\n\n\n")
+            var check = true
+            for R in CopeMtlFile{
+                let File = Bundle.main.url(forResource: R , withExtension: "mtl")!
+                var toMtlFile = toFile.appendingPathComponent(R + ".mtl")
+                do {
+                    try FileManager.default.copyItem(at: File, to: toMtlFile)
+                }catch{
+                    print("複製材質檔出錯")
+                    check = false
+                }
+            }
+            toFile = toFile.appendingPathComponent("Textures")
+            do{
+                try FileManager.default.createDirectory(atPath: toFile.path, withIntermediateDirectories: true, attributes: nil)
+            }catch{
+                print("創建資料夾錯誤")
+            }
+            
+            for R in CopeTgaFile{
+                let File = Bundle.main.url(forResource: R, withExtension: "tga")!
+                let toTgaFile = toFile.appendingPathComponent(R + ".tga")
+                do{
+                    try FileManager.default.copyItem(at: File, to: toTgaFile)
+                }catch{
+                    print ("複製圖片檔錯誤")
+                    check = false
+                }
+            }
+            
+            for R in CopePngFile{
+                let File = Bundle.main.url(forResource: R, withExtension: "png")!
+                let toPngFile = toFile.appendingPathComponent(R + ".png")
+                do{
+                    try FileManager.default.copyItem(at: File, to: toPngFile)
+                }catch{
+                    print ("複製圖片檔錯誤")
+                    check = false
+                }
+            }
+            if check{
+                UserDefaults.standard.set(true,forKey: "Firest")
+                UserDefaults.standard.synchronize()
+            }
+        }
     }
  
     // Dispose of any resources that can be recreated.
