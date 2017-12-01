@@ -314,17 +314,22 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             self.performSegue(withIdentifier: "Map", sender: self)
         case .model:
             let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
-            
-            if self.items[indexPath.row].isRead {
-                self.inputAccessoryView?.isHidden = true
-                self.items[indexPath.row].isRead = false
+            if self.items[indexPath.row].owner == .sender {
                 downlord(objName: objName[1])
-            }else{
-                self.inputAccessoryView?.isHidden = true
-                self.performSegue(withIdentifier: "NoExtract", sender: self)
+                let desertRef = Storage.storage().reference().child("Model").child(objName[1] + ".obj")
+                desertRef.delete{ error in
+                    if let error = error {
+                        // Uh-oh, an error occurred!
+                        print ("刪除錯誤：" + String(describing: error) + "\n\n\n\n")
+                    } else {
+                        // File deleted successfully
+                        self.inputAccessoryView?.isHidden = true
+                        self.performSegue(withIdentifier: "Extract", sender: self)
+                    }
+                }
             }
+            self.inputAccessoryView?.isHidden = false
             break
-            
         default: break
         }
     }
@@ -362,24 +367,20 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         }
     }
     
-    func downlord(objName: String) {
-        let objURL = Storage.storage().reference().child(currentUser!.id).child(Auth.auth().currentUser!.uid).child(objName + ".obj")
+    func downlord(objName: String){
+        let check = false
+        let objURL = Storage.storage().reference().child("Model").child(objName + ".obj")
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         filePath = DocumentDirURL.appendingPathComponent(objName).appendingPathExtension("obj")
-        
+        print(filePath.path + "\n\n\n\n")
         let downloadTask = objURL.write(toFile: filePath) { (url, error) in
             if error != nil {
                 //有錯誤
                 print("有錯:\(String(describing: error?.localizedDescription))")
-                return
             }else{
                 //return檔案位置
                 print("位置：\(String(describing: self.filePath))")
             }
-
-        }
-        downloadTask.observe(.success){ snapshot in
-            self.performSegue(withIdentifier: "Extract", sender: self)
         }
     }
     

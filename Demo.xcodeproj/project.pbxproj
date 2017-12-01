@@ -48,7 +48,6 @@
 		C24654601F612ED800E8643B /* IBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246545F1F612ED800E8643B /* IBTextField.swift */; };
 		C24654621F66AEEA00E8643B /* IBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24654611F66AEEA00E8643B /* IBImageView.swift */; };
 		CE16F96E1FD04426005CB5AF /* ExtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16F96D1FD04426005CB5AF /* ExtractionViewController.swift */; };
-		CE16F9701FD08959005CB5AF /* NoEctractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16F96F1FD08958005CB5AF /* NoEctractViewController.swift */; };
 		CE4F7D2B1F7F43D3007E35FD /* Squirtle.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CE4F7D251F7F43D3007E35FD /* Squirtle.mtl */; };
 		CE4F7D2C1F7F43D3007E35FD /* Squirtle.obj in Resources */ = {isa = PBXBuildFile; fileRef = CE4F7D261F7F43D3007E35FD /* Squirtle.obj */; };
 		CE4F7D2D1F7F43D3007E35FD /* Squirtle.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4F7D271F7F43D3007E35FD /* Squirtle.png */; };
@@ -168,7 +167,6 @@
 		C24654611F66AEEA00E8643B /* IBImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBImageView.swift; sourceTree = "<group>"; };
 		CD7EFD29A223606BF9C62292 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE16F96D1FD04426005CB5AF /* ExtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractionViewController.swift; sourceTree = "<group>"; };
-		CE16F96F1FD08958005CB5AF /* NoEctractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEctractViewController.swift; sourceTree = "<group>"; };
 		CE4F7D251F7F43D3007E35FD /* Squirtle.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Squirtle.mtl; sourceTree = "<group>"; };
 		CE4F7D261F7F43D3007E35FD /* Squirtle.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Squirtle.obj; sourceTree = "<group>"; };
 		CE4F7D271F7F43D3007E35FD /* Squirtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle.png; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 				558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */,
 				55481EE51FCD911600A0EEE6 /* MapViewController.swift */,
 				CE16F96D1FD04426005CB5AF /* ExtractionViewController.swift */,
-				CE16F96F1FD08958005CB5AF /* NoEctractViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -683,7 +680,7 @@
 				TargetAttributes = {
 					55DB88F21F1475280002CCA3 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = R577YJV57H;
+						DevelopmentTeam = 3YSGUXA2R4;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -873,7 +870,6 @@
 				55B7A5901F68C669006D3559 /* SideButton.swift in Sources */,
 				55A79B7A1F46BAD30076CE60 /* Button.swift in Sources */,
 				CEB41CDD1F7BFB67001B8594 /* ChooseMViewController.swift in Sources */,
-				CE16F9701FD08959005CB5AF /* NoEctractViewController.swift in Sources */,
 				554102A51FA2246F007800A8 /* Message.swift in Sources */,
 				5554F8931FA858AE00C1B19D /* ChatTableViewCell.swift in Sources */,
 				5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */,
@@ -1011,10 +1007,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = R577YJV57H;
+				DEVELOPMENT_TEAM = 3YSGUXA2R4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.3Dtalk;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.6016.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1027,10 +1023,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = R577YJV57H;
+				DEVELOPMENT_TEAM = 3YSGUXA2R4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.3Dtalk;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.6016.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

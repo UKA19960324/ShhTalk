@@ -20,8 +20,8 @@ class Message {
     var timestamp: Int
     var isRead: Bool
     var image: UIImage?
-    private var toID: String?
-    private var fromID: String?
+    var toID: String?
+    var fromID: String?
     
     //MARK: Inits
     

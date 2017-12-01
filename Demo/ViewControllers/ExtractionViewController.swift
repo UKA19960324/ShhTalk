@@ -62,9 +62,11 @@ class ExtractionViewController: UIViewController {
         var Sstart = String(key[key.index(before: key.endIndex)])
         key.remove(at: key.index(before: key.endIndex))
         Sstart = String(key[key.index(before: key.endIndex)]) + Sstart
+        
         for k in Sstart.unicodeScalars{
-            start = Int(k.value) - 48 + start
+            start = Int(k.value - UInt32(48)) + start
         }
+        print("起始： \(start)" + "\n" + "\n")
         //剩下轉2進 1藏 0不藏
         let binaryKey = key.data(using: .utf8)
         hideKey = (binaryKey?.reduce(""){(acc,byte) -> String! in
@@ -102,7 +104,7 @@ class ExtractionViewController: UIViewController {
                                 //print("End \(count)" )
                                 break
                             }
-                            if (R < 0 && (R < -(Ip - I4p) || R >= -I4p)) || (R > 0 && (R < I4p || R >= Ip - I4p)){
+                            if (R < 0 && (R <= -(Ip - I4p) || R >= -I4p)) || (R > 0 && (R <= I4p || R >= Ip - I4p)){
                                 Hide += "1"
                                 //print("\(count) \(R)")
                             }else{
@@ -132,24 +134,14 @@ class ExtractionViewController: UIViewController {
                 let nextIndex = Hide.index(index, offsetBy: 8)
                 let charBits = Hide[index..<nextIndex]
                 let k = UInt8(charBits,radix:2)!
-                //print(k)
                 buffer.append(k)
                 index = nextIndex
             }
+            //print(Hide + "\n \n \n \n")
             messageTextView.text = String(bytes: buffer, encoding: String.Encoding.utf8)!
         }catch{
             print("萃取 Error")
         }
-    }
-    
-    func textViewDidChange(_ textView: UITextView) {
-        let spacing = NSMutableParagraphStyle()
-        spacing.lineSpacing = 10
-        let attr = [NSFontAttributeName:UIFont.systemFont(ofSize: 18),NSParagraphStyleAttributeName : spacing]
-        textView.typingAttributes = attr
-        textView.textColor = UIColor.white
-        textView.textContainer.maximumNumberOfLines = 3
-        textView.textContainer.lineBreakMode = .byTruncatingTail
     }
     
     @IBAction func Delete(_ sender: Any) {
