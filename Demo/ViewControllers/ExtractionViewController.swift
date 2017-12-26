@@ -146,7 +146,7 @@ class ExtractionViewController: UIViewController {
     
     @IBAction func Delete(_ sender: Any) {
         do {
-            try FileManager.default.removeItem(at: filePath)
+//            try FileManager.default.removeItem(at: filePath)
             self.dismiss(animated: true, completion: nil)
             self.inputAccessoryView?.isHidden = false
         }catch{

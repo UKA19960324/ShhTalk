@@ -316,16 +316,19 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
             let objName = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
             if self.items[indexPath.row].owner == .sender {
                 downlord(objName: objName[1])
-                let desertRef = Storage.storage().reference().child("Model").child(objName[1] + ".obj")
-                desertRef.delete{ error in
-                    if let error = error {
-                        // Uh-oh, an error occurred!
-                        print ("刪除錯誤：" + String(describing: error) + "\n\n\n\n")
-                    } else {
-                        // File deleted successfully
-                        self.inputAccessoryView?.isHidden = true
-                        self.performSegue(withIdentifier: "Extract", sender: self)
-                    }
+//                let desertRef = Storage.storage().reference().child("Model").child(objName[1] + ".obj")
+//                desertRef.delete{ error in
+//                    if let error = error {
+//                        // Uh-oh, an error occurred!
+//                        print ("刪除錯誤：" + String(describing: error) + "\n\n\n\n")
+//                    } else {
+//                        // File deleted successfully
+//
+//                    }
+//                }
+                self.inputAccessoryView?.isHidden = true
+                if FileManager.default.fileExists(atPath: filePath.path) {
+                    self.performSegue(withIdentifier: "Extract", sender: self)
                 }
             }
             self.inputAccessoryView?.isHidden = false

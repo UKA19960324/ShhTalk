@@ -300,7 +300,7 @@ class ShowMViewController: UIViewController , UITextViewDelegate {
                     
                 }
                  */
-                try FileManager.default.removeItem(at: NewfileURL)
+                //try FileManager.default.removeItem(at: NewfileURL)
             }catch{
                 print("錯誤")
             }
