@@ -337,6 +337,45 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         }
     }
     
+     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let showAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "😎", handler: {(action,indexPath) -> Void in
+            
+            self.inputAccessoryView?.isHidden = true
+            let alertController = UIAlertController(title: "開發人員專用", message: "請輸入密碼開啟此功能", preferredStyle: .alert)
+            alertController.addTextField(configurationHandler: {(textField: UITextField) -> Void in
+                textField.placeholder = "Password"
+                textField.isSecureTextEntry = true
+            })
+            
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action:UIAlertAction!) -> Void in
+                self.inputAccessoryView?.isHidden = false
+            })
+            let enterAction = UIAlertAction(title: "Enter", style: .default , handler: { (action:UIAlertAction!) -> Void in
+                
+                let password = (alertController.textFields?.first)!.text
+                print(password)
+                if  password == "CSIE"{
+                    //self.inputAccessoryView?.isHidden = false
+                    //self.performSegue(withIdentifier: "Different", sender: self)
+                    //print(" Correct ! ! ")
+                }
+                else{
+                    let alertController = UIAlertController(title: "Input Error", message: "Wrong Password.", preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK",style: .cancel,handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    self.inputAccessoryView?.isHidden = false
+                }
+            })
+            alertController.addAction(enterAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        })
+    return [showAction]
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

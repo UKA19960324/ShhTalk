@@ -680,7 +680,7 @@
 				TargetAttributes = {
 					55DB88F21F1475280002CCA3 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3YSGUXA2R4;
+						DevelopmentTeam = R577YJV57H;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1007,10 +1007,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3YSGUXA2R4;
+				DEVELOPMENT_TEAM = R577YJV57H;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.6016.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1023,10 +1023,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3YSGUXA2R4;
+				DEVELOPMENT_TEAM = R577YJV57H;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.6016.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mcu.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
