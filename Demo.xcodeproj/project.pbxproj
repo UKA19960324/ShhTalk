@@ -24,6 +24,7 @@
 		5560842D1F2A03C700B0D8EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */; };
 		5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */; };
 		556084311F2A0C5900B0D8EC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */; };
+		556197671FF61AA7004D39AC /* DifferentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556197661FF61AA7004D39AC /* DifferentViewController.swift */; };
 		5581642C1F8E0C2700A7B554 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581642B1F8E0C2700A7B554 /* FriendsTableViewCell.swift */; };
 		5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585E7431F828A9B003A3687 /* ScannerViewController.swift */; };
 		558E9EA51FCC68A400D69CC8 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */; };
@@ -139,6 +140,7 @@
 		5560842C1F2A03C700B0D8EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		5560842E1F2A0C1D00B0D8EC /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		556084301F2A0C5900B0D8EC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		556197661FF61AA7004D39AC /* DifferentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentViewController.swift; sourceTree = "<group>"; };
 		5581642B1F8E0C2700A7B554 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		5585E7431F828A9B003A3687 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				558E9EA41FCC68A400D69CC8 /* ShowImageViewController.swift */,
 				55481EE51FCD911600A0EEE6 /* MapViewController.swift */,
 				CE16F96D1FD04426005CB5AF /* ExtractionViewController.swift */,
+				556197661FF61AA7004D39AC /* DifferentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				55C529D41F6548C200F5927F /* HomeViewController.swift in Sources */,
 				554102A31FA2228A007800A8 /* Helper Files.swift in Sources */,
 				CEB41CDF1F7BFBBA001B8594 /* ShowMViewController.swift in Sources */,
+				556197671FF61AA7004D39AC /* DifferentViewController.swift in Sources */,
 				5585E7441F828A9B003A3687 /* ScannerViewController.swift in Sources */,
 				5560842F1F2A0C1D00B0D8EC /* MessageViewController.swift in Sources */,
 				55481EE61FCD911600A0EEE6 /* MapViewController.swift in Sources */,

@@ -551,6 +551,24 @@
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="2157.5712143928035"/>
         </scene>
+        <!--Different View Controller-->
+        <scene sceneID="NaH-HN-Fxb">
+            <objects>
+                <viewController id="kCE-UF-INi" customClass="DifferentViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fb6-ME-XAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="f7c-On-fUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DGT-SL-uQp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZl-H8-8AM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="2161"/>
+        </scene>
         <!--ShowM View Controller-->
         <scene sceneID="07T-Lw-sRu">
             <objects>
@@ -1777,6 +1795,7 @@
                         <segue destination="0h5-EV-jyS" kind="show" identifier="FullImage" id="PbN-MP-SdD"/>
                         <segue destination="Rgu-LV-OCh" kind="show" identifier="Map" id="Uvj-0i-m2w"/>
                         <segue destination="qii-Jd-BAD" kind="show" identifier="Extract" id="tVz-Pb-huB"/>
+                        <segue destination="kCE-UF-INi" kind="show" identifier="Different" id="7hi-kh-q1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcx-U7-9th" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2081,7 +2100,6 @@
         <image name="send" width="64" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xge-tT-lHX"/>
         <segue reference="avx-Q5-JK3"/>
         <segue reference="8fP-wj-AJg"/>
         <segue reference="hJi-oD-PdC"/>

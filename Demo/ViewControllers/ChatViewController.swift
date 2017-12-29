@@ -30,6 +30,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     var latitude  : CLLocationDegrees!
     var longitude : CLLocationDegrees!
     var filePath : URL!
+    var Name : String!
     
     override var inputAccessoryView: UIView? {
         get {
@@ -338,7 +339,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
     }
     
      func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
+        // modelName
         let showAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "😎", handler: {(action,indexPath) -> Void in
             
             self.inputAccessoryView?.isHidden = true
@@ -356,10 +357,13 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 
                 let password = (alertController.textFields?.first)!.text
                 print(password)
+                
                 if  password == "CSIE"{
-                    //self.inputAccessoryView?.isHidden = false
-                    //self.performSegue(withIdentifier: "Different", sender: self)
-                    //print(" Correct ! ! ")
+                    let obj = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+                    self.Name = obj[0]
+                    self.inputAccessoryView?.isHidden = false
+                    self.performSegue(withIdentifier: "Different", sender: self)
+                    print(" Correct ! ! ")
                 }
                 else{
                     let alertController = UIAlertController(title: "Input Error", message: "Wrong Password.", preferredStyle: .alert)
@@ -445,6 +449,14 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
         else if  segue.identifier == "Extract" {
             let controller = segue.destination as! ExtractionViewController
             controller.filePath = filePath
+        }
+        else if  segue.identifier == "Different" {
+            let controller = segue.destination as! DifferentViewController
+            //controller.filePath = filePath
+            controller.modelName = Name
+//            let obj = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
+//            let ModelName = obj[0]
+//            controller.modelName = ModelName
         }
     }
 }
