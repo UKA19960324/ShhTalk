@@ -32,7 +32,6 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
                     try FileManager.default.copyItem(at: File, to: toMtlFile)
                 }catch{
                     print("複製材質檔出錯")
-                    check = false
                 }
             }
             toFile = toFile.appendingPathComponent("Textures")
@@ -49,7 +48,6 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
                     try FileManager.default.copyItem(at: File, to: toTgaFile)
                 }catch{
                     print ("複製圖片檔錯誤")
-                    check = false
                 }
             }
             
@@ -60,7 +58,6 @@ class MessageViewController: UIViewController, UITableViewDataSource , UITableVi
                     try FileManager.default.copyItem(at: File, to: toPngFile)
                 }catch{
                     print ("複製圖片檔錯誤")
-                    check = false
                 }
             }
             if check{

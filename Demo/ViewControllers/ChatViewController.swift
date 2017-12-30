@@ -359,8 +359,7 @@ class ChatViewController: UIViewController, UITableViewDelegate , UITableViewDat
                 print(password)
                 
                 if  password == "CSIE"{
-                    let obj = (self.items[indexPath.row].content as! String).components(separatedBy: " ")
-                    self.Name = obj[0]
+                    self.Name = self.items[indexPath.row].content as! String
                     self.inputAccessoryView?.isHidden = false
                     self.performSegue(withIdentifier: "Different", sender: self)
                     print(" Correct ! ! ")
