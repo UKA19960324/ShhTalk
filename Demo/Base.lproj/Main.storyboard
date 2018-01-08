@@ -585,6 +585,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="back:" destination="kCE-UF-INi" eventType="touchUpInside" id="TVF-uZ-Arb"/>
                                     <action selector="backButton:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="HHv-GK-ESW"/>
                                 </connections>
                             </button>

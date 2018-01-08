@@ -49,7 +49,6 @@ class DifferentViewController: UIViewController {
             print("檔案沒下載")
         }
         Modelafter.rootNode.addChildNode(CameraNode)
-        Modelafter.rootNode.addChildNode(LightNode)
         
         scnAfter.scene = Modelafter
         scnAfter.allowsCameraControl = true
@@ -60,7 +59,10 @@ class DifferentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
