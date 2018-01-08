@@ -563,20 +563,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEN-oN-2lQ">
-                                <rect key="frame" x="67" y="65" width="240" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </sceneKitView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8F-Lc-DXt">
-                                <rect key="frame" x="67" y="369" width="240" height="245"/>
+                                <rect key="frame" x="67" y="355" width="240" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </sceneKitView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMl-qn-SBo">
-                                <rect key="frame" x="15" y="600" width="45" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMl-qn-SBo">
+                                <rect key="frame" x="16" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5e5-DZ-vFU"/>
                                     <constraint firstAttribute="width" constant="45" id="O9i-WU-sSu"/>
@@ -589,8 +583,18 @@
                                     <action selector="backButton:" destination="Nz9-5J-wvU" eventType="touchUpInside" id="HHv-GK-ESW"/>
                                 </connections>
                             </button>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEN-oN-2lQ">
+                                <rect key="frame" x="67" y="80" width="240" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f7c-On-fUc" firstAttribute="top" secondItem="iMl-qn-SBo" secondAttribute="bottom" constant="20" id="35M-wM-6Fk"/>
+                            <constraint firstItem="iMl-qn-SBo" firstAttribute="leading" secondItem="DGT-SL-uQp" secondAttribute="leadingMargin" id="uaD-vh-L40"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scnAfter" destination="C8F-Lc-DXt" id="Qcb-Av-1u3"/>
